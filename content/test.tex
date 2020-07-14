@@ -3,8 +3,15 @@
 \documentclass[english]{article}
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
+\usepackage{amsthm}
 
 \makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\theoremstyle{plain}
+\newtheorem{thm}{\protect\theoremname}
+\theoremstyle{definition}
+\newtheorem{problem}[thm]{\protect\problemname}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
 \usepackage{pgfplots}
 \usepackage{enumitem}
@@ -17,11 +24,24 @@
 \makeatother
 
 \usepackage{babel}
+\providecommand{\problemname}{Problem}
+\providecommand{\theoremname}{Theorem}
+
 \begin{document}
 
-\section*{Lorem Ipsum}
+\section*{Solucionario Barry James}
 
-Lorem Ipsum dolo
-
+\section{Definiciones básicas}
+\begin{problem}
+Sean $A,B,C$ eventos aleatorios. Identifique las siguientes ecuaciones
+y frases
+\end{problem}
+%
+\begin{problem}
+A partir de los axiomas, pruebe la propuedad P5: 
+\[
+P\left(\bigcup_{n=1}^{\infty}A_{n}\right)\leq\sum_{n=1}^{\infty}P\left(A_{n}\right)
+\]
+\end{problem}
 
 \end{document}

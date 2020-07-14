@@ -12,6 +12,9 @@
 \setenumerate[2]{label=a)}
 \end_preamble
 \use_default_options true
+\begin_modules
+theorems-std
+\end_modules
 \maintain_unincluded_children false
 \language english
 \language_package default
@@ -84,14 +87,38 @@
 \begin_body
 
 \begin_layout Section*
-Lorem Ipsum
+Solucionario Barry James
+\end_layout
+
+\begin_layout Section
+Definiciones básicas
+\end_layout
+
+\begin_layout Problem
+Sean 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+ eventos aleatorios.
+ Identifique las siguientes ecuaciones y frases
 \end_layout
 
 \begin_layout Standard
-Lorem Ipsum dolo
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
+\begin_layout Problem
+A partir de los axiomas, pruebe la propuedad P5: 
+\begin_inset Formula 
+\[
+P\left(\bigcup_{n=1}^{\infty}A_{n}\right)\leq\sum_{n=1}^{\infty}P\left(A_{n}\right)
+\]
+
+\end_inset
+
 
 \end_layout
 
