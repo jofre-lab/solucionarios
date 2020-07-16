@@ -28,4 +28,7 @@ TD.eqno			{ }	/* equation-number cells */
 
 
 /* document-specific styles come next */
+SPAN.bfseries		{   }
 DIV.navigation		{   }
+SPAN.normalfont		{   }
+SPAN.arabic		{   }
