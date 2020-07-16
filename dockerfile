@@ -12,7 +12,7 @@ RUN echo "Acquire::http {No-Cache=True;};" > /etc/apt/apt.conf.d/no-cache && apt
 RUN apt-get upgrade -y
 RUN lyx -batch /usr/share/lyx/doc/LaTeXConfig.lyx
 RUN mkdir /home/content
-RUN apt-get install latex2html -y
+RUN apt-get install latex2html -y 
 CMD lyx --force-overwrite --export XeTeX /home/content/solucionario.lyx; latex2html /home/content/solucionario.tex
 
 # docker build . -t lyx2web
