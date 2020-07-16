@@ -13,7 +13,7 @@ RUN apt-get upgrade -y
 RUN lyx -batch /usr/share/lyx/doc/LaTeXConfig.lyx
 RUN mkdir /home/content
 RUN apt-get install latex2html -y 
-CMD lyx --force-overwrite --export XeTeX /home/content/solucionario.lyx; latex2html /home/content/solucionario.tex
+CMD lyx --force-overwrite --export xetex /home/content/solucionario.lyx; latex2html /home/content/solucionario.tex
 
 # docker build . -t lyx2web
 # docker run -v ${PWD}/doc:/home/content -t lyx2web:latest
