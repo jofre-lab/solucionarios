@@ -2,6 +2,7 @@
 %% Do not edit unless you really know what you are doing.
 \documentclass[english]{article}
 \usepackage[T1]{fontenc}
+\usepackage{amsmath}
 \usepackage{amsthm}
 
 \makeatletter
@@ -41,6 +42,15 @@ A partir de los axiomas, pruebe la propuedad \textbf{P5}:
 \[
 P\left(\bigcup_{n=1}^{\infty}A_{n}\right)\leq\sum_{n=1}^{\infty}P\left(A_{n}\right)
 \]
+Consideremos $B_{k}=\bigcup_{n=k}^{\infty}A_{n}$ entonces 
+\begin{align*}
+P\left(\bigcup_{n=1}^{\infty}A_{n}\right) & =P\left(\bigcup_{n=1}^{k}A_{n}\cup B_{k+1}\right)\\
+ & \leq P\left(\bigcup_{n=1}^{k}A_{n}\right)+P\left(B_{k+1}\right)\\
+ & \leq\sum_{n=1}^{k}P\left(A_{n}\right)+P\left(B_{k+1}\right)\\
+ & =\lim_{k\to\infty}\sum_{n=1}^{k}P\left(A_{n}\right)+P\left(B_{k+1}\right)\\
+ & =\sum_{n=1}^{\infty}P\left(A_{n}\right)+\lim_{k\to\infty}P\left(B_{k+1}\right)\\
+ & \leq\sum_{n=1}^{\infty}P\left(A_{n}\right)
+\end{align*}
 \end{problem}
 
 \end{document}

@@ -5,7 +5,7 @@
 
 
 \usepackage[T1]{fontenc}
-\usepackage[latin9]{inputenc}
+\usepackage{amsmath}
 \usepackage{amsthm}
 
 
@@ -38,7 +38,7 @@
 
 \usepackage{xcolor}
 
-\usepackage[latin9]{inputenc}
+\usepackage[latin1]{inputenc}
 
 
 
@@ -136,6 +136,20 @@
   \else\expandafter\vss\fi}%
 \providecommand{\selectlanguage}[1]{}%
 \makeatletter \tracingstats = 1 
+\providecommand{\Chi}{\textrm{X}}
+\providecommand{\Zeta}{\textrm{Z}}
+\providecommand{\Iota}{\textrm{J}}
+\providecommand{\Eta}{\textrm{H}}
+\providecommand{\Mu}{\textrm{M}}
+\providecommand{\Epsilon}{\textrm{E}}
+\providecommand{\Omicron}{\textrm{O}}
+\providecommand{\omicron}{\textrm{o}}
+\providecommand{\Rho}{\textrm{R}}
+\providecommand{\Beta}{\textrm{B}}
+\providecommand{\Alpha}{\textrm{A}}
+\providecommand{\Nu}{\textrm{N}}
+\providecommand{\Kappa}{\textrm{K}}
+\providecommand{\Tau}{\textrm{T}}
 
 
 \begin{document}
@@ -162,17 +176,58 @@
 
 \stepcounter{section}
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_inline50}%
-$A,B,C$%
+\lthtmlinlinemathA{tex2html_wrap_indisplay135}%
+$\displaystyle P\left(\bigcup_{n=1}^{\infty}A_{n}\right)\leq\sum_{n=1}^{\infty}P\left(A_{n}\right)
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline137}%
+$ B_{k}=\bigcup_{n=k}^{\infty}A_{n}$%
 \lthtmlinlinemathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmldisplayA{displaymath48}%
-\begin{displaymath}
-P\left(\bigcup_{n=1}^{\infty}A_{n}\right)\leq\sum_{n=1}^{\infty}P\left(A_{n}\right)
-\end{displaymath}%
-\lthtmldisplayZ
+\lthtmlinlinemathA{tex2html_wrap_indisplay138}%
+$\displaystyle P\left(\bigcup_{n=1}^{\infty}A_{n}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay139}%
+$\displaystyle =P\left(\bigcup_{n=1}^{k}A_{n}\cup B_{k+1}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay140}%
+$\displaystyle \leq P\left(\bigcup_{n=1}^{k}A_{n}\right)+P\left(B_{k+1}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay141}%
+$\displaystyle \leq\sum_{n=1}^{k}P\left(A_{n}\right)+P\left(B_{k+1}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay142}%
+$\displaystyle =\lim_{k\to\infty}\sum_{n=1}^{k}P\left(A_{n}\right)+P\left(B_{k+1}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay143}%
+$\displaystyle =\sum_{n=1}^{\infty}P\left(A_{n}\right)+\lim_{k\to\infty}P\left(B_{k+1}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay144}%
+$\displaystyle \leq\sum_{n=1}^{\infty}P\left(A_{n}\right)$%
+\lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 
