@@ -182,6 +182,16 @@ Si
 Estadística Matemática Bickel
 \end_layout
 
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "inferencia-clasica.lyx"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter*
 Statistical Models, Goals, and performance criteria
 \end_layout
