@@ -13,7 +13,8 @@
 \end_preamble
 \use_default_options true
 \begin_modules
-theorems-std
+theorems-ams
+theorems-chap
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -85,6 +86,10 @@ theorems-std
 \end_header
 
 \begin_body
+
+\begin_layout Part
+Probabilidad
+\end_layout
 
 \begin_layout Chapter
 Definiciones básicas
@@ -179,7 +184,7 @@ Si
 
 \end_deeper
 \begin_layout Part
-Estadística Matemática Bickel
+Inferencia Clásica
 \end_layout
 
 \begin_layout Standard
@@ -190,10 +195,6 @@ filename "inferencia-clasica.lyx"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Chapter*
-Statistical Models, Goals, and performance criteria
 \end_layout
 
 \end_body

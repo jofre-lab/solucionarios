@@ -10,9 +10,13 @@
 \makeatletter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
 \theoremstyle{plain}
+\ifx\thechapter\undefined
 \newtheorem{thm}{\protect\theoremname}
-\theoremstyle{definition}
-\newtheorem{problem}[thm]{\protect\problemname}
+\else
+\newtheorem{thm}{\protect\theoremname}[chapter]
+\fi
+  \theoremstyle{definition}
+  \newtheorem{problem}[thm]{\protect\problemname}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
 \usepackage{pgfplots}
@@ -26,7 +30,7 @@
 \makeatother
 
 \usepackage{babel}
-\providecommand{\problemname}{Problem}
+  \providecommand{\problemname}{Problem}
 \providecommand{\theoremname}{Theorem}
 
 \begin{document}
@@ -36,7 +40,7 @@
 Sean $A,B,C$ eventos aleatorios. Identifique las siguientes ecuaciones
 y frases
 \end{problem}
-%
+
 \begin{problem}
 A partir de los axiomas, pruebe la propuedad \textbf{P5}: 
 \[
@@ -52,7 +56,7 @@ P\left(\bigcup_{n=1}^{\infty}A_{n}\right) & =P\left(\bigcup_{n=1}^{k}A_{n}\cup B
  & \leq\sum_{n=1}^{\infty}P\left(A_{n}\right)
 \end{align*}
 \end{problem}
-%
+
 \begin{problem}
 Sean $A_{1},A_{2},\ldots$ eventos aleatorios, mostrar que: 
 \begin{enumerate}
@@ -61,6 +65,7 @@ Sean $A_{1},A_{2},\ldots$ eventos aleatorios, mostrar que:
 \item $P\left(\bigcap_{k=1}^{\infty}A_{k}\right)\geq1-\sum_{k=1}^{\infty}P\left(A_{k}^{c}\right)$
 \end{enumerate}
 \end{problem}
+
 
 \part{Estad\'{\i}stica Matem\'{a}tica Bickel}
 
