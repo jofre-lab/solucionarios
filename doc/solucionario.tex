@@ -1,7 +1,9 @@
 %% LyX 2.2.4 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
-\documentclass[english]{article}
+\documentclass[oneside,english]{book}
 \usepackage[T1]{fontenc}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
 \usepackage{amsmath}
 \usepackage{amsthm}
 
@@ -29,9 +31,7 @@
 
 \begin{document}
 
-\section*{Solucionario Barry James}
-
-\section{Definiciones b\'{a}sicas}
+\chapter{Definiciones b\'{a}sicas}
 \begin{problem}
 Sean $A,B,C$ eventos aleatorios. Identifique las siguientes ecuaciones
 y frases
@@ -52,5 +52,17 @@ P\left(\bigcup_{n=1}^{\infty}A_{n}\right) & =P\left(\bigcup_{n=1}^{k}A_{n}\cup B
  & \leq\sum_{n=1}^{\infty}P\left(A_{n}\right)
 \end{align*}
 \end{problem}
+%
+\begin{problem}
+Sean $A_{1},A_{2},\ldots$ eventos aleatorios, mostrar que: 
+\begin{enumerate}
+\item $P\left(\bigcap_{k=1}^{n}A_{k}\right)\geq1-\sum_{k=1}^{n}P\left(A_{k}^{c}\right)$
+\item Si $P\left(A_{k}\right)\geq1-\varepsilon\implies P\left(\bigcap_{k=1}^{n}A_{k}\right)\geq1-n\varepsilon$
+\item $P\left(\bigcap_{k=1}^{\infty}A_{k}\right)\geq1-\sum_{k=1}^{\infty}P\left(A_{k}^{c}\right)$
+\end{enumerate}
+\end{problem}
 
+\part{Estad\'{\i}stica Matem\'{a}tica Bickel}
+
+\chapter*{Statistical Models, Goals, and performance criteria}
 \end{document}
