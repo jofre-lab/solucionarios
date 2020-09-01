@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2020.7.15)  31 AUG 2020 21:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2020.7.15)  1 SEP 2020 10:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -577,27 +577,24 @@ latex2htmlLength oddsidemargin=62.0pt
 
 latex2htmlLength evensidemargin=62.0pt
 
+\openout2 = `inferencia-clasica.aux'.
 
-! LaTeX Error: File `inferencia-clasica.tex' not found.
+No file inferencia-clasica.tex.
+l2hSize :figure219:12.0pt::0.0pt::0.0pt.
+[1
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: tex)
 
-Enter file name: 
-! Emergency stop.
-<read *> 
-         
-l.190 ...nter}\vbox{\input{inferencia-clasica.tex}
-                                                  ^^M
-*** (cannot \read from terminal in nonstop modes)
 
- 
+
+
+] (./images.aux (./inferencia-clasica.aux)) ) 
 Here is how much of TeX's memory you used:
- 21964 strings out of 494799
- 568347 string characters out of 6176826
+ 21971 strings out of 494799
+ 568429 string characters out of 6176826
  754091 words of memory out of 5000000
- 24970 multiletter control sequences out of 15000+600000
+ 24972 multiletter control sequences out of 15000+600000
  4403 words of font info for 15 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 62i,2n,96p,725b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
-No pages of output.
+ 62i,5n,96p,725b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on images.dvi (1 page, 5000 bytes).

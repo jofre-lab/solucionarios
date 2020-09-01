@@ -189,7 +189,7 @@ Inferencia Clásica
 
 \begin_layout Standard
 \begin_inset CommandInset include
-LatexCommand input
+LatexCommand include
 filename "inferencia-clasica.lyx"
 
 \end_inset
