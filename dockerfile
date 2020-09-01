@@ -18,7 +18,7 @@ CMD lyx --force-overwrite --export xetex /home/content/solucionario.lyx; latex2h
 && lyx --force-overwrite --export xetex /home/content/inferencia-bayesiana.lyx; latex2html /home/content/inferencia-bayesiana.tex
 
 # docker build . -t lyx2web
-# docker run -v ${PWD}/doc:/home/content -t lyx2web:latest; git add . ; git commit -a -m "just update"
+# docker run -v ${PWD}/doc:/home/content -t lyx2web:latest; git add . ; git commit -a -m "just update"; git push
 # docker run -v ${PWD}/content:/home/content --rm -it  lyx2web:latest
 # lyx --force-overwrite --export pdflatex /home/content/test.lyx
 # latex2html /home/content/test.tex
