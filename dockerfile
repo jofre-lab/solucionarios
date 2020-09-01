@@ -14,8 +14,8 @@ RUN lyx -batch /usr/share/lyx/doc/LaTeXConfig.lyx
 RUN mkdir /home/content
 RUN apt-get install latex2html -y 
 CMD lyx --force-overwrite --export xetex /home/content/solucionario.lyx; latex2html /home/content/solucionario.tex \
-lyx --force-overwrite --export xetex /home/content/inferencia-clasica.lyx; latex2html /home/content/inferencia-clasica.tex \
-lyx --force-overwrite --export xetex /home/content/inferencia-bayesiana.lyx; latex2html /home/content/inferencia-bayesiana.tex
+&& lyx --force-overwrite --export xetex /home/content/inferencia-clasica.lyx; latex2html /home/content/inferencia-clasica.tex \
+&& lyx --force-overwrite --export xetex /home/content/inferencia-bayesiana.lyx; latex2html /home/content/inferencia-bayesiana.tex
 
 # docker build . -t lyx2web
 # docker run -v ${PWD}/doc:/home/content -t lyx2web:latest; git add . ; git commit -a -m "just update"

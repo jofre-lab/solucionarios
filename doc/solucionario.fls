@@ -236,6 +236,7 @@ INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /Users/ljofreflor/dev/solucionario-barry-james.github.io/doc/inferencia-clasica.tex
 INPUT /Users/ljofreflor/dev/solucionario-barry-james.github.io/doc/inferencia-clasica.tex
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/jknappen/ec/ecsl1000.tfm
 INPUT /Users/ljofreflor/dev/solucionario-barry-james.github.io/doc/solucionario.aux
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
