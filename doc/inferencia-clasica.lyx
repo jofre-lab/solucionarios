@@ -4,7 +4,7 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass article
+\textclass book
 \begin_preamble
 \usepackage{pgfplots}
 \usepackage{enumitem}
@@ -87,12 +87,12 @@ theorems-chap
 
 \begin_body
 
-\begin_layout Section
+\begin_layout Chapter
 Reducción de datos y estadísticos suficientes
 \end_layout
 
 \begin_layout Problem
-Ejemplo
+Ejemplo de estadísticos suficientes mediante teorema de factorización
 \end_layout
 
 \end_body
