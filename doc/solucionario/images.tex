@@ -13,9 +13,13 @@
 
 \makeatletter
 \theoremstyle{plain}
+\ifx\thechapter\undefined
 
-\newtheorem{thm}{\protect\theoremname } \theoremstyle{definition}
+\newtheorem{thm}{\protect\theoremname } \else
 
+\newtheorem{thm}{\protect\theoremname }[chapter] \fi
+  \theoremstyle{definition}
+  
 \newtheorem{problem}[thm]{\protect\problemname } 
 
 \usepackage{pgfplots}
@@ -138,20 +142,20 @@
   \else\expandafter\vss\fi}%
 \providecommand{\selectlanguage}[1]{}%
 \makeatletter \tracingstats = 1 
-\providecommand{\Nu}{\textrm{N}}
-\providecommand{\Iota}{\textrm{J}}
-\providecommand{\Zeta}{\textrm{Z}}
-\providecommand{\Tau}{\textrm{T}}
-\providecommand{\Epsilon}{\textrm{E}}
-\providecommand{\Eta}{\textrm{H}}
-\providecommand{\Alpha}{\textrm{A}}
-\providecommand{\Kappa}{\textrm{K}}
-\providecommand{\Chi}{\textrm{X}}
-\providecommand{\Mu}{\textrm{M}}
 \providecommand{\omicron}{\textrm{o}}
-\providecommand{\Rho}{\textrm{R}}
+\providecommand{\Tau}{\textrm{T}}
 \providecommand{\Omicron}{\textrm{O}}
+\providecommand{\Chi}{\textrm{X}}
+\providecommand{\Alpha}{\textrm{A}}
+\providecommand{\Zeta}{\textrm{Z}}
+\providecommand{\Epsilon}{\textrm{E}}
 \providecommand{\Beta}{\textrm{B}}
+\providecommand{\Mu}{\textrm{M}}
+\providecommand{\Nu}{\textrm{N}}
+\providecommand{\Rho}{\textrm{R}}
+\providecommand{\Eta}{\textrm{H}}
+\providecommand{\Kappa}{\textrm{K}}
+\providecommand{\Iota}{\textrm{J}}
 
 
 \begin{document}
@@ -178,10 +182,11 @@
 
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
+\stepcounter{part}
 \stepcounter{chapter}
 \stepcounter{part}
 {\newpage\clearpage
-\lthtmlfigureA{center206}%
+\lthtmlfigureA{center219}%
 \begin{center}\vbox{\input{inferencia-clasica.tex}
 }\end{center}%
 \lthtmlfigureZ
