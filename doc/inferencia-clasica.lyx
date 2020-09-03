@@ -95,5 +95,27 @@ Reducción de datos y estadísticos suficientes
 Ejemplo de estadísticos suficientes mediante teorema de factorización
 \end_layout
 
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $Z$
+\end_inset
+
+ una 
+\begin_inset Formula $v.a$
+\end_inset
+
+ positiva, si 
+\begin_inset Formula $E\left(Z\right)=0\implies P\left(Z=0\right)=1$
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
