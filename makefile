@@ -10,3 +10,6 @@ release:
 clear:
 	rm docs/content/*.tex
 	rm docs/content/*.aux
+	rm docs/content/*.log
+	rm docs/content/*.fls
+	rm docs/content/*.gz
