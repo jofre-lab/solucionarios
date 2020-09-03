@@ -4,7 +4,7 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass article
+\textclass book
 \begin_preamble
 \usepackage{pgfplots}
 \usepackage{enumitem}
@@ -12,6 +12,10 @@
 \setenumerate[2]{label=a)}
 \end_preamble
 \use_default_options true
+\begin_modules
+theorems-ams
+theorems-chap
+\end_modules
 \maintain_unincluded_children false
 \language english
 \language_package default
@@ -83,7 +87,113 @@
 
 \begin_body
 
+\begin_layout Part
+Probabilidad
+\end_layout
+
+\begin_layout Chapter
+Definiciones básicas
+\end_layout
+
+\begin_layout Problem
+Sean 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+ eventos aleatorios.
+ Identifique las siguientes ecuaciones y frases
+\end_layout
+
 \begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+A partir de los axiomas, pruebe la propuedad 
+\series bold
+P5
+\series default
+: 
+\begin_inset Formula 
+\[
+P\left(\bigcup_{n=1}^{\infty}A_{n}\right)\leq\sum_{n=1}^{\infty}P\left(A_{n}\right)
+\]
+
+\end_inset
+
+Consideremos 
+\begin_inset Formula $B_{k}=\bigcup_{n=k}^{\infty}A_{n}$
+\end_inset
+
+ entonces 
+\begin_inset Formula 
+\begin{align*}
+P\left(\bigcup_{n=1}^{\infty}A_{n}\right) & =P\left(\bigcup_{n=1}^{k}A_{n}\cup B_{k+1}\right)\\
+ & \leq P\left(\bigcup_{n=1}^{k}A_{n}\right)+P\left(B_{k+1}\right)\\
+ & \leq\sum_{n=1}^{k}P\left(A_{n}\right)+P\left(B_{k+1}\right)\\
+ & =\lim_{k\to\infty}\sum_{n=1}^{k}P\left(A_{n}\right)+P\left(B_{k+1}\right)\\
+ & =\sum_{n=1}^{\infty}P\left(A_{n}\right)+\lim_{k\to\infty}P\left(B_{k+1}\right)\\
+ & \leq\sum_{n=1}^{\infty}P\left(A_{n}\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Sean 
+\begin_inset Formula $A_{1},A_{2},\ldots$
+\end_inset
+
+ eventos aleatorios, mostrar que: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $P\left(\bigcap_{k=1}^{n}A_{k}\right)\geq1-\sum_{k=1}^{n}P\left(A_{k}^{c}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $P\left(A_{k}\right)\geq1-\varepsilon\implies P\left(\bigcap_{k=1}^{n}A_{k}\right)\geq1-n\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(\bigcap_{k=1}^{\infty}A_{k}\right)\geq1-\sum_{k=1}^{\infty}P\left(A_{k}^{c}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Part
+Inferencia Clásica
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "inferencia-clasica.lyx"
+
+\end_inset
+
 
 \end_layout
 

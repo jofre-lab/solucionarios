@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2020.7.15)  3 SEP 2020 04:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2020.7.15)  3 SEP 2020 05:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -577,6 +577,77 @@ latex2htmlLength oddsidemargin=62.0pt
 
 latex2htmlLength evensidemargin=62.0pt
 
+l2hSize :tex2html_wrap_inline188:7.33331pt::7.33331pt::32.83803pt.
+[1
+
+
+
+]
+l2hSize :tex2html_wrap_indisplay195:18.00014pt::18.00014pt::115.7523pt.
+[2
+
+
+]
+l2hSize :tex2html_wrap_inline197:8.54175pt::8.54175pt::65.2841pt.
+[3
+
+
+]
+l2hSize :tex2html_wrap_indisplay198:18.00014pt::18.00014pt::55.48727pt.
+[4
+
+
+]
+l2hSize :tex2html_wrap_indisplay199:18.86115pt::18.86115pt::99.7841pt.
+[5
+
+
+]
+l2hSize :tex2html_wrap_indisplay200:18.86115pt::18.86115pt::118.14868pt.
+[6
+
+
+]
+l2hSize :tex2html_wrap_indisplay201:18.86115pt::18.86115pt::110.09311pt.
+[7
+
+
+]
+l2hSize :tex2html_wrap_indisplay202:18.86115pt::18.86115pt::132.12439pt.
+[8
+
+
+]
+l2hSize :tex2html_wrap_indisplay203:17.01393pt::17.01393pt::132.12439pt.
+[9
+
+
+]
+l2hSize :tex2html_wrap_indisplay204:17.01393pt::17.01393pt::57.98721pt.
+[10
+
+
+]
+l2hSize :tex2html_wrap_inline211:7.33331pt::7.33331pt::45.02762pt.
+[11
+
+
+]
+l2hSize :tex2html_wrap_inline213:8.54175pt::8.54175pt::142.71518pt.
+[12
+
+
+]
+l2hSize :tex2html_wrap_inline215:8.54175pt::8.54175pt::188.55386pt.
+[13
+
+
+]
+l2hSize :tex2html_wrap_inline217:8.54175pt::8.54175pt::142.71518pt.
+[14
+
+
+]
 
 ! LaTeX Error: File `inferencia-clasica.tex' not found.
 
@@ -587,17 +658,17 @@ Enter file name:
 ! Emergency stop.
 <read *> 
          
-l.190 ...nter}\vbox{\input{inferencia-clasica.tex}
+l.275 ...nter}\vbox{\input{inferencia-clasica.tex}
                                                   ^^M
 *** (cannot \read from terminal in nonstop modes)
 
  
 Here is how much of TeX's memory you used:
- 21965 strings out of 494799
- 568369 string characters out of 6176826
- 754090 words of memory out of 5000000
- 24971 multiletter control sequences out of 15000+600000
- 4403 words of font info for 15 fonts, out of 8000000 for 9000
+ 21969 strings out of 494799
+ 568412 string characters out of 6176826
+ 755090 words of memory out of 5000000
+ 24973 multiletter control sequences out of 15000+600000
+ 4857 words of font info for 17 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 62i,2n,96p,725b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
-No pages of output.
+ 62i,5n,96p,725b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+Output written on images.dvi (14 pages, 9648 bytes).
