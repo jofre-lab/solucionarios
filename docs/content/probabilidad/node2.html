@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2018 (Released Feb 1, 2018) -->
+<HTML>
+<HEAD>
+<TITLE>Definiciones b&#225;sicas</TITLE>
+<META NAME="description" CONTENT="Definiciones b&#225;sicas">
+<META NAME="keywords" CONTENT="probabilidad">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2018">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="probabilidad.css">
+
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="up" HREF="node1.html">
+<LINK REL="next" HREF="node3.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html24"
+  HREF="node3.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html22"
+  HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html18"
+  HREF="node1.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html25"
+  HREF="node3.html">Inferencia Cl&#225;sica</A>
+<B> Up:</B> <A NAME="tex2html23"
+  HREF="node1.html">Probabilidad</A>
+<B> Previous:</B> <A NAME="tex2html19"
+  HREF="node1.html">Probabilidad</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION01100000000000000000">
+Definiciones b&#225;sicas</A>
+</H1>
+<P>
+<DIV><B>Problem <SPAN CLASS="arabic">1</SPAN></B> &nbsp; 
+Sean <SPAN CLASS="MATH"><IMG
+ WIDTH="55" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$A,B,C$"></SPAN> eventos aleatorios. Identifique las siguientes ecuaciones
+y frases</DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Problem <SPAN CLASS="arabic">2</SPAN></B> &nbsp; 
+A partir de los axiomas, pruebe la propuedad <SPAN  CLASS="textbf">P5</SPAN>: 
+<P><!-- MATH
+ \begin{displaymath}
+P\left(\bigcup_{n=1}^{\infty}A_{n}\right)\leq\sum_{n=1}^{\infty}P\left(A_{n}\right)
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="187" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$\displaystyle P\left(\bigcup_{n=1}^{\infty}A_{n}\right)\leq\sum_{n=1}^{\infty}P\left(A_{n}\right)
+$">
+</DIV><P></P>
+Consideremos <!-- MATH
+ $B_{k}=\bigcup_{n=k}^{\infty}A_{n}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="107" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$B_{k}=\bigcup_{n=k}^{\infty}A_{n}$"></SPAN> entonces 
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><TABLE CELLPADDING="0" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
+ WIDTH="91" HEIGHT="63" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$\displaystyle P\left(\bigcup_{n=1}^{\infty}A_{n}\right)$"></SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="162" HEIGHT="67" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$\displaystyle =P\left(\bigcup_{n=1}^{k}A_{n}\cup B_{k+1}\right)$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="191" HEIGHT="67" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$\displaystyle \leq P\left(\bigcup_{n=1}^{k}A_{n}\right)+P\left(B_{k+1}\right)$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="178" HEIGHT="67" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$\displaystyle \leq\sum_{n=1}^{k}P\left(A_{n}\right)+P\left(B_{k+1}\right)$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="213" HEIGHT="67" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$\displaystyle =\lim_{k\to\infty}\sum_{n=1}^{k}P\left(A_{n}\right)+P\left(B_{k+1}\right)$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="213" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$\displaystyle =\sum_{n=1}^{\infty}P\left(A_{n}\right)+\lim_{k\to\infty}P\left(B_{k+1}\right)$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="95" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$\displaystyle \leq\sum_{n=1}^{\infty}P\left(A_{n}\right)$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P></DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Problem <SPAN CLASS="arabic">3</SPAN></B> &nbsp; 
+Sean <!-- MATH
+ $A_{1},A_{2},\ldots$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="75" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$A_{1},A_{2},\ldots$"></SPAN> eventos aleatorios, mostrar que: 
+
+<OL>
+<LI><!-- MATH
+ $P\left(\bigcap_{k=1}^{n}A_{k}\right)\geq1-\sum_{k=1}^{n}P\left(A_{k}^{c}\right)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="230" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$P\left(\bigcap_{k=1}^{n}A_{k}\right)\geq1-\sum_{k=1}^{n}P\left(A_{k}^{c}\right)$"></SPAN>
+</LI>
+<LI>Si <!-- MATH
+ $P\left(A_{k}\right)\geq1-\varepsilon\implies P\left(\bigcap_{k=1}^{n}A_{k}\right)\geq1-n\varepsilon$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="303" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$P\left(A_{k}\right)\geq1-\varepsilon\implies P\left(\bigcap_{k=1}^{n}A_{k}\right)\geq1-n\varepsilon$"></SPAN>
+</LI>
+<LI><!-- MATH
+ $P\left(\bigcap_{k=1}^{\infty}A_{k}\right)\geq1-\sum_{k=1}^{\infty}P\left(A_{k}^{c}\right)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="230" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$P\left(\bigcap_{k=1}^{\infty}A_{k}\right)\geq1-\sum_{k=1}^{\infty}P\left(A_{k}^{c}\right)$"></SPAN>
+</LI>
+</OL></DIV><P></P>
+
+<P>
+<BR><HR>
+
+</BODY>
+</HTML>

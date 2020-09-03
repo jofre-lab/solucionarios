@@ -13,9 +13,9 @@ RUN apt-get upgrade -y
 RUN lyx -batch /usr/share/lyx/doc/LaTeXConfig.lyx
 RUN mkdir /home/content
 RUN apt-get install latex2html -y 
-CMD lyx --force-overwrite --export xetex /home/content/solucionario.lyx; latex2html /home/content/solucionario.tex \
-&& lyx --force-overwrite --export xetex /home/content/inferencia-clasica.lyx; latex2html /home/content/inferencia-clasica.tex \
-&& lyx --force-overwrite --export xetex /home/content/inferencia-bayesiana.lyx; latex2html /home/content/inferencia-bayesiana.tex
+CMD lyx --force-overwrite --export xetex /home/content/probabilidad.lyx &&        latex2html /home/content/probabilidad.tex \
+&& lyx --force-overwrite --export xetex /home/content/inferencia-clasica.lyx &&   latex2html /home/content/inferencia-clasica.tex \
+&& lyx --force-overwrite --export xetex /home/content/inferencia-bayesiana.lyx && latex2html /home/content/inferencia-bayesiana.tex
 
 
 # docker run -v ${PWD}/content:/home/content --rm -it  lyx2web:latest
