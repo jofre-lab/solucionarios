@@ -83,8 +83,29 @@
 
 \begin_body
 
-\begin_layout Standard
+\begin_layout Section
+Teorema de De Finetti
+\end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+https://people.eecs.berkeley.edu/~jordan/courses/260-spring10/lectures/lecture1.pdf
+\end_layout
+
+\begin_layout Plain Layout
+http://wwwf.imperial.ac.uk/~das01/MyWeb/M3S3/Handouts/DeFinetti.pdf
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Urnas de polya
 \end_layout
 
 \end_body
