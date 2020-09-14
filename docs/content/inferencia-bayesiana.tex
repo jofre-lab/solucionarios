@@ -2,8 +2,16 @@
 %% Do not edit unless you really know what you are doing.
 \documentclass[english]{article}
 \usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsthm}
 
 \makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\theoremstyle{plain}
+\newtheorem{thm}{\protect\theoremname}
+  \theoremstyle{definition}
+  \newtheorem{problem}[thm]{\protect\problemname}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
 \usepackage{pgfplots}
 \usepackage{enumitem}
@@ -16,9 +24,168 @@
 \makeatother
 
 \usepackage{babel}
+  \providecommand{\problemname}{Problem}
+\providecommand{\theoremname}{Theorem}
+
 \begin{document}
 
 \section{Teorema de De Finetti}
 
-Urnas de polya
+Las urnas de Polya son un buen ejemplo de variables aleatorias intercambiables
+
+\section{Primeros ejemplos de medida de De Finetti}
+
+A pesar de que el teorema de representaci\'{o}n de De Finetti nos
+garantizan la existencia de una distribuci\'{o}n a priori no nos dice
+cual es el precisamente, podemos recolectar algunos ejemplos de ciertas
+bibliograf\'{\i}as para hacernos una idea de como operar con estos
+conceptos. Si tenemos una muestra aleatoria independiente es simple
+ver que
+\[
+f\left(x_{1},\ldots,x_{n}\right)=\prod_{i=1}^{n}f\left(x_{i}\right)\implies f\left(x_{n+1},\ldots,x_{n+m}|x_{1},\ldots,x_{n}\right)=\prod_{i=n+1}^{m}f\left(x_{i}\right)
+\]
+, esto quiere decir que no hay aprendizaje desde la experiencia. \marginpar{no hay aprendizaje desde la experiencia} 
+\begin{thm}
+Sea $\theta\sim f\left(\theta\right)$ y $Y_{1},\ldots,Y_{n}$ condicionalmente
+independientes de $\theta$ entonces $Y_{1},\ldots,Y_{n}$ es intercambiable.
+\end{thm}
+
+\begin{proof}
+Basta con probar lo siguiente 
+\begin{align*}
+f\left(y_{1},\ldots,y_{n}\right) & =\int f\left(y_{1},\ldots,y_{n}|\theta\right)dF\left(\theta\right)\\
+ & =\int\prod_{i=1}^{n}f\left(y_{i}|\theta\right)dF\left(\theta\right)\\
+ & =f\left(y_{\pi_{1}},\ldots,y_{\pi_{n}}\right)
+\end{align*}
+\end{proof}
+B\'{a}sicamente el teorema de De Finetti es el rec\'{\i}proco de esta
+proposici\'{o}n. La prueba de De Finetti para variables aleatorias
+dicot\'{o}micas se explica a continuaci\'{o}n. Consideremos el caso
+de una secuencia intercambiable de variables aleatorias $0-1$. Entonces
+\begin{align*}
+p\left(y_{1},\ldots,y_{n}\right) & =\int\prod_{i=1}^{n}p\left(y_{i}|\theta\right)dF\left(\theta\right)
+\end{align*}
+donde 
+\[
+F\left(\theta\right)=\lim_{n\to\infty}P\left(s_{n}\leq\theta\right)
+\]
+notemos que 
+\[
+p\left(y_{1}+\ldots+y_{n}=s_{n}\right)=\binom{n}{s_{n}}p\left(y_{1},\ldots,y_{n}\right)=\binom{n}{s_{n}}p\left(y_{\pi_{1}},\ldots,y_{\pi_{n}}\right)
+\]
+dado que vale para cualquier permutaci\'{o}n, ahora bien, sea $N>n$
+entonces 
+\[
+p\left(y_{1}+\ldots+y_{n}=s_{n}\right)=\sum p\left(y_{1}+\ldots+y_{n}=s_{n}|y_{1}+\ldots+y_{N}=s_{N}\right)p\left(y_{1}+\ldots+y_{N}=s_{N}\right)
+\]
+
+
+\section{BDA 3}
+
+En esta secci\'{o}n se ilustrar\'{a}n algunos conceptos \'{u}tiles
+expuestos en el libro de Gelman y algunos ejercicios que son frecuentes
+en c\'{a}tedras de inferencia bayesiana que se basan en el texto.
+
+\subsection{Introducci\'{o} y motivaci\'{o}n}
+
+\subsection{Modelos uniparam\'{e}tricos}
+\begin{problem}[cap2.prob5]
+La distribuci\'{o}n a posterior es un compromiso entre la priori
+y los datos: Sea $n$ el n\'{u}mero de lanzamientos de una moneda,
+la cual tiene probabilidad de $\theta$ de ser cara. (a) Si la distribuci\'{o}n
+a priori es una uniforme entre $0,1$, derive la distribuci\'{o}n
+predictiva 
+\[
+p\left(y=k\right)=\int_{0}^{1}p\left(y=k|\theta\right)d\theta
+\]
+para cada $k=1,\ldots,n$. Sol: 
+\begin{align*}
+p\left(y=k\right) & =\int_{0}^{1}p\left(y=k,\theta\right)d\theta\\
+ & =\int_{0}^{1}p\left(y=k|\theta\right)\underbrace{p\left(\theta\right)}_{1}d\theta\\
+ & =\int_{0}^{1}p\left(y=k|\theta\right)d\theta\\
+ & =\int_{0}^{1}\binom{n}{k}\theta^{k}\left(1-\theta\right)^{n-k}d\theta\\
+ & =\binom{n}{k}\int_{0}^{1}\theta^{k}\left(1-\theta\right)^{n-k}d\theta\\
+ & =\binom{n}{k}\frac{\Gamma\left(k+1\right)\Gamma\left(n-k+1\right)}{\Gamma\left(n+2\right)}\\
+ & =\binom{n}{k}\frac{k!\left(n-k\right)!}{\left(n+1\right)!}\\
+ & =\frac{1}{n+1}
+\end{align*}
+usamos el siguiente resultado 
+\begin{align*}
+\int_{0}^{1}\frac{\Gamma\left(\alpha+\beta\right)}{\Gamma\left(\alpha\right)\Gamma\left(\beta\right)}\theta^{\alpha-1}\left(1-\theta\right)^{\beta-1}d\theta & =1\\
+\implies\int_{0}^{1}\theta^{\alpha-1}\left(1-\theta\right)^{\beta-1}d\theta & =\frac{\Gamma\left(\alpha\right)\Gamma\left(\beta\right)}{\Gamma\left(\alpha+\beta\right)}\\
+\implies\int_{0}^{1}\theta^{k}\left(1-\theta\right)^{n-k}d\theta & =\frac{\Gamma\left(k+1\right)\Gamma\left(n-k+1\right)}{\Gamma\left(k+1+n-k+1\right)}=\frac{\Gamma\left(k+1\right)\Gamma\left(n-k+1\right)}{\Gamma\left(n+2\right)}
+\end{align*}
+(b) Supona que asigna una distribuci\'{o}n $\theta\sim\text{beta}\left(\alpha,\beta\right)$
+y usted observa $y$ caras en sus $n$ lanzamientos. Muestre algebraicamente
+que la media posterior involucra a la media a priori y la media de
+los datos. 
+\begin{align*}
+p\left(\theta|y\right) & \propto p\left(y|\theta\right)p\left(\theta\right)\\
+ & =\binom{n}{y}\theta^{y}\left(1-\theta\right)^{n-y}\frac{\Gamma\left(\alpha+\beta\right)}{\Gamma\left(\alpha\right)\Gamma\left(\beta\right)}\theta^{\alpha-1}\left(1-\theta\right)^{\beta-1}\\
+ & \propto\theta^{\alpha+y-1}\left(1-\theta\right)^{\beta+n-y-1}\\
+\implies\theta|y & \sim\text{beta}\left(\alpha+y,\beta+n-y\right)
+\end{align*}
+luego, la media condicional 
+\begin{align*}
+E\left(\theta|y\right) & =\frac{\alpha+y}{\alpha+y+\beta+n-y}\\
+ & =\frac{\alpha+y}{\alpha+\beta+n}\\
+ & =\frac{\alpha}{\alpha+\beta+n}+\frac{y}{\alpha+\beta+n}\\
+ & =\frac{\alpha+\beta}{\alpha+\beta}\frac{\alpha}{\alpha+\beta+n}+\frac{n}{n}\frac{y}{\alpha+\beta+n}\\
+ & =\frac{\alpha+\beta}{\alpha+\beta+n}\underbrace{\frac{\alpha}{\alpha+\beta}}_{E\left(\theta\right)}+\frac{n}{\alpha+\beta+n}\frac{y}{n}
+\end{align*}
+\end{problem}
+
+
+\paragraph*{2.5c. }
+
+Muestre que si la priori es uniforme entonces la media a posteriori,
+entonces la varianza a posterior es siempre menor a la varianza a
+priori. Sol: Sea $\theta\sim\text{beta}\left(1,1\right)$
+
+\begin{align*}
+\text{Var}\left(\theta|y\right) & =\frac{\left(\alpha+y\right)\left(\beta+n-y\right)}{\left(\alpha+y+\beta+n-y\right)^{2}\left(\alpha+y+\beta+n-y\right)}\\
+ & =\frac{\left(\alpha+y\right)\left(\beta+n-y\right)}{\left(\alpha+\beta+n\right)^{2}\left(\alpha+\beta+n+1\right)}\\
+ & =\frac{\left(1+y\right)\left(1+n-y\right)}{\left(2+n\right)^{2}\left(2+n+1\right)}=\frac{\left(1+y\right)\left(1+n-y\right)}{\left(2+n\right)^{2}\left(n+3\right)}\leq\frac{1}{12}=\text{Var}\left(\theta\right)
+\end{align*}
+
+
+\paragraph*{2.5d. }
+
+De un ejemplo de una priori $\text{beta}\left(\alpha,\beta\right)$
+con $y$ y $n$ donde va varianza posterior es menor a la varianza
+a priori. Sol. 
+\[
+\frac{\left(\alpha+y\right)\left(\beta+n-y\right)}{\left(\alpha+\beta+n\right)^{2}\left(\alpha+\beta+n+1\right)}\leq\frac{\alpha\beta}{\left(\alpha+\beta\right)^{2}\left(\alpha+\beta+1\right)}
+\]
+y seleccionamos valores que respeten la igualdad.
+
+\section{Ayudant\'{\i}a}
+
+Ejercicios de las ayudant\'{\i}as del segundo semestre del 2020
+
+\subsection{Ayudant\'{\i}a 1}
+
+\subsection{Ayudant\'{\i}a 2}
+
+\subsection{Ayudant\'{\i}a 3}
+
+\subsection{Ayudant\'{\i}a 4}
+
+\section{Ejemplos de c\'{a}tedra}
+
+demuestre que que modelo probit con $\pi\left(x\right)=\Phi\left(\beta_{0}+\beta_{1}x|\mu,\sigma^{2}\right)$
+es no identificado para $\mu$ y $\sigma^{2}$. La demostraci\'{o}n
+se basa en que 
+\begin{align*}
+Y_{i}|x_{i} & \sim\text{ber}\left(\pi\left(x_{i}\right)\right)\\
+\implies\pi\left(x\right) & =\Phi\left(\beta_{0}+\beta_{1}x|\mu,\sigma^{2}\right)\\
+\pi\left(x\right) & =\Phi_{0,1}\left(\frac{\beta_{0}+\beta_{1}x-\mu}{\sigma}\right)\\
+\pi\left(x\right) & =\Phi_{0,1}\left(\beta_{0}^{*}+\beta_{1}^{*}x\right)
+\end{align*}
+entonces existen par\'{a}metros observacionalmente equivalentes.
+
+\paragraph{Intervalo de Confianza }
+
+El par\'{a}metro est\'{a} cubierto por el intervalo de confianza con
+una probabilidad $1-\alpha$.
 \end{document}

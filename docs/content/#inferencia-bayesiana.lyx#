@@ -1,0 +1,448 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{pgfplots}
+\usepackage{enumitem}
+\setenumerate{label=A)}
+\setenumerate[2]{label=a)}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Teorema de De Finetti
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+https://people.eecs.berkeley.edu/~jordan/courses/260-spring10/lectures/lecture1.pdf
+\end_layout
+
+\begin_layout Plain Layout
+http://wwwf.imperial.ac.uk/~das01/MyWeb/M3S3/Handouts/DeFinetti.pdf
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Las urnas de Polya son un buen ejemplo de variables aleatorias intercambiables
+\end_layout
+
+\begin_layout Section
+Primeros ejemplos de medida de De Finetti
+\end_layout
+
+\begin_layout Standard
+A pesar de que el teorema de representación de De Finetti nos garantizan
+ la existencia de una distribución a priori no nos dice cual es el precisamente,
+ podemos recolectar algunos ejemplos de ciertas bibliografías para hacernos
+ una idea de como operar con estos conceptos.
+ Si tenemos una muestra aleatoria independiente es simple ver que
+\begin_inset Formula 
+\[
+f\left(x_{1},\ldots,x_{n}\right)=\prod_{i=1}^{n}f\left(x_{i}\right)\implies f\left(x_{n+1},\ldots,x_{n+m}|x_{1},\ldots,x_{n}\right)=\prod_{i=n+1}^{m}f\left(x_{i}\right)
+\]
+
+\end_inset
+
+, esto quiere decir que no hay aprendizaje desde la experiencia.
+ 
+\begin_inset Marginal
+status open
+
+\begin_layout Plain Layout
+no hay aprendizaje desde la experiencia
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Theorem
+Sea 
+\begin_inset Formula $\theta\sim f\left(\theta\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $Y_{1},\ldots,Y_{n}$
+\end_inset
+
+ condicionalmente independientes de 
+\begin_inset Formula $\theta$
+\end_inset
+
+ entonces 
+\begin_inset Formula $Y_{1},\ldots,Y_{n}$
+\end_inset
+
+ es intercambiable.
+\end_layout
+
+\begin_layout Proof
+Basta con probar lo siguiente 
+\begin_inset Formula 
+\begin{align*}
+f\left(y_{1},\ldots,y_{n}\right) & =\int f\left(y_{1},\ldots,y_{n}|\theta\right)dF\left(\theta\right)\\
+ & =\int\prod_{i=1}^{n}f\left(y_{i}|\theta\right)dF\left(\theta\right)\\
+ & =f\left(y_{\pi_{1}},\ldots,y_{\pi_{n}}\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Básicamente el teorema de De Finetti es el recíproco de esta proposición.
+ La prueba de De Finetti para variables aleatorias dicotómicas se explica
+ a continuación.
+ Consideremos el caso de una secuencia intercambiable de variables aleatorias
+ 
+\begin_inset Formula $0-1$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula 
+\begin{align*}
+p\left(y_{1},\ldots,y_{n}\right) & =\int\prod_{i=1}^{n}p\left(y_{i}|\theta\right)dF\left(\theta\right)
+\end{align*}
+
+\end_inset
+
+donde 
+\begin_inset Formula 
+\[
+F\left(\theta\right)=\lim_{n\to\infty}P\left(s_{n}\leq\theta\right)
+\]
+
+\end_inset
+
+notemos que 
+\begin_inset Formula 
+\[
+p\left(y_{1}+\ldots+y_{n}=s_{n}\right)=\binom{n}{s_{n}}p\left(y_{1},\ldots,y_{n}\right)=\binom{n}{s_{n}}p\left(y_{\pi_{1}},\ldots,y_{\pi_{n}}\right)
+\]
+
+\end_inset
+
+dado que vale para cualquier permutación, ahora bien, sea 
+\begin_inset Formula $N>n$
+\end_inset
+
+ entonces 
+\begin_inset Formula 
+\[
+p\left(y_{1}+\ldots+y_{n}=s_{n}\right)=\sum p\left(y_{1}+\ldots+y_{n}=s_{n}|y_{1}+\ldots+y_{N}=s_{N}\right)p\left(y_{1}+\ldots+y_{N}=s_{N}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+BDA 3
+\end_layout
+
+\begin_layout Standard
+En esta sección se ilustrarán algunos conceptos útiles expuestos en el libro
+ de Gelman y algunos ejercicios que son frecuentes en cátedras de inferencia
+ bayesiana que se basan en el texto.
+\end_layout
+
+\begin_layout Subsection
+Introducció y motivación
+\end_layout
+
+\begin_layout Subsection
+Modelos uniparamétricos
+\end_layout
+
+\begin_layout Problem
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+cap2.prob5
+\end_layout
+
+\end_inset
+
+La distribución a posterior es un compromiso entre la priori y los datos:
+ Sea 
+\begin_inset Formula $n$
+\end_inset
+
+ el número de lanzamientos de una moneda, la cual tiene probabilidad de
+ 
+\begin_inset Formula $\theta$
+\end_inset
+
+ de ser cara.
+ (a) Si la distribución a priori es una uniforme entre 
+\begin_inset Formula $0,1$
+\end_inset
+
+, derive la distribución predictiva 
+\begin_inset Formula 
+\[
+p\left(y=k\right)=\int_{0}^{1}p\left(y=k|\theta\right)d\theta
+\]
+
+\end_inset
+
+para cada 
+\begin_inset Formula $k=1,\ldots,n$
+\end_inset
+
+.
+ Sol: 
+\begin_inset Formula 
+\begin{align*}
+p\left(y=k\right) & =\int_{0}^{1}p\left(y=k,\theta\right)d\theta\\
+ & =\int_{0}^{1}p\left(y=k|\theta\right)\underbrace{p\left(\theta\right)}_{1}d\theta\\
+ & =\int_{0}^{1}p\left(y=k|\theta\right)d\theta\\
+ & =\int_{0}^{1}\binom{n}{k}\theta^{k}\left(1-\theta\right)^{n-k}d\theta\\
+ & =\binom{n}{k}\int_{0}^{1}\theta^{k}\left(1-\theta\right)^{n-k}d\theta\\
+ & =\binom{n}{k}\frac{\Gamma\left(k+1\right)\Gamma\left(n-k+1\right)}{\Gamma\left(n+2\right)}\\
+ & =\binom{n}{k}\frac{k!\left(n-k\right)!}{\left(n+1\right)!}\\
+ & =\frac{1}{n+1}
+\end{align*}
+
+\end_inset
+
+usamos el siguiente resultado 
+\begin_inset Formula 
+\begin{align*}
+\int_{0}^{1}\frac{\Gamma\left(\alpha+\beta\right)}{\Gamma\left(\alpha\right)\Gamma\left(\beta\right)}\theta^{\alpha-1}\left(1-\theta\right)^{\beta-1}d\theta & =1\\
+\implies\int_{0}^{1}\theta^{\alpha-1}\left(1-\theta\right)^{\beta-1}d\theta & =\frac{\Gamma\left(\alpha\right)\Gamma\left(\beta\right)}{\Gamma\left(\alpha+\beta\right)}\\
+\implies\int_{0}^{1}\theta^{k}\left(1-\theta\right)^{n-k}d\theta & =\frac{\Gamma\left(k+1\right)\Gamma\left(n-k+1\right)}{\Gamma\left(k+1+n-k+1\right)}=\frac{\Gamma\left(k+1\right)\Gamma\left(n-k+1\right)}{\Gamma\left(n+2\right)}
+\end{align*}
+
+\end_inset
+
+(b) Supona que asigna una distribución 
+\begin_inset Formula $\theta\sim\text{beta}\left(\alpha,\beta\right)$
+\end_inset
+
+ y usted observa 
+\begin_inset Formula $y$
+\end_inset
+
+ caras en sus 
+\begin_inset Formula $n$
+\end_inset
+
+ lanzamientos.
+ Muestre algebraicamente que la media posterior involucra a la media a priori
+ y la media de los datos.
+ 
+\begin_inset Formula 
+\begin{align*}
+p\left(\theta|y\right) & \propto p\left(y|\theta\right)p\left(\theta\right)\\
+ & =\binom{n}{y}\theta^{y}\left(1-\theta\right)^{n-y}\frac{\Gamma\left(\alpha+\beta\right)}{\Gamma\left(\alpha\right)\Gamma\left(\beta\right)}\theta^{\alpha-1}\left(1-\theta\right)^{\beta-1}\\
+ & \propto\theta^{\alpha+y-1}\left(1-\theta\right)^{\beta+n-y-1}\\
+\implies\theta|y & \sim\text{beta}\left(\alpha+y,\beta+n-y\right)
+\end{align*}
+
+\end_inset
+
+luego, la media condicional 
+\begin_inset Formula 
+\begin{align*}
+E\left(\theta|y\right) & =\frac{\alpha+y}{\alpha+y+\beta+n-y}\\
+ & =\frac{\alpha+y}{\alpha+\beta+n}\\
+ & =\frac{\alpha}{\alpha+\beta+n}+\frac{y}{\alpha+\beta+n}\\
+ & =\frac{\alpha+\beta}{\alpha+\beta}\frac{\alpha}{\alpha+\beta+n}+\frac{n}{n}\frac{y}{\alpha+\beta+n}\\
+ & =\frac{\alpha+\beta}{\alpha+\beta+n}\underbrace{\frac{\alpha}{\alpha+\beta}}_{E\left(\theta\right)}+\frac{n}{\alpha+\beta+n}\frac{y}{n}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+2.5c.
+ 
+\end_layout
+
+\begin_layout Standard
+Muestre que si la priori es uniforme entonces la media a posteriori, entonces
+ la varianza a posterior es siempre menor a la varianza a priori.
+ Sol: Sea 
+\begin_inset Formula $\theta\sim\text{beta}\left(1,1\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\text{Var}\left(\theta|y\right) & =\frac{\left(\alpha+y\right)\left(\beta+n-y\right)}{\left(\alpha+y+\beta+n-y\right)^{2}\left(\alpha+y+\beta+n-y\right)}\\
+ & =\frac{\left(\alpha+y\right)\left(\beta+n-y\right)}{\left(\alpha+\beta+n\right)^{2}\left(\alpha+\beta+n+1\right)}\\
+ & =\frac{\left(1+y\right)\left(1+n-y\right)}{\left(2+n\right)^{2}\left(\alpha+\beta+n+1\right)}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Ayudantía
+\end_layout
+
+\begin_layout Standard
+Ejercicios de las ayudantías del segundo semestre del 2020
+\end_layout
+
+\begin_layout Subsection
+Ayudantía 1
+\end_layout
+
+\begin_layout Subsection
+Ayudantía 2
+\end_layout
+
+\begin_layout Subsection
+Ayudantía 3
+\end_layout
+
+\begin_layout Subsection
+Ayudantía 4
+\end_layout
+
+\begin_layout Section
+Ejemplos de cátedra
+\end_layout
+
+\begin_layout Standard
+demuestre que que modelo probit con 
+\begin_inset Formula $\pi\left(x\right)=\Phi\left(\beta_{0}+\beta_{1}x|\mu,\sigma^{2}\right)$
+\end_inset
+
+ es no identificado para 
+\begin_inset Formula $\mu$
+\end_inset
+
+ y 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+.
+ La demostración se basa en que 
+\begin_inset Formula 
+\begin{align*}
+Y_{i}|x_{i} & \sim\text{ber}\left(\pi\left(x_{i}\right)\right)\\
+\implies\pi\left(x\right) & =\Phi\left(\beta_{0}+\beta_{1}x|\mu,\sigma^{2}\right)\\
+\pi\left(x\right) & =\Phi_{0,1}\left(\frac{\beta_{0}+\beta_{1}x-\mu}{\sigma}\right)\\
+\pi\left(x\right) & =\Phi_{0,1}\left(\beta_{0}^{*}+\beta_{1}^{*}x\right)
+\end{align*}
+
+\end_inset
+
+entonces existen parámetros observacionalmente equivalentes.
+\end_layout
+
+\begin_layout Paragraph
+Intervalo de Confianza 
+\end_layout
+
+\begin_layout Standard
+El parámetro está cubierto por el intervalo de confianza con una probabilidad
+ 
+\begin_inset Formula $1-\alpha$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
