@@ -367,7 +367,95 @@ Muestre que si la priori es uniforme entonces la media a posteriori, entonces
 \begin{align*}
 \text{Var}\left(\theta|y\right) & =\frac{\left(\alpha+y\right)\left(\beta+n-y\right)}{\left(\alpha+y+\beta+n-y\right)^{2}\left(\alpha+y+\beta+n-y\right)}\\
  & =\frac{\left(\alpha+y\right)\left(\beta+n-y\right)}{\left(\alpha+\beta+n\right)^{2}\left(\alpha+\beta+n+1\right)}\\
- & =\frac{\left(1+y\right)\left(1+n-y\right)}{\left(2+n\right)^{2}\left(\alpha+\beta+n+1\right)}
+ & =\frac{\left(1+y\right)\left(1+n-y\right)}{\left(2+n\right)^{2}\left(2+n+1\right)}=\frac{\left(1+y\right)\left(1+n-y\right)}{\left(2+n\right)^{2}\left(n+3\right)}\leq\frac{1}{12}=\text{Var}\left(\theta\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+2.5d.
+ 
+\end_layout
+
+\begin_layout Standard
+De un ejemplo de una priori 
+\begin_inset Formula $\text{beta}\left(\alpha,\beta\right)$
+\end_inset
+
+ con 
+\begin_inset Formula $y$
+\end_inset
+
+ y 
+\begin_inset Formula $n$
+\end_inset
+
+ donde va varianza posterior es menor a la varianza a priori.
+ Sol.
+ 
+\begin_inset Formula 
+\[
+\frac{\left(\alpha+y\right)\left(\beta+n-y\right)}{\left(\alpha+\beta+n\right)^{2}\left(\alpha+\beta+n+1\right)}\leq\frac{\alpha\beta}{\left(\alpha+\beta\right)^{2}\left(\alpha+\beta+1\right)}
+\]
+
+\end_inset
+
+y seleccionamos valores que respeten la igualdad.
+\end_layout
+
+\begin_layout Paragraph*
+2.7.a
+\end_layout
+
+\begin_layout Standard
+Sobre prioris no informativas: Para la verosimilitud binomial 
+\begin_inset Formula $y\sim\text{bin}\left(n,\theta\right)$
+\end_inset
+
+ , muestre que 
+\begin_inset Formula $p\left(\theta\right)\propto\theta^{-1}\left(1-\theta\right)^{-1}$
+\end_inset
+
+ es la priori uniforme para el parámetro natural de la familia exponencial.
+ Sol.
+ Sabemos que la función de enlace canónica de distribución binomial es 
+\begin_inset Formula $\phi=\log\left(\frac{\theta}{1-\theta}\right)$
+\end_inset
+
+.
+ Por otro lado, usando el principio de invanrianza de Jeffrey 
+\begin_inset Formula $p\left(\phi\right)=p\left(\theta\right)\left|\frac{d\theta}{d\phi}\right|$
+\end_inset
+
+ si es que 
+\begin_inset Formula $\phi$
+\end_inset
+
+ es una función uno a uno.
+ La demostración es bastante simple porque es básicamente transformación
+ de variables aleatorias.
+ 
+\begin_inset Formula 
+\begin{align*}
+F_{\phi}\left(t\right) & =P\left(\phi\leq t\right) &  &  & \text{si no nos acordamos que}\\
+ & =P\left(\phi\left(\theta\right)\leq t\right) &  &  & \phi\left(\phi^{-1}\left(t\right)\right) & =t\\
+ & =P\left(\theta\leq\phi^{-1}\left(t\right)\right) &  &  & \phi'\left(\phi^{-1}\left(t\right)\right)\frac{d}{dt}\phi^{-1}\left(t\right) & =1\\
+ & =F_{\theta}\left(\phi^{-1}\left(t\right)\right) &  &  & \frac{d}{dt}\phi^{-1}\left(t\right) & =\frac{1}{\phi'\left(\phi^{-1}\left(t\right)\right)}\\
+f_{\phi}\left(t\right) & =f_{\theta}\left(\phi^{-1}\left(t\right)\right)\frac{d}{dt}\phi^{-1}\left(t\right)
+\end{align*}
+
+\end_inset
+
+pero podemos usar astutamente la regla de la cadena de tal manera que sea
+ más práctico para nosotros 
+\begin_inset Formula 
+\begin{align*}
+p\left(\phi\right) & =p\left(\theta\right)\left|\frac{d\phi}{d\theta}\right|\\
+ & =p\left(\frac{e^{\phi}}{1+e^{\phi}}\right)\left|\frac{d\phi}{d\theta}\right|\\
+ & =
 \end{align*}
 
 \end_inset
@@ -397,6 +485,206 @@ Ayudantía 3
 
 \begin_layout Subsection
 Ayudantía 4
+\end_layout
+
+\begin_layout Subsection
+Ayudantía 5
+\end_layout
+
+\begin_layout Paragraph
+4.5.1a 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ permutables 
+\begin_inset Formula $p\left(\mu,\sigma^{2}\right)\propto\left(\sigma^{2}\right)^{-3/2}$
+\end_inset
+
+.
+ Buscamos la distribución a posterior 
+\begin_inset Formula 
+\begin{align*}
+p\left(\mu,\sigma^{2}|\mathbf{x}\right) & \propto p\left(\mu,\sigma^{2}\right)p\left(\mathbf{x}|\mu,\sigma^{2}\right)\\
+ & =\left(\sigma^{2}\right)^{-3/2}\sigma^{-n/2}\exp\left(-\frac{1}{2\sigma^{2}}\sum\left(x_{i}-\mu\right)^{2}\right)\\
+ & =\left(\sigma^{2}\right)^{-3/2}\sigma^{-n/2}\exp\left(-\frac{1}{2\sigma^{2}}\sum\left(x_{i}-\overline{x}\right)^{2}+n\left(\overline{x}-\mu\right)^{2}\right)\\
+ & =\left(\sigma^{2}\right)^{-3/2}\sigma^{-n/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(\sum\left(x_{i}-\overline{x}\right)^{2}+n\left(\overline{x}-\mu\right)^{2}\right)\right)\\
+ & =\left(\sigma^{2}\right)^{-3/2-n/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(\left(n-1\right)s^{2}+n\left(\overline{x}-\mu\right)^{2}\right)\right)\\
+\text{kerner de una normal} & \propto\exp\left(-\frac{1}{2\sigma^{2}}\left(n\left(\overline{x}-\mu\right)^{2}\right)\right)\\
+\implies\mu|\mathbf{x},\sigma^{2} & \sim N\left(\overline{x},\sigma^{2}/n\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+4.5.1b
+\end_layout
+
+\begin_layout Standard
+posteriori marginal
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+p\left(\mu,\sigma^{2}|\mathbf{x}\right) & \propto\left(\sigma^{2}\right)^{-3/2-n/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(\left(n-1\right)s^{2}+n\left(\overline{x}-\mu\right)^{2}\right)\right)\\
+ & =\left(\sigma^{2}\right)^{-3/2-n/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(n-1\right)s^{2}\right)\underbrace{\exp\left(-\frac{1}{2\sigma^{2}}n\left(\overline{x}-\mu\right)^{2}\right)\left(\frac{\sigma}{n}\right)^{-1/2}}_{\text{kernel de una normal}}\left(\frac{\sigma}{n}\right)^{1/2}\\
+\text{integrando}\\
+\implies p\left(\sigma^{2}|\mathbf{x}\right) & \propto\left(\sigma^{2}\right)^{-\left(n/2+1\right)}\exp\left(-\frac{1}{2\sigma^{2}}\left(n-1\right)s^{2}\right)\\
+\sigma^{2}|\mathbf{x} & \sim\chi^{2}-\mathbf{inv}\left(n,s^{2}\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+4.5.1c
+\end_layout
+
+\begin_layout Standard
+calcular la distribución a posteriori marginal de 
+\begin_inset Formula $\mu$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+p\left(\mu|\mathbf{x}\right) & =\int_{0}^{\infty}p\left(\mu,\sigma^{2}|\mathbf{x}\right)d\sigma^{2}\\
+ & \propto\int_{0}^{\infty}\left(\sigma^{2}\right)^{-3/2}\sigma^{-n/2}\exp\left(-\frac{1}{2\sigma^{2}}A\right)d\sigma^{2}\\
+A & =\left(\sum\left(x_{i}-\overline{x}\right)^{2}+n\left(\overline{x}-\mu\right)^{2}\right)
+\end{align*}
+
+\end_inset
+
+con el siguiente cambio de variable 
+\begin_inset Formula $z=A/\left(2\sigma^{2}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\text{\ensuremath{\sigma^{2}=A/2z} }$
+\end_inset
+
+ y 
+\begin_inset Formula $d\sigma^{2}=-\frac{A}{2z^{2}}dz$
+\end_inset
+
+.
+ Luego 
+\begin_inset Formula 
+\begin{align*}
+p\left(\mu|\mathbf{x}\right) & \propto\int_{0}^{\infty}\left(\frac{A}{2z}\right)^{-3/2-n/2}\exp\left(-z\right)\left(-\frac{A}{2z^{2}}\right)dz\\
+ & \propto\left(\frac{A}{2z}\right)^{-1/2-n/2}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+4.5.1d
+\end_layout
+
+\begin_layout Standard
+Utilice los resultados anteriores para encontrar la distribución predictiva
+ a posteriori usando el método de la composición.
+ 
+\end_layout
+
+\begin_layout Enumerate
+para 
+\begin_inset Formula $s=1\ldots,S$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+genera 
+\begin_inset Formula $\mu^{\left(s\right)}\sim p\left(\mu|\mathbf{y}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+genera 
+\begin_inset Formula $\sigma^{2\left(s\right)}\sim p\left(\sigma^{2}|\mathbf{y}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $y^{s}\sim p\left(x|\mu^{\left(s\right)},\sigma^{2\left(s\right)}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+4.5.1e
+\end_layout
+
+\begin_layout Standard
+Repita a) y c) con la priori informativa: 
+\begin_inset Formula $p\left(\mu,\sigma^{2}\right)=p\left(\mu|\sigma^{2}\right)p\left(\sigma^{2}\right)$
+\end_inset
+
+.
+ Luego 
+\begin_inset Formula 
+\begin{align*}
+p\left(\mu,\sigma^{2}|\mathbf{x}\right) & \propto p\left(\mu,\sigma^{2}\right)p\left(\mathbf{x}|\mu,\sigma^{2}\right)\\
+ & =p\left(\mu|\sigma^{2}\right)p\left(\sigma^{2}\right)p\left(\mathbf{x}|\mu,\sigma^{2}\right)\\
+ & =
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+4.5.2a 
+\end_layout
+
+\begin_layout Standard
+Encontre la distribución a posterior de 
+\begin_inset Formula $\beta,\sigma^{2}$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\begin{align*}
+y|\beta,\sigma^{2},X & \sim N\left(X\beta,\sigma^{2}I\right)\\
+p\left(y|\beta,\sigma^{2},X\right) & \propto\left(\sigma^{2}\right)^{2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\hat{\beta}\right)^{t}\left(y-X\hat{\beta}\right)\right)\exp\left(-\frac{1}{2\sigma^{2}}\left(\beta-\hat{\beta}\right)^{t}X^{t}X\left(\beta-\hat{\beta}\right)\right)\\
+\implies
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+4.5.2b
+\end_layout
+
+\begin_layout Paragraph
+4.5.2d
+\end_layout
+
+\begin_layout Paragraph
+4.5.2e
 \end_layout
 
 \begin_layout Section
@@ -442,6 +730,14 @@ El parámetro está cubierto por el intervalo de confianza con una probabilidad
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Paragraph*
+Identificabilidad bayesiana
+\end_layout
+
+\begin_layout Standard
+Si tengo un modelo clasicamente no identificado, en bayesiana podemos
 \end_layout
 
 \end_body

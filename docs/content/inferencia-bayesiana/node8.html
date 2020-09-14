@@ -3,8 +3,8 @@
 <!--Converted with LaTeX2HTML 2018 (Released Feb 1, 2018) -->
 <HTML>
 <HEAD>
-<TITLE>Ayudant&#237;a</TITLE>
-<META NAME="description" CONTENT="Ayudant&#237;a">
+<TITLE>2.7.a</TITLE>
+<META NAME="description" CONTENT="2.7.a">
 <META NAME="keywords" CONTENT="inferencia-bayesiana">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
@@ -14,59 +14,216 @@
 
 <LINK REL="STYLESHEET" HREF="inferencia-bayesiana.css">
 
-<LINK REL="next" HREF="node13.html">
-<LINK REL="previous" HREF="node3.html">
-<LINK REL="up" HREF="inferencia-bayesiana.html">
+<LINK REL="previous" HREF="node7.html">
+<LINK REL="up" HREF="node5.html">
 <LINK REL="next" HREF="node9.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation"><!--Navigation Panel-->
-<A NAME="tex2html98"
+<A NAME="tex2html112"
   HREF="node9.html">
 <IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html96"
-  HREF="inferencia-bayesiana.html">
+<A NAME="tex2html110"
+  HREF="node5.html">
 <IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html90"
+<A NAME="tex2html106"
   HREF="node7.html">
 <IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A>   
 <BR>
-<B> Next:</B> <A NAME="tex2html99"
-  HREF="node9.html">Ayudant&#237;a 1</A>
-<B> Up:</B> <A NAME="tex2html97"
-  HREF="inferencia-bayesiana.html">inferencia-bayesiana</A>
-<B> Previous:</B> <A NAME="tex2html91"
+<B> Next:</B> <A NAME="tex2html113"
+  HREF="node9.html">Ayudant&#237;a</A>
+<B> Up:</B> <A NAME="tex2html111"
+  HREF="node5.html">Modelos uniparam&#233;tricos</A>
+<B> Previous:</B> <A NAME="tex2html107"
   HREF="node7.html">2.5d.</A>
 <BR>
 <BR></DIV>
 <!--End of Navigation Panel-->
 
-<H1><A NAME="SECTION00040000000000000000">
-Ayudant&#237;a</A>
-</H1>
+<H4><A NAME="SECTION00032030000000000000">
+2.7.a</A>
+</H4>
 
 <P>
-Ejercicios de las ayudant&#237;as del segundo semestre del 2020
+Sobre prioris no informativas: Para la verosimilitud binomial <!-- MATH
+ $y\sim\text{bin}\left(n,\theta\right)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="29" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$y\sim$">bin<IMG
+ WIDTH="41" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img60.png"
+ ALT="$\left(n,\theta\right)$"></SPAN>
+, muestre que <!-- MATH
+ $p\left(\theta\right)\propto\theta^{-1}\left(1-\theta\right)^{-1}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="148" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$p\left(\theta\right)\propto\theta^{-1}\left(1-\theta\right)^{-1}$"></SPAN>
+es la priori uniforme para el par&#225;metro natural de la familia
+exponencial. Sol. Sabemos que la funci&#243;n de enlace can&#243;nica
+de distribuci&#243;n binomial es <!-- MATH
+ $\phi=\log\left(\frac{\theta}{1-\theta}\right)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="103" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img62.png"
+ ALT="$\phi=\log\left(\frac{\theta}{1-\theta}\right)$"></SPAN>.
+Por otro lado, usando el principio de invanrianza de Jeffrey <!-- MATH
+ $p\left(\phi\right)=p\left(\theta\right)\left|\frac{d\theta}{d\phi}\right|$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="120" HEIGHT="45" ALIGN="MIDDLE" BORDER="0"
+ SRC="img63.png"
+ ALT="$p\left(\phi\right)=p\left(\theta\right)\left\vert\frac{d\theta}{d\phi}\right\vert$"></SPAN>
+si es que <SPAN CLASS="MATH"><IMG
+ WIDTH="13" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
+ SRC="img64.png"
+ ALT="$\phi$"></SPAN> es una funci&#243;n uno a uno. La demostraci&#243;n
+es bastante simple porque es b&#225;sicamente transformaci&#243;n de
+variables aleatorias. 
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><TABLE CELLPADDING="0" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
+ WIDTH="43" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img65.png"
+ ALT="$\displaystyle F_{\phi}\left(t\right)$"></SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="84" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img66.png"
+ ALT="$\displaystyle =P\left(\phi\leq t\right)$"></SPAN></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH">si no nos acordamos que</SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="107" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img67.png"
+ ALT="$\displaystyle =P\left(\phi\left(\theta\right)\leq t\right)$"></SPAN></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
+ WIDTH="78" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img68.png"
+ ALT="$\displaystyle \phi\left(\phi^{-1}\left(t\right)\right)$"></SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.png"
+ ALT="$\displaystyle =t$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="127" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$\displaystyle =P\left(\theta\leq\phi^{-1}\left(t\right)\right)$"></SPAN></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
+ WIDTH="150" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$\displaystyle \phi'\left(\phi^{-1}\left(t\right)\right)\frac{d}{dt}\phi^{-1}\left(t\right)$"></SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="28" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.png"
+ ALT="$\displaystyle =1$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="103" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.png"
+ ALT="$\displaystyle =F_{\theta}\left(\phi^{-1}\left(t\right)\right)$"></SPAN></TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
+ WIDTH="69" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img73.png"
+ ALT="$\displaystyle \frac{d}{dt}\phi^{-1}\left(t\right)$"></SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="101" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img74.png"
+ ALT="$\displaystyle =\frac{1}{\phi'\left(\phi^{-1}\left(t\right)\right)}$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
+ WIDTH="41" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img75.png"
+ ALT="$\displaystyle f_{\phi}\left(t\right)$"></SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="168" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
+ SRC="img76.png"
+ ALT="$\displaystyle =f_{\theta}\left(\phi^{-1}\left(t\right)\right)\frac{d}{dt}\phi^{-1}\left(t\right)$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+pero podemos usar astutamente la regla de la cadena de tal manera
+que sea m&#225;s pr&#225;ctico para nosotros 
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><TABLE CELLPADDING="0" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
+ WIDTH="36" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img77.png"
+ ALT="$\displaystyle p\left(\phi\right)$"></SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="86" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="img78.png"
+ ALT="$\displaystyle =p\left(\theta\right)\left\vert\frac{d\phi}{d\theta}\right\vert$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="137" HEIGHT="56" ALIGN="MIDDLE" BORDER="0"
+ SRC="img79.png"
+ ALT="$\displaystyle =p\left(\frac{e^{\phi}}{1+e^{\phi}}\right)\left\vert\frac{d\phi}{d\theta}\right\vert$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img80.png"
+ ALT="$\displaystyle =$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
 
 <P>
-<BR><HR>
-<!--Table of Child-Links-->
-<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
 
-<UL CLASS="ChildLinks">
-<LI><A NAME="tex2html100"
-  HREF="node9.html">Ayudant&#237;a 1</A>
-<LI><A NAME="tex2html101"
-  HREF="node10.html">Ayudant&#237;a 2</A>
-<LI><A NAME="tex2html102"
-  HREF="node11.html">Ayudant&#237;a 3</A>
-<LI><A NAME="tex2html103"
-  HREF="node12.html">Ayudant&#237;a 4</A>
-</UL>
-<!--End of Table of Child-Links-->
-<BR><HR>
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html112"
+  HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html110"
+  HREF="node5.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html106"
+  HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html113"
+  HREF="node9.html">Ayudant&#237;a</A>
+<B> Up:</B> <A NAME="tex2html111"
+  HREF="node5.html">Modelos uniparam&#233;tricos</A>
+<B> Previous:</B> <A NAME="tex2html107"
+  HREF="node7.html">2.5d.</A></DIV>
+<!--End of Navigation Panel-->
 
 </BODY>
 </HTML>

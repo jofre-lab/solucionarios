@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2020.7.15)  14 SEP 2020 00:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2020.7.15)  14 SEP 2020 15:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -531,7 +531,7 @@ File: latin1.def 2015/03/17 v1.2c Input encoding file
 ))
 \sizebox=\box41
 \lthtmlwrite=\write4
-No file images.aux.
+(./images.aux)
 \openout1 = `images.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 155.
@@ -576,364 +576,329 @@ latex2htmlLength oddsidemargin=62.0pt
 
 latex2htmlLength evensidemargin=62.0pt
 
-l2hSize :tex2html_wrap_indisplay430:17.01393pt::17.01393pt::332.30963pt.
+l2hSize :tex2html_wrap_inline878:6.95676pt::6.95676pt::16.317pt.
 [1
 
 
 
 ]
-l2hSize :tex2html_wrap_inline437:8.0pt::8.0pt::39.19426pt.
+l2hSize :tex2html_wrap_inline879:8.0pt::8.0pt::23.69669pt.
 [2
 
 
 ]
-l2hSize :tex2html_wrap_inline439:7.33331pt::7.33331pt::44.26253pt.
+l2hSize :tex2html_wrap_inline881:10.03891pt::10.03891pt::91.36435pt.
 [3
 
 
 ]
-l2hSize :tex2html_wrap_inline441:6.94444pt::0.0pt::5.47212pt.
+l2hSize :tex2html_wrap_inline883:12.00008pt::12.00008pt::62.97964pt.
 [4
 
 
 ]
-l2hSize :tex2html_wrap_inline445:6.74837pt::0.0pt::8.27585pt.
+l2hSize :tex2html_wrap_inline885:12.00009pt::12.00009pt::73.41953pt.
 [5
 
 
 ]
-l2hSize :tex2html_wrap_indisplay447:8.0pt::8.0pt::57.87373pt.
+l2hSize :tex2html_wrap_inline887:7.44444pt::7.44444pt::6.45824pt.
 [6
 
 
 ]
-l2hSize :tex2html_wrap_indisplay448:14.11122pt::14.11122pt::116.9535pt.
+l2hSize :tex2html_wrap_indisplay888:8.0pt::8.0pt::25.29433pt.
 [7
 
 
 ]
-l2hSize :tex2html_wrap_indisplay449:17.01393pt::17.01393pt::97.84941pt.
+l2hSize :tex2html_wrap_indisplay889:8.0pt::8.0pt::51.21155pt.
 [8
 
 
 ]
-l2hSize :tex2html_wrap_indisplay450:8.0pt::8.0pt::77.65924pt.
+l2hSize :tex2html_wrap_indisplay890:8.0pt::8.0pt::65.6282pt.
 [9
 
 
 ]
-l2hSize :tex2html_wrap_inline452:6.95676pt::6.95676pt::22.72206pt.
+l2hSize :tex2html_wrap_indisplay891:9.14003pt::9.14003pt::47.04161pt.
 [10
 
 
 ]
-l2hSize :tex2html_wrap_indisplay453:8.0pt::8.0pt::56.93272pt.
+l2hSize :tex2html_wrap_indisplay892:6.95676pt::6.95676pt::14.66652pt.
 [11
 
 
 ]
-l2hSize :tex2html_wrap_indisplay454:17.01393pt::17.01393pt::96.9084pt.
+l2hSize :tex2html_wrap_indisplay893:9.14003pt::9.14003pt::77.75327pt.
 [12
 
 
 ]
-l2hSize :tex2html_wrap_indisplay456:8.0pt::8.0pt::104.31342pt.
+l2hSize :tex2html_wrap_indisplay894:14.20952pt::14.20952pt::92.4798pt.
 [13
 
 
 ]
-l2hSize :tex2html_wrap_indisplay458:15.0001pt::15.0001pt::292.75394pt.
+l2hSize :tex2html_wrap_indisplay896:9.14003pt::9.14003pt::62.59361pt.
 [14
 
 
 ]
-l2hSize :tex2html_wrap_inline460:7.33331pt::7.33331pt::28.96043pt.
+l2hSize :tex2html_wrap_indisplay897:14.20952pt::14.20952pt::41.4659pt.
 [15
 
 
 ]
-l2hSize :tex2html_wrap_indisplay462:11.00006pt::11.00006pt::403.62138pt.
-
-Overfull \hbox (57.62085pt too wide) in paragraph at lines 276--277
-[]|[] 
- []
-
+l2hSize :tex2html_wrap_indisplay898:13.70952pt::13.70952pt::61.41376pt.
 [16
 
 
 ]
-l2hSize :tex2html_wrap_inline472:6.45676pt::0.0pt::6.50224pt.
+l2hSize :tex2html_wrap_indisplay899:8.0pt::8.0pt::23.75963pt.
 [17
 
 
 ]
-l2hSize :tex2html_wrap_inline476:6.95676pt::6.95676pt::14.94434pt.
+l2hSize :tex2html_wrap_indisplay900:14.20952pt::14.20952pt::103.69154pt.
 [18
 
 
 ]
-l2hSize :tex2html_wrap_indisplay478:16.15013pt::16.15013pt::126.7623pt.
+l2hSize :tex2html_wrap_indisplay901:8.0pt::8.0pt::20.93391pt.
 [19
 
 
 ]
-l2hSize :tex2html_wrap_inline480:7.44444pt::7.44444pt::52.57838pt.
+l2hSize :tex2html_wrap_indisplay902:15.00012pt::15.00012pt::52.3998pt.
 [20
 
 
 ]
-l2hSize :tex2html_wrap_indisplay481:8.0pt::8.0pt::39.09123pt.
+l2hSize :tex2html_wrap_indisplay903:15.7551pt::15.7551pt::83.9588pt.
 [21
 
 
 ]
-l2hSize :tex2html_wrap_indisplay482:16.15013pt::16.15013pt::87.05988pt.
+l2hSize :tex2html_wrap_indisplay904:6.95676pt::6.95676pt::8.2777pt.
 [22
 
 
 ]
-l2hSize :tex2html_wrap_indisplay483:17.37773pt::17.37773pt::106.50778pt.
+l2hSize :tex2html_wrap_inline913:6.95676pt::6.95676pt::9.54445pt.
 [23
 
 
 ]
-l2hSize :tex2html_wrap_indisplay484:16.15013pt::16.15013pt::85.39325pt.
+l2hSize :tex2html_wrap_inline915:11.77785pt::11.77785pt::89.2719pt.
 [24
 
 
 ]
-l2hSize :tex2html_wrap_indisplay485:16.15013pt::16.15013pt::117.42125pt.
+l2hSize :tex2html_wrap_indisplay916:9.14003pt::9.14003pt::46.24062pt.
 [25
 
 
 ]
-l2hSize :tex2html_wrap_indisplay486:16.15013pt::16.15013pt::119.08788pt.
+l2hSize :tex2html_wrap_indisplay917:9.14003pt::9.14003pt::95.35628pt.
 [26
 
 
 ]
-l2hSize :tex2html_wrap_indisplay487:15.0001pt::15.0001pt::130.94603pt.
+l2hSize :tex2html_wrap_indisplay918:15.0001pt::15.0001pt::193.52094pt.
 [27
 
 
 ]
-l2hSize :tex2html_wrap_indisplay488:15.0001pt::15.0001pt::78.44621pt.
+l2hSize :tex2html_wrap_indisplay919:15.0001pt::15.0001pt::249.32866pt.
 [28
 
 
 ]
-l2hSize :tex2html_wrap_indisplay489:13.70952pt::13.70952pt::36.6799pt.
+l2hSize :tex2html_wrap_indisplay920:15.0001pt::15.0001pt::261.27312pt.
 [29
 
 
 ]
-l2hSize :tex2html_wrap_indisplay490:16.15013pt::16.15013pt::144.74617pt.
+l2hSize :tex2html_wrap_indisplay921:15.0001pt::15.0001pt::239.51915pt.
 [30
 
 
 ]
-l2hSize :tex2html_wrap_indisplay491:6.95676pt::6.95676pt::16.05542pt.
+l2hSize :tex2html_wrap_indisplay922:15.0001pt::15.0001pt::125.96587pt.
 [31
 
 
 ]
-l2hSize :tex2html_wrap_indisplay492:16.15013pt::16.15013pt::121.11693pt.
+l2hSize :tex2html_wrap_indisplay923:9.14003pt::9.14003pt::54.82034pt.
 [32
 
 
 ]
-l2hSize :tex2html_wrap_indisplay493:14.76508pt::14.76508pt::59.12897pt.
+l2hSize :tex2html_wrap_indisplay924:9.14003pt::9.14003pt::62.7348pt.
 [33
 
 
 ]
-l2hSize :tex2html_wrap_indisplay494:16.15013pt::16.15013pt::110.58542pt.
+l2hSize :tex2html_wrap_indisplay927:15.0001pt::15.0001pt::239.51915pt.
 [34
 
 
 ]
-l2hSize :tex2html_wrap_indisplay495:14.76508pt::14.76508pt::222.7206pt.
+l2hSize :tex2html_wrap_indisplay928:24.68779pt::24.68779pt::349.97972pt.
+
+Overfull \hbox (3.97919pt too wide) in paragraph at lines 397--398
+[]|[] 
+ []
+
 [35
 
 
 ]
-l2hSize :tex2html_wrap_inline497:6.94444pt::0.0pt::16.02763pt.
+l2hSize :tex2html_wrap_indisplay929:9.14003pt::9.14003pt::60.21504pt.
 [36
 
 
 ]
-l2hSize :tex2html_wrap_inline498:8.0pt::8.0pt::25.34016pt.
+l2hSize :tex2html_wrap_indisplay930:15.0001pt::15.0001pt::169.51233pt.
 [37
 
 
 ]
-l2hSize :tex2html_wrap_inline500:6.95676pt::6.95676pt::5.76149pt.
+l2hSize :tex2html_wrap_indisplay931:9.14003pt::9.14003pt::19.90613pt.
 [38
 
 
 ]
-l2hSize :tex2html_wrap_indisplay503:8.0pt::8.0pt::27.98718pt.
+l2hSize :tex2html_wrap_indisplay932:9.14003pt::9.14003pt::79.9673pt.
 [39
 
 
 ]
-l2hSize :tex2html_wrap_indisplay504:8.0pt::8.0pt::59.65723pt.
+l2hSize :tex2html_wrap_indisplay936:8.0pt::8.0pt::29.84825pt.
 [40
 
 
 ]
-l2hSize :tex2html_wrap_indisplay505:15.0001pt::15.0001pt::207.11433pt.
+l2hSize :tex2html_wrap_indisplay937:14.65291pt::14.65291pt::94.36554pt.
 [41
 
 
 ]
-l2hSize :tex2html_wrap_indisplay506:10.3889pt::10.3889pt::111.3163pt.
+l2hSize :tex2html_wrap_indisplay938:15.0001pt::15.0001pt::181.25653pt.
 [42
 
 
 ]
-l2hSize :tex2html_wrap_indisplay507:8.0pt::8.0pt::37.95583pt.
+l2hSize :tex2html_wrap_indisplay939:7.33331pt::7.33331pt::7.99991pt.
 [43
 
 
 ]
-l2hSize :tex2html_wrap_indisplay508:6.95676pt::6.95676pt::8.2777pt.
+l2hSize :tex2html_wrap_indisplay940:12.00008pt::12.00008pt::134.4748pt.
 [44
 
 
 ]
-l2hSize :tex2html_wrap_indisplay509:8.0pt::8.0pt::78.53212pt.
+l2hSize :tex2html_wrap_inline942:9.00005pt::9.00005pt::57.81584pt.
 [45
 
 
 ]
-l2hSize :tex2html_wrap_indisplay510:8.0pt::8.0pt::30.91425pt.
+l2hSize :tex2html_wrap_inline631:8.64003pt::8.64003pt::50.31502pt.
 [46
 
 
 ]
-l2hSize :tex2html_wrap_indisplay511:13.0984pt::13.0984pt::91.48755pt.
+l2hSize :tex2html_wrap_inline945:9.22066pt::9.22066pt::62.06662pt.
 [47
 
 
 ]
-l2hSize :tex2html_wrap_indisplay512:13.0984pt::13.0984pt::56.52008pt.
+l2hSize :tex2html_wrap_indisplay947:17.77791pt::17.77791pt::188.86502pt.
 [48
 
 
 ]
-l2hSize :tex2html_wrap_indisplay513:11.57062pt::11.57062pt::114.2069pt.
+l2hSize :tex2html_wrap_indisplay948:17.77791pt::17.77791pt::76.36421pt.
 [49
 
 
 ]
-l2hSize :tex2html_wrap_indisplay514:14.20952pt::14.20952pt::149.84943pt.
+l2hSize :tex2html_wrap_inline951:7.33331pt::7.33331pt::49.67322pt.
 [50
 
 
 ]
-l2hSize :tex2html_wrap_indisplay515:26.17058pt::26.17058pt::148.73834pt.
+l2hSize :tex2html_wrap_inline953:9.37892pt::9.37892pt::59.89104pt.
 [51
 
 
 ]
-l2hSize :tex2html_wrap_inline519:8.0pt::8.0pt::22.72214pt.
+l2hSize :tex2html_wrap_inline955:9.37892pt::9.37892pt::69.84706pt.
 [52
 
 
 ]
-l2hSize :tex2html_wrap_indisplay520:8.0pt::8.0pt::21.2893pt.
+l2hSize :tex2html_wrap_inline957:9.37892pt::9.37892pt::89.30432pt.
 [53
 
 
 ]
-l2hSize :tex2html_wrap_indisplay521:14.76508pt::14.76508pt::191.22806pt.
+l2hSize :tex2html_wrap_inline960:9.00005pt::9.00005pt::114.0438pt.
 [54
 
 
 ]
-l2hSize :tex2html_wrap_indisplay522:14.76508pt::14.76508pt::138.51527pt.
+l2hSize :tex2html_wrap_indisplay963:9.14003pt::9.14003pt::121.7799pt.
 [55
 
 
 ]
-l2hSize :tex2html_wrap_indisplay523:14.76508pt::14.76508pt::231.2711pt.
+l2hSize :tex2html_wrap_inline967:8.64003pt::8.64003pt::21.68736pt.
 [56
 
 
 ]
-l2hSize :tex2html_wrap_indisplay524:8.0pt::8.0pt::13.24992pt.
+l2hSize :tex2html_wrap_indisplay968:9.14003pt::9.14003pt::43.24059pt.
 [57
 
 
 ]
-l2hSize :tex2html_wrap_indisplay533:14.76508pt::14.76508pt::232.30388pt.
+l2hSize :tex2html_wrap_indisplay969:9.14003pt::9.14003pt::66.45116pt.
 [58
 
 
 ]
-l2hSize :tex2html_wrap_inline541:9.00005pt::9.00005pt::115.13632pt.
+l2hSize :tex2html_wrap_indisplay970:9.14003pt::9.14003pt::59.10518pt.
 [59
 
 
 ]
-l2hSize :tex2html_wrap_inline543:6.95676pt::6.95676pt::6.52538pt.
+l2hSize :tex2html_wrap_indisplay971:15.0001pt::15.0001pt::352.87477pt.
+
+Overfull \hbox (6.87424pt too wide) in paragraph at lines 551--552
+[]|[] 
+ []
+
 [60
 
 
 ]
-l2hSize :tex2html_wrap_inline545:8.14003pt::0.0pt::11.05893pt.
+l2hSize :tex2html_wrap_indisplay972:6.95676pt::6.95676pt::22.1665pt.
 [61
-
-
-]
-l2hSize :tex2html_wrap_indisplay546:8.0pt::8.0pt::21.45708pt.
-[62
-
-
-]
-l2hSize :tex2html_wrap_indisplay548:8.0pt::8.0pt::32.82573pt.
-[63
-
-
-]
-l2hSize :tex2html_wrap_indisplay549:8.0pt::8.0pt::46.16296pt.
-[64
-
-
-]
-l2hSize :tex2html_wrap_indisplay550:9.14003pt::9.14003pt::91.13986pt.
-[65
-
-
-]
-l2hSize :tex2html_wrap_indisplay551:8.0pt::8.0pt::21.71864pt.
-[66
-
-
-]
-l2hSize :tex2html_wrap_indisplay552:15.0001pt::15.0001pt::104.38359pt.
-[67
-
-
-]
-l2hSize :tex2html_wrap_indisplay554:8.0pt::8.0pt::78.06923pt.
-[68
-
-
-]
-l2hSize :tex2html_wrap_inline557:6.95676pt::6.95676pt::24.15608pt.
-[69
 
 
 ] (./images.aux) ) 
 Here is how much of TeX's memory you used:
- 21947 strings out of 494799
- 568155 string characters out of 6176826
- 755672 words of memory out of 5000000
- 24953 multiletter control sequences out of 15000+600000
- 4857 words of font info for 17 fonts, out of 8000000 for 9000
+ 21959 strings out of 494799
+ 568276 string characters out of 6176826
+ 755674 words of memory out of 5000000
+ 24958 multiletter control sequences out of 15000+600000
+ 7318 words of font info for 22 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 62i,9n,96p,725b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,11n,96p,725b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on images.dvi (69 pages, 26624 bytes).
+Output written on images.dvi (61 pages, 24844 bytes).

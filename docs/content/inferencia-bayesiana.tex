@@ -159,6 +159,33 @@ a priori. Sol.
 \]
 y seleccionamos valores que respeten la igualdad.
 
+\paragraph*{2.7.a}
+
+Sobre prioris no informativas: Para la verosimilitud binomial $y\sim\text{bin}\left(n,\theta\right)$
+, muestre que $p\left(\theta\right)\propto\theta^{-1}\left(1-\theta\right)^{-1}$
+es la priori uniforme para el par\'{a}metro natural de la familia
+exponencial. Sol. Sabemos que la funci\'{o}n de enlace can\'{o}nica
+de distribuci\'{o}n binomial es $\phi=\log\left(\frac{\theta}{1-\theta}\right)$.
+Por otro lado, usando el principio de invanrianza de Jeffrey $p\left(\phi\right)=p\left(\theta\right)\left|\frac{d\theta}{d\phi}\right|$
+si es que $\phi$ es una funci\'{o}n uno a uno. La demostraci\'{o}n
+es bastante simple porque es b\'{a}sicamente transformaci\'{o}n de
+variables aleatorias. 
+\begin{align*}
+F_{\phi}\left(t\right) & =P\left(\phi\leq t\right) &  &  & \text{si no nos acordamos que}\\
+ & =P\left(\phi\left(\theta\right)\leq t\right) &  &  & \phi\left(\phi^{-1}\left(t\right)\right) & =t\\
+ & =P\left(\theta\leq\phi^{-1}\left(t\right)\right) &  &  & \phi'\left(\phi^{-1}\left(t\right)\right)\frac{d}{dt}\phi^{-1}\left(t\right) & =1\\
+ & =F_{\theta}\left(\phi^{-1}\left(t\right)\right) &  &  & \frac{d}{dt}\phi^{-1}\left(t\right) & =\frac{1}{\phi'\left(\phi^{-1}\left(t\right)\right)}\\
+f_{\phi}\left(t\right) & =f_{\theta}\left(\phi^{-1}\left(t\right)\right)\frac{d}{dt}\phi^{-1}\left(t\right)
+\end{align*}
+pero podemos usar astutamente la regla de la cadena de tal manera
+que sea m\'{a}s pr\'{a}ctico para nosotros 
+\begin{align*}
+p\left(\phi\right) & =p\left(\theta\right)\left|\frac{d\phi}{d\theta}\right|\\
+ & =p\left(\frac{e^{\phi}}{1+e^{\phi}}\right)\left|\frac{d\phi}{d\theta}\right|\\
+ & =
+\end{align*}
+
+
 \section{Ayudant\'{\i}a}
 
 Ejercicios de las ayudant\'{\i}as del segundo semestre del 2020
@@ -170,6 +197,91 @@ Ejercicios de las ayudant\'{\i}as del segundo semestre del 2020
 \subsection{Ayudant\'{\i}a 3}
 
 \subsection{Ayudant\'{\i}a 4}
+
+\subsection{Ayudant\'{\i}a 5}
+
+\paragraph{4.5.1a.}
+
+$x_{i}$ permutables $p\left(\mu,\sigma^{2}\right)\propto\left(\sigma^{2}\right)^{-3/2}$.
+Buscamos la distribuci\'{o}n a posterior 
+\begin{align*}
+p\left(\mu,\sigma^{2}|\mathbf{x}\right) & \propto p\left(\mu,\sigma^{2}\right)p\left(\mathbf{x}|\mu,\sigma^{2}\right)\\
+ & =\left(\sigma^{2}\right)^{-3/2}\sigma^{-n/2}\exp\left(-\frac{1}{2\sigma^{2}}\sum\left(x_{i}-\mu\right)^{2}\right)\\
+ & =\left(\sigma^{2}\right)^{-3/2}\sigma^{-n/2}\exp\left(-\frac{1}{2\sigma^{2}}\sum\left(x_{i}-\overline{x}\right)^{2}+n\left(\overline{x}-\mu\right)^{2}\right)\\
+ & =\left(\sigma^{2}\right)^{-3/2}\sigma^{-n/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(\sum\left(x_{i}-\overline{x}\right)^{2}+n\left(\overline{x}-\mu\right)^{2}\right)\right)\\
+ & =\left(\sigma^{2}\right)^{-3/2-n/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(\left(n-1\right)s^{2}+n\left(\overline{x}-\mu\right)^{2}\right)\right)\\
+\text{kerner de una normal} & \propto\exp\left(-\frac{1}{2\sigma^{2}}\left(n\left(\overline{x}-\mu\right)^{2}\right)\right)\\
+\implies\mu|\mathbf{x},\sigma^{2} & \sim N\left(\overline{x},\sigma^{2}/n\right)
+\end{align*}
+
+
+\paragraph{4.5.1b.}
+
+posteriori marginal
+
+\begin{align*}
+p\left(\mu,\sigma^{2}|\mathbf{x}\right) & \propto\left(\sigma^{2}\right)^{-3/2-n/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(\left(n-1\right)s^{2}+n\left(\overline{x}-\mu\right)^{2}\right)\right)\\
+ & =\left(\sigma^{2}\right)^{-3/2-n/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(n-1\right)s^{2}\right)\underbrace{\exp\left(-\frac{1}{2\sigma^{2}}n\left(\overline{x}-\mu\right)^{2}\right)\left(\frac{\sigma}{n}\right)^{-1/2}}_{\text{kernel de una normal}}\left(\frac{\sigma}{n}\right)^{1/2}\\
+\text{integrando}\\
+\implies p\left(\sigma^{2}|\mathbf{x}\right) & \propto\left(\sigma^{2}\right)^{-\left(n/2+1\right)}\exp\left(-\frac{1}{2\sigma^{2}}\left(n-1\right)s^{2}\right)\\
+\sigma^{2}|\mathbf{x} & \sim\chi^{2}-\mathbf{inv}\left(n,s^{2}\right)
+\end{align*}
+
+
+\paragraph{4.5.1c.}
+
+calcular la distribuci\'{o}n a posteriori marginal de $\mu$
+\begin{align*}
+p\left(\mu|\mathbf{x}\right) & =\int_{0}^{\infty}p\left(\mu,\sigma^{2}|\mathbf{x}\right)d\sigma^{2}\\
+ & \propto\int_{0}^{\infty}\left(\sigma^{2}\right)^{-3/2}\sigma^{-n/2}\exp\left(-\frac{1}{2\sigma^{2}}A\right)d\sigma^{2}\\
+A & =\left(\sum\left(x_{i}-\overline{x}\right)^{2}+n\left(\overline{x}-\mu\right)^{2}\right)
+\end{align*}
+con el siguiente cambio de variable $z=A/\left(2\sigma^{2}\right)$,
+$\text{\ensuremath{\sigma^{2}=A/2z} }$ y $d\sigma^{2}=-\frac{A}{2z^{2}}dz$.
+Luego 
+\begin{align*}
+p\left(\mu|\mathbf{x}\right) & \propto\int_{0}^{\infty}\left(\frac{A}{2z}\right)^{-3/2-n/2}\exp\left(-z\right)\left(-\frac{A}{2z^{2}}\right)dz\\
+ & \propto\left(\frac{A}{2z}\right)^{-1/2-n/2}
+\end{align*}
+
+
+\paragraph{4.5.1d.}
+
+Utilice los resultados anteriores para encontrar la distribuci\'{o}n
+predictiva a posteriori usando el m\'{e}todo de la composici\'{o}n. 
+\begin{enumerate}
+\item para $s=1\ldots,S$
+\item genera $\mu^{\left(s\right)}\sim p\left(\mu|\mathbf{y}\right)$
+\item genera $\sigma^{2\left(s\right)}\sim p\left(\sigma^{2}|\mathbf{y}\right)$
+\item $y^{s}\sim p\left(x|\mu^{\left(s\right)},\sigma^{2\left(s\right)}\right)$
+\end{enumerate}
+
+\paragraph{4.5.1e}
+
+Repita a) y c) con la priori informativa: $p\left(\mu,\sigma^{2}\right)=p\left(\mu|\sigma^{2}\right)p\left(\sigma^{2}\right)$.
+Luego 
+\begin{align*}
+p\left(\mu,\sigma^{2}|\mathbf{x}\right) & \propto p\left(\mu,\sigma^{2}\right)p\left(\mathbf{x}|\mu,\sigma^{2}\right)\\
+ & =p\left(\mu|\sigma^{2}\right)p\left(\sigma^{2}\right)p\left(\mathbf{x}|\mu,\sigma^{2}\right)\\
+ & =
+\end{align*}
+
+
+\paragraph{4.5.2a.}
+
+Encontre la distribuci\'{o}n a posterior de $\beta,\sigma^{2}$. 
+\begin{align*}
+y|\beta,\sigma^{2},X & \sim N\left(X\beta,\sigma^{2}I\right)\\
+p\left(y|\beta,\sigma^{2},X\right) & \propto\left(\sigma^{2}\right)^{2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\hat{\beta}\right)^{t}\left(y-X\hat{\beta}\right)\right)\exp\left(-\frac{1}{2\sigma^{2}}\left(\beta-\hat{\beta}\right)^{t}X^{t}X\left(\beta-\hat{\beta}\right)\right)\\
+\implies
+\end{align*}
+
+
+\paragraph{4.5.2b}
+
+\paragraph{4.5.2d}
+
+\paragraph{4.5.2e}
 
 \section{Ejemplos de c\'{a}tedra}
 
@@ -188,4 +300,8 @@ entonces existen par\'{a}metros observacionalmente equivalentes.
 
 El par\'{a}metro est\'{a} cubierto por el intervalo de confianza con
 una probabilidad $1-\alpha$.
+
+\paragraph*{Identificabilidad bayesiana}
+
+Si tengo un modelo clasicamente no identificado, en bayesiana podemos
 \end{document}
