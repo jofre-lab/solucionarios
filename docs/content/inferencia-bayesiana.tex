@@ -165,26 +165,15 @@ Sobre prioris no informativas: Para la verosimilitud binomial $y\sim\text{bin}\l
 , muestre que $p\left(\theta\right)\propto\theta^{-1}\left(1-\theta\right)^{-1}$
 es la priori uniforme para el par\'{a}metro natural de la familia
 exponencial. Sol. Sabemos que la funci\'{o}n de enlace can\'{o}nica
-de distribuci\'{o}n binomial es $\phi=\log\left(\frac{\theta}{1-\theta}\right)$.
-Por otro lado, usando el principio de invanrianza de Jeffrey $p\left(\phi\right)=p\left(\theta\right)\left|\frac{d\theta}{d\phi}\right|$
-si es que $\phi$ es una funci\'{o}n uno a uno. La demostraci\'{o}n
-es bastante simple porque es b\'{a}sicamente transformaci\'{o}n de
-variables aleatorias. 
+de distribuci\'{o}n binomial es $\phi=\log\left(\frac{\theta}{1-\theta}\right)=h\left(\theta\right)$.
+sabiendo que 
 \begin{align*}
-F_{\phi}\left(t\right) & =P\left(\phi\leq t\right) &  &  & \text{si no nos acordamos que}\\
- & =P\left(\phi\left(\theta\right)\leq t\right) &  &  & \phi\left(\phi^{-1}\left(t\right)\right) & =t\\
- & =P\left(\theta\leq\phi^{-1}\left(t\right)\right) &  &  & \phi'\left(\phi^{-1}\left(t\right)\right)\frac{d}{dt}\phi^{-1}\left(t\right) & =1\\
- & =F_{\theta}\left(\phi^{-1}\left(t\right)\right) &  &  & \frac{d}{dt}\phi^{-1}\left(t\right) & =\frac{1}{\phi'\left(\phi^{-1}\left(t\right)\right)}\\
-f_{\phi}\left(t\right) & =f_{\theta}\left(\phi^{-1}\left(t\right)\right)\frac{d}{dt}\phi^{-1}\left(t\right)
+p\left(\theta\right) & =\underbrace{p\left(\phi\right)}_{\propto1}\left|\frac{d\phi}{d\theta}\right|\\
+ & \propto\left|\frac{d}{d\theta}\log\left(\frac{\theta}{1-\theta}\right)\right|\\
+ & =\frac{1}{\theta}+\frac{1}{1-\theta}\\
+ & =\theta^{-1}\left(1-\theta\right)^{-1}
 \end{align*}
-pero podemos usar astutamente la regla de la cadena de tal manera
-que sea m\'{a}s pr\'{a}ctico para nosotros 
-\begin{align*}
-p\left(\phi\right) & =p\left(\theta\right)\left|\frac{d\phi}{d\theta}\right|\\
- & =p\left(\frac{e^{\phi}}{1+e^{\phi}}\right)\left|\frac{d\phi}{d\theta}\right|\\
- & =
-\end{align*}
-
+ .ver BDA (ecuaci\'{o}n 2.19) 
 
 \section{Ayudant\'{\i}a}
 

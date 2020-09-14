@@ -422,45 +422,22 @@ Sobre prioris no informativas: Para la verosimilitud binomial
  es la priori uniforme para el parámetro natural de la familia exponencial.
  Sol.
  Sabemos que la función de enlace canónica de distribución binomial es 
-\begin_inset Formula $\phi=\log\left(\frac{\theta}{1-\theta}\right)$
+\begin_inset Formula $\phi=\log\left(\frac{\theta}{1-\theta}\right)=h\left(\theta\right)$
 \end_inset
 
 .
- Por otro lado, usando el principio de invanrianza de Jeffrey 
-\begin_inset Formula $p\left(\phi\right)=p\left(\theta\right)\left|\frac{d\theta}{d\phi}\right|$
-\end_inset
-
- si es que 
-\begin_inset Formula $\phi$
-\end_inset
-
- es una función uno a uno.
- La demostración es bastante simple porque es básicamente transformación
- de variables aleatorias.
- 
+ sabiendo que 
 \begin_inset Formula 
 \begin{align*}
-F_{\phi}\left(t\right) & =P\left(\phi\leq t\right) &  &  & \text{si no nos acordamos que}\\
- & =P\left(\phi\left(\theta\right)\leq t\right) &  &  & \phi\left(\phi^{-1}\left(t\right)\right) & =t\\
- & =P\left(\theta\leq\phi^{-1}\left(t\right)\right) &  &  & \phi'\left(\phi^{-1}\left(t\right)\right)\frac{d}{dt}\phi^{-1}\left(t\right) & =1\\
- & =F_{\theta}\left(\phi^{-1}\left(t\right)\right) &  &  & \frac{d}{dt}\phi^{-1}\left(t\right) & =\frac{1}{\phi'\left(\phi^{-1}\left(t\right)\right)}\\
-f_{\phi}\left(t\right) & =f_{\theta}\left(\phi^{-1}\left(t\right)\right)\frac{d}{dt}\phi^{-1}\left(t\right)
+p\left(\theta\right) & =\underbrace{p\left(\phi\right)}_{\propto1}\left|\frac{d\phi}{d\theta}\right|\\
+ & \propto\left|\frac{d}{d\theta}\log\left(\frac{\theta}{1-\theta}\right)\right|\\
+ & =\frac{1}{\theta}+\frac{1}{1-\theta}\\
+ & =\theta^{-1}\left(1-\theta\right)^{-1}
 \end{align*}
 
 \end_inset
 
-pero podemos usar astutamente la regla de la cadena de tal manera que sea
- más práctico para nosotros 
-\begin_inset Formula 
-\begin{align*}
-p\left(\phi\right) & =p\left(\theta\right)\left|\frac{d\phi}{d\theta}\right|\\
- & =p\left(\frac{e^{\phi}}{1+e^{\phi}}\right)\left|\frac{d\phi}{d\theta}\right|\\
- & =
-\end{align*}
-
-\end_inset
-
-
+ .ver BDA (ecuación 2.19) 
 \end_layout
 
 \begin_layout Section

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2020.7.15)  14 SEP 2020 15:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2020.7.15)  14 SEP 2020 21:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -576,329 +576,44 @@ latex2htmlLength oddsidemargin=62.0pt
 
 latex2htmlLength evensidemargin=62.0pt
 
-l2hSize :tex2html_wrap_inline878:6.95676pt::6.95676pt::16.317pt.
+l2hSize :tex2html_wrap_inline854:12.00008pt::12.00008pt::96.4911pt.
 [1
 
 
 
 ]
-l2hSize :tex2html_wrap_inline879:8.0pt::8.0pt::23.69669pt.
+l2hSize :tex2html_wrap_indisplay855:8.0pt::8.0pt::19.9478pt.
 [2
 
 
 ]
-l2hSize :tex2html_wrap_inline881:10.03891pt::10.03891pt::91.36435pt.
+l2hSize :tex2html_wrap_indisplay856:17.37773pt::17.37773pt::53.38591pt.
 [3
 
 
 ]
-l2hSize :tex2html_wrap_inline883:12.00008pt::12.00008pt::62.97964pt.
+l2hSize :tex2html_wrap_indisplay857:15.00012pt::15.00012pt::85.86575pt.
 [4
 
 
 ]
-l2hSize :tex2html_wrap_inline885:12.00009pt::12.00009pt::73.41953pt.
+l2hSize :tex2html_wrap_indisplay858:13.70952pt::13.70952pt::55.27193pt.
 [5
 
 
 ]
-l2hSize :tex2html_wrap_inline887:7.44444pt::7.44444pt::6.45824pt.
+l2hSize :tex2html_wrap_indisplay859:10.03891pt::10.03891pt::69.13873pt.
 [6
-
-
-]
-l2hSize :tex2html_wrap_indisplay888:8.0pt::8.0pt::25.29433pt.
-[7
-
-
-]
-l2hSize :tex2html_wrap_indisplay889:8.0pt::8.0pt::51.21155pt.
-[8
-
-
-]
-l2hSize :tex2html_wrap_indisplay890:8.0pt::8.0pt::65.6282pt.
-[9
-
-
-]
-l2hSize :tex2html_wrap_indisplay891:9.14003pt::9.14003pt::47.04161pt.
-[10
-
-
-]
-l2hSize :tex2html_wrap_indisplay892:6.95676pt::6.95676pt::14.66652pt.
-[11
-
-
-]
-l2hSize :tex2html_wrap_indisplay893:9.14003pt::9.14003pt::77.75327pt.
-[12
-
-
-]
-l2hSize :tex2html_wrap_indisplay894:14.20952pt::14.20952pt::92.4798pt.
-[13
-
-
-]
-l2hSize :tex2html_wrap_indisplay896:9.14003pt::9.14003pt::62.59361pt.
-[14
-
-
-]
-l2hSize :tex2html_wrap_indisplay897:14.20952pt::14.20952pt::41.4659pt.
-[15
-
-
-]
-l2hSize :tex2html_wrap_indisplay898:13.70952pt::13.70952pt::61.41376pt.
-[16
-
-
-]
-l2hSize :tex2html_wrap_indisplay899:8.0pt::8.0pt::23.75963pt.
-[17
-
-
-]
-l2hSize :tex2html_wrap_indisplay900:14.20952pt::14.20952pt::103.69154pt.
-[18
-
-
-]
-l2hSize :tex2html_wrap_indisplay901:8.0pt::8.0pt::20.93391pt.
-[19
-
-
-]
-l2hSize :tex2html_wrap_indisplay902:15.00012pt::15.00012pt::52.3998pt.
-[20
-
-
-]
-l2hSize :tex2html_wrap_indisplay903:15.7551pt::15.7551pt::83.9588pt.
-[21
-
-
-]
-l2hSize :tex2html_wrap_indisplay904:6.95676pt::6.95676pt::8.2777pt.
-[22
-
-
-]
-l2hSize :tex2html_wrap_inline913:6.95676pt::6.95676pt::9.54445pt.
-[23
-
-
-]
-l2hSize :tex2html_wrap_inline915:11.77785pt::11.77785pt::89.2719pt.
-[24
-
-
-]
-l2hSize :tex2html_wrap_indisplay916:9.14003pt::9.14003pt::46.24062pt.
-[25
-
-
-]
-l2hSize :tex2html_wrap_indisplay917:9.14003pt::9.14003pt::95.35628pt.
-[26
-
-
-]
-l2hSize :tex2html_wrap_indisplay918:15.0001pt::15.0001pt::193.52094pt.
-[27
-
-
-]
-l2hSize :tex2html_wrap_indisplay919:15.0001pt::15.0001pt::249.32866pt.
-[28
-
-
-]
-l2hSize :tex2html_wrap_indisplay920:15.0001pt::15.0001pt::261.27312pt.
-[29
-
-
-]
-l2hSize :tex2html_wrap_indisplay921:15.0001pt::15.0001pt::239.51915pt.
-[30
-
-
-]
-l2hSize :tex2html_wrap_indisplay922:15.0001pt::15.0001pt::125.96587pt.
-[31
-
-
-]
-l2hSize :tex2html_wrap_indisplay923:9.14003pt::9.14003pt::54.82034pt.
-[32
-
-
-]
-l2hSize :tex2html_wrap_indisplay924:9.14003pt::9.14003pt::62.7348pt.
-[33
-
-
-]
-l2hSize :tex2html_wrap_indisplay927:15.0001pt::15.0001pt::239.51915pt.
-[34
-
-
-]
-l2hSize :tex2html_wrap_indisplay928:24.68779pt::24.68779pt::349.97972pt.
-
-Overfull \hbox (3.97919pt too wide) in paragraph at lines 397--398
-[]|[] 
- []
-
-[35
-
-
-]
-l2hSize :tex2html_wrap_indisplay929:9.14003pt::9.14003pt::60.21504pt.
-[36
-
-
-]
-l2hSize :tex2html_wrap_indisplay930:15.0001pt::15.0001pt::169.51233pt.
-[37
-
-
-]
-l2hSize :tex2html_wrap_indisplay931:9.14003pt::9.14003pt::19.90613pt.
-[38
-
-
-]
-l2hSize :tex2html_wrap_indisplay932:9.14003pt::9.14003pt::79.9673pt.
-[39
-
-
-]
-l2hSize :tex2html_wrap_indisplay936:8.0pt::8.0pt::29.84825pt.
-[40
-
-
-]
-l2hSize :tex2html_wrap_indisplay937:14.65291pt::14.65291pt::94.36554pt.
-[41
-
-
-]
-l2hSize :tex2html_wrap_indisplay938:15.0001pt::15.0001pt::181.25653pt.
-[42
-
-
-]
-l2hSize :tex2html_wrap_indisplay939:7.33331pt::7.33331pt::7.99991pt.
-[43
-
-
-]
-l2hSize :tex2html_wrap_indisplay940:12.00008pt::12.00008pt::134.4748pt.
-[44
-
-
-]
-l2hSize :tex2html_wrap_inline942:9.00005pt::9.00005pt::57.81584pt.
-[45
-
-
-]
-l2hSize :tex2html_wrap_inline631:8.64003pt::8.64003pt::50.31502pt.
-[46
-
-
-]
-l2hSize :tex2html_wrap_inline945:9.22066pt::9.22066pt::62.06662pt.
-[47
-
-
-]
-l2hSize :tex2html_wrap_indisplay947:17.77791pt::17.77791pt::188.86502pt.
-[48
-
-
-]
-l2hSize :tex2html_wrap_indisplay948:17.77791pt::17.77791pt::76.36421pt.
-[49
-
-
-]
-l2hSize :tex2html_wrap_inline951:7.33331pt::7.33331pt::49.67322pt.
-[50
-
-
-]
-l2hSize :tex2html_wrap_inline953:9.37892pt::9.37892pt::59.89104pt.
-[51
-
-
-]
-l2hSize :tex2html_wrap_inline955:9.37892pt::9.37892pt::69.84706pt.
-[52
-
-
-]
-l2hSize :tex2html_wrap_inline957:9.37892pt::9.37892pt::89.30432pt.
-[53
-
-
-]
-l2hSize :tex2html_wrap_inline960:9.00005pt::9.00005pt::114.0438pt.
-[54
-
-
-]
-l2hSize :tex2html_wrap_indisplay963:9.14003pt::9.14003pt::121.7799pt.
-[55
-
-
-]
-l2hSize :tex2html_wrap_inline967:8.64003pt::8.64003pt::21.68736pt.
-[56
-
-
-]
-l2hSize :tex2html_wrap_indisplay968:9.14003pt::9.14003pt::43.24059pt.
-[57
-
-
-]
-l2hSize :tex2html_wrap_indisplay969:9.14003pt::9.14003pt::66.45116pt.
-[58
-
-
-]
-l2hSize :tex2html_wrap_indisplay970:9.14003pt::9.14003pt::59.10518pt.
-[59
-
-
-]
-l2hSize :tex2html_wrap_indisplay971:15.0001pt::15.0001pt::352.87477pt.
-
-Overfull \hbox (6.87424pt too wide) in paragraph at lines 551--552
-[]|[] 
- []
-
-[60
-
-
-]
-l2hSize :tex2html_wrap_indisplay972:6.95676pt::6.95676pt::22.1665pt.
-[61
 
 
 ] (./images.aux) ) 
 Here is how much of TeX's memory you used:
- 21959 strings out of 494799
- 568276 string characters out of 6176826
- 755674 words of memory out of 5000000
- 24958 multiletter control sequences out of 15000+600000
- 7318 words of font info for 22 fonts, out of 8000000 for 9000
+ 21949 strings out of 494799
+ 568177 string characters out of 6176826
+ 754674 words of memory out of 5000000
+ 24953 multiletter control sequences out of 15000+600000
+ 4857 words of font info for 17 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 62i,11n,96p,725b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,9n,96p,725b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on images.dvi (61 pages, 24844 bytes).
+Output written on images.dvi (6 pages, 7052 bytes).
