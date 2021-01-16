@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>4.5.2c.</TITLE>
+<META NAME="description" CONTENT="4.5.2c.">
+<META NAME="keywords" CONTENT="inferencia-bayesiana">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="inferencia-bayesiana.css">
+
+<LINK REL="next" HREF="node29.html">
+<LINK REL="previous" HREF="node27.html">
+<LINK REL="next" HREF="node29.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node29.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node20.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node27.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node29.html">4.5.2d</A>
+<B> Up:</B> <A
+ HREF="node20.html">Ayudantıa 5</A>
+<B> Previous:</B> <A
+ HREF="node27.html">4.5.2b.</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H4><A ID="SECTION00035080000000000000">
+4.5.2c.</A>
+</H4>
+
+<P>
+Encuentre la distribución a posterior de <!-- MATH
+ $\sigma^{2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.12ex; vertical-align: -0.12ex; " SRC="img180.svg"
+ ALT="$\sigma^{2}$"></SPAN> , (ver
+ejercicio 14.4 BDA)
+<P></P>
+<DIV CLASS="mathdisplay"><TABLE CLASS="equation" >
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.04ex; vertical-align: -0.93ex; " SRC="img196.svg"
+ ALT="$\displaystyle p\left(\sigma^{2}\vert y\right)$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.08ex; vertical-align: -2.29ex; " SRC="img197.svg"
+ ALT="$\displaystyle =\frac{p\left(\beta,\sigma^{2}\vert,y\right)}{p\left(\beta\vert\sigma^{2},y\right)}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 10.60ex; vertical-align: -5.44ex; " SRC="img198.svg"
+ ALT="$\displaystyle \propto\frac{\left(\sigma^{2}\right)^{-n/2-2}\exp\left(-\frac{1}{...
+...}\left(\beta-\hat{\beta}\right)^{t}X^{t}X\left(\beta-\hat{\beta}\right)\right)}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 11.99ex; vertical-align: -5.44ex; " SRC="img199.svg"
+ ALT="$\displaystyle =\frac{\left(\sigma^{2}\right)^{-n/2-2}\exp\left(-\frac{1}{2\sigm...
+...}\left(\beta-\hat{\beta}\right)^{t}X^{t}X\left(\beta-\hat{\beta}\right)\right)}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 11.24ex; vertical-align: -4.69ex; " SRC="img200.svg"
+ ALT="$\displaystyle =\frac{\left(\sigma^{2}\right)^{-n/2-2}\exp\left(-\frac{1}{2\sigm...
+...}{\det\left(\sigma^{2}\left(X^{t}X\right)^{-1}\right)^{-1/2}\exp\left(0\right)}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 11.24ex; vertical-align: -4.69ex; " SRC="img201.svg"
+ ALT="$\displaystyle =\frac{\left(\sigma^{2}\right)^{-n/2-2}\exp\left(-\frac{1}{2\sigm...
+...ight)^{-1/2}\det\left(\left(X^{t}X\right)^{-1}\right)^{-1/2}\exp\left(0\right)}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.79ex; vertical-align: -2.32ex; " SRC="img202.svg"
+ ALT="$\displaystyle \propto\left(\sigma^{2}\right)^{-n/2-2+k/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\hat{\beta}\right)^{t}\left(y-X\hat{\beta}\right)\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.81ex; vertical-align: -0.70ex; " SRC="img203.svg"
+ ALT="$\displaystyle \implies\sigma^{2}\vert y$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.04ex; vertical-align: -0.93ex; " SRC="img204.svg"
+ ALT="$\displaystyle \sim Inv-\chi^{2}\left(n-k,s^{2}\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+<BR><HR>
+
+</BODY>
+</HTML>

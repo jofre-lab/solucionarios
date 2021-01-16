@@ -1,53 +1,108 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE HTML>
 
-<!--Converted with LaTeX2HTML 2018 (Released Feb 1, 2018) -->
-<HTML>
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
 <HEAD>
-<TITLE>Identificabilidad bayesiana</TITLE>
-<META NAME="description" CONTENT="Identificabilidad bayesiana">
+<TITLE>4.5.2a.</TITLE>
+<META NAME="description" CONTENT="4.5.2a.">
 <META NAME="keywords" CONTENT="inferencia-bayesiana">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
 
-<META NAME="Generator" CONTENT="LaTeX2HTML v2018">
-<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
 
 <LINK REL="STYLESHEET" HREF="inferencia-bayesiana.css">
 
+<LINK REL="next" HREF="node27.html">
 <LINK REL="previous" HREF="node25.html">
-<LINK REL="up" HREF="node24.html">
 <LINK REL="next" HREF="node27.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation"><!--Navigation Panel-->
-<A NAME="tex2html311"
-  HREF="node27.html">
-<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html309"
-  HREF="node24.html">
-<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html305"
-  HREF="node25.html">
-<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A>   
+<A
+ HREF="node27.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node20.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node25.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
 <BR>
-<B> Next:</B> <A NAME="tex2html312"
-  HREF="node27.html">About this document ...</A>
-<B> Up:</B> <A NAME="tex2html310"
-  HREF="node24.html">Ejemplos de c&#225;tedra</A>
-<B> Previous:</B> <A NAME="tex2html306"
-  HREF="node25.html">Intervalo de Confianza</A>
+<B> Next:</B> <A
+ HREF="node27.html">4.5.2b.</A>
+<B> Up:</B> <A
+ HREF="node20.html">Ayudantıa 5</A>
+<B> Previous:</B> <A
+ HREF="node25.html">4.5.1e</A>
 <BR>
 <BR></DIV>
 <!--End of Navigation Panel-->
 
-<H4><A NAME="SECTION00050020000000000000">
-Identificabilidad bayesiana</A>
+<H4><A ID="SECTION00035060000000000000">
+4.5.2a.</A>
 </H4>
 
 <P>
-Si tengo un modelo clasicamente no identificado, en bayesiana podemos
+Encontre la distribución a posterior de <!-- MATH
+ $\beta,\sigma^{2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.57ex; vertical-align: -0.57ex; " SRC="img169.svg"
+ ALT="$\beta,\sigma^{2}$"></SPAN>. Conocido
+que la distribución a priori de <!-- MATH
+ $p\left(\beta,\sigma^{2}\right)\propto\sigma^{-2}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.01ex; vertical-align: -0.93ex; " SRC="img170.svg"
+ ALT="$p\left(\beta,\sigma^{2}\right)\propto\sigma^{-2}$"></SPAN>
+<P></P>
+<DIV CLASS="mathdisplay"><TABLE CLASS="equation" >
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.81ex; vertical-align: -0.70ex; " SRC="img171.svg"
+ ALT="$\displaystyle y\vert\beta,\sigma^{2},X$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.04ex; vertical-align: -0.93ex; " SRC="img172.svg"
+ ALT="$\displaystyle \sim N\left(X\beta,\sigma^{2}I\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.04ex; vertical-align: -0.93ex; " SRC="img173.svg"
+ ALT="$\displaystyle p\left(y\vert\beta,\sigma^{2},X\right)$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.79ex; vertical-align: -2.32ex; " SRC="img174.svg"
+ ALT="$\displaystyle \propto\det\left(\sigma^{2}I\right)^{-1/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\beta\right)^{t}\left(y-X\beta\right)\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.79ex; vertical-align: -2.32ex; " SRC="img175.svg"
+ ALT="$\displaystyle =\left(\sigma^{2}\right)^{-1/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\beta\right)^{t}\left(y-X\beta\right)\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.08ex; vertical-align: -0.12ex; " SRC="img168.svg"
+ ALT="$\displaystyle =$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.04ex; vertical-align: -0.93ex; " SRC="img176.svg"
+ ALT="$\displaystyle \implies p\left(\beta,\sigma^{2}\vert y,X\right)$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.79ex; vertical-align: -2.32ex; " SRC="img177.svg"
+ ALT="$\displaystyle \propto\left(\sigma^{2}\right)^{-n/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\beta\right)^{t}\left(y-X\beta\right)\right)\sigma^{-2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.79ex; vertical-align: -2.32ex; " SRC="img178.svg"
+ ALT="$\displaystyle =\left(\sigma^{2}\right)^{-n/2-2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\beta\right)^{t}\left(y-X\beta\right)\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
 <BR><HR>
 
 </BODY>

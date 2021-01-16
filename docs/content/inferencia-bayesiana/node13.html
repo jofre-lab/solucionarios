@@ -1,51 +1,145 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE HTML>
 
-<!--Converted with LaTeX2HTML 2018 (Released Feb 1, 2018) -->
-<HTML>
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
 <HEAD>
-<TITLE>Ayudant&#237;a 4</TITLE>
-<META NAME="description" CONTENT="Ayudant&#237;a 4">
+<TITLE>2.8b.</TITLE>
+<META NAME="description" CONTENT="2.8b.">
 <META NAME="keywords" CONTENT="inferencia-bayesiana">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
 
-<META NAME="Generator" CONTENT="LaTeX2HTML v2018">
-<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
 
 <LINK REL="STYLESHEET" HREF="inferencia-bayesiana.css">
 
 <LINK REL="next" HREF="node14.html">
 <LINK REL="previous" HREF="node12.html">
-<LINK REL="up" HREF="node9.html">
 <LINK REL="next" HREF="node14.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation"><!--Navigation Panel-->
-<A NAME="tex2html176"
-  HREF="node14.html">
-<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html174"
-  HREF="node9.html">
-<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html168"
-  HREF="node12.html">
-<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A>   
+<A
+ HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
 <BR>
-<B> Next:</B> <A NAME="tex2html177"
-  HREF="node14.html">Ayudant&#237;a 5</A>
-<B> Up:</B> <A NAME="tex2html175"
-  HREF="node9.html">Ayudant&#237;a</A>
-<B> Previous:</B> <A NAME="tex2html169"
-  HREF="node12.html">Ayudant&#237;a 3</A>
+<B> Next:</B> <A
+ HREF="node14.html">4.2.a</A>
+<B> Up:</B> <A
+ HREF="node7.html">Modelos uniparamétricos</A>
+<B> Previous:</B> <A
+ HREF="node12.html">2.8a.</A>
 <BR>
 <BR></DIV>
 <!--End of Navigation Panel-->
 
-<H2><A NAME="SECTION00044000000000000000">
-Ayudant&#237;a 4</A>
-</H2>
+<H4><A ID="SECTION00022060000000000000">
+2.8b.</A>
+</H4>
+
+<P>
+La forma de encontrar la distribución predictiva en media esperanza
+y varianza iterada. 
+<P><!-- MATH
+ \begin{displaymath}
+\tilde{y}|y\sim N\left(\widetilde{\mu},\widetilde{\sigma}^{2}\right)
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="mathdisplay">
+<IMG STYLE="height: 3.04ex; vertical-align: -0.93ex; " SRC="img115.svg"
+ ALT="$\displaystyle \tilde{y}\vert y\sim N\left(\widetilde{\mu},\widetilde{\sigma}^{2}\right)
+$">
+</DIV><P></P>
+donde 
+<P></P>
+<DIV CLASS="mathdisplay"><TABLE CLASS="equation" >
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.35ex; vertical-align: -0.57ex; " SRC="img116.svg"
+ ALT="$\displaystyle \widetilde{\mu}$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img117.svg"
+ ALT="$\displaystyle =E\left(\tilde{y}\vert y\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img118.svg"
+ ALT="$\displaystyle =E\left(E\left(\tilde{y}\vert\theta,y\right)\vert y\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img119.svg"
+ ALT="$\displaystyle =E\left(E\left(\tilde{y}\vert\theta\right)\vert y\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img120.svg"
+ ALT="$\displaystyle =E\left(\theta\vert y\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 7.52ex; vertical-align: -3.19ex; " SRC="img121.svg"
+ ALT="$\displaystyle =\frac{\frac{1}{\sigma^{2}}\mu_{0}+\frac{n}{\tau_{0}^{2}}\overline{y}}{\frac{1}{\sigma^{2}}+\frac{n}{\tau_{0}^{2}}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<P></P>
+y la varianza 
+<P></P>
+<DIV CLASS="mathdisplay"><TABLE CLASS="equation" >
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.23ex; vertical-align: -0.12ex; " SRC="img122.svg"
+ ALT="$\displaystyle \widetilde{\sigma}^{2}$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img123.svg"
+ ALT="$\displaystyle =var\left(\tilde{y}\vert y\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img124.svg"
+ ALT="$\displaystyle =var\left(E\left(\tilde{y}\vert\theta\right)\vert y\right)+E\left(var\left(\tilde{y}\vert\theta\right)\vert y\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.04ex; vertical-align: -0.93ex; " SRC="img125.svg"
+ ALT="$\displaystyle =var\left(\theta\vert y\right)+E\left(\sigma^{2}\vert y\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.36ex; vertical-align: -3.19ex; " SRC="img126.svg"
+ ALT="$\displaystyle =\frac{1}{\frac{1}{\sigma^{2}}+\frac{n}{\tau_{0}^{2}}}+\sigma^{2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<P></P>
+por lo tanto 
+<P><!-- MATH
+ \begin{displaymath}
+\tilde{y}|y\sim N\left(\frac{\frac{1}{20^{2}}180+\frac{n}{40^{2}}150}{\frac{1}{20^{2}}+\frac{n}{40^{2}}},\frac{1}{\frac{1}{\sigma^{2}}+\frac{n}{\tau_{0}^{2}}}+\sigma^{2}\right)
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="mathdisplay">
+<IMG STYLE="height: 7.35ex; vertical-align: -3.19ex; " SRC="img127.svg"
+ ALT="$\displaystyle \tilde{y}\vert y\sim N\left(\frac{\frac{1}{20^{2}}180+\frac{n}{40...
+...^{2}}},\frac{1}{\frac{1}{\sigma^{2}}+\frac{n}{\tau_{0}^{2}}}+\sigma^{2}\right)
+$">
+</DIV><P></P>
 
 <P>
 <BR><HR>

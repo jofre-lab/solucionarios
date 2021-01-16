@@ -183,17 +183,7 @@ Si
 \end_layout
 
 \end_deeper
-\begin_layout Part
-Inferencia Clásica
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "inferencia-clasica.lyx"
-
-\end_inset
-
+\begin_layout Problem
 
 \end_layout
 

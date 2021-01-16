@@ -86,7 +86,7 @@ theorems-ams
 
 \begin_body
 
-\begin_layout Section
+\begin_layout Subsection
 Teorema de De Finetti
 \end_layout
 
@@ -223,6 +223,129 @@ p\left(y_{1}+\ldots+y_{n}=s_{n}\right)=\sum p\left(y_{1}+\ldots+y_{n}=s_{n}|y_{1
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Urnas de Polya 
+\end_layout
+
+\begin_layout Standard
+Las urnas de Polya son un buen ejemplo de intercambiabilidad: Tenemos 
+\begin_inset Formula $b_{0}$
+\end_inset
+
+ bolitas negras y 
+\begin_inset Formula $w_{0}$
+\end_inset
+
+ bolitas blancas en una urna.
+ Extraigo una bolita aleatoriamente, si es blanca retorno la bolita a la
+ urna y agrego una blanca, si es negra retorno la bolita y agrego una negra.
+ 
+\begin_inset Formula $B_{n}:$
+\end_inset
+
+ El número de bolas negras dado 
+\begin_inset Formula $n$
+\end_inset
+
+ ensayos es.
+\begin_inset Formula 
+\[
+B_{n}\sim Bin\left(n,\frac{b_{0}}{b_{0}+w_{0}}\right)
+\]
+
+\end_inset
+
+la demostración biene como sigue 
+\begin_inset Formula 
+\begin{align*}
+\text{Bolas negras iniciales }B_{0} & =b_{0}\\
+\implies P\left(B_{0}=b_{0}\right) & =1\\
+P\left(B_{1}=b_{0}+1\right) & =\frac{b_{0}}{b_{0}+w_{0}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para 
+\begin_inset Formula $n=2$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{align*}
+P\left(B_{2}=b_{0}\right) & =\frac{w_{0}}{w_{0}+b_{0}}\cdot\frac{w_{0}+1}{w_{0}+b_{0}+1}\\
+P\left(B_{2}=b_{0}+1\right) & =\frac{w_{0}}{w_{0}+b_{0}}\frac{b_{0}}{w_{0}+b_{0}+1}+\frac{b_{0}}{w_{0}+b_{0}}\frac{w_{0}}{w_{0}+b_{0}+1}\\
+P\left(B_{2}=b_{0}+2\right) & =\frac{b_{0}}{w_{0}+b_{0}}\cdot\frac{b_{0}+1}{w_{0}+b_{0}+1}
+\end{align*}
+
+\end_inset
+
+debemos demostrar que la secuencia de variables aleatorias 
+\begin_inset Formula $X_{1},\ldots,X_{n}$
+\end_inset
+
+ de la secuencua de colores en cada una de las 
+\begin_inset Formula $n$
+\end_inset
+
+ extracciones en la urna es una secuencia de variables aleatorias intercambiable
+s.
+ Sea 
+\begin_inset Formula $Y_{n}$
+\end_inset
+
+ la proporción de bolas negras en la urna en dado 
+\begin_inset Formula $n$
+\end_inset
+
+ ensayos.
+ 
+\begin_inset Formula 
+\[
+Y_{n}=\frac{B_{n}}{B_{n}+W_{n}}=\frac{B_{n}}{b_{0}+w_{0}+n}
+\]
+
+\end_inset
+
+con esto podemos decir que 
+\begin_inset Formula 
+\[
+B_{n+1}=\begin{cases}
+B_{n} & \text{con probabilidad }1-Y_{n}\\
+B_{n}+1 & \text{con probabilidad }Y_{n}
+\end{cases}
+\]
+
+\end_inset
+
+entonces 
+\begin_inset Formula 
+\begin{align*}
+E\left(Y_{n+1}|X_{1},\ldots,X_{n}\right) & =E\left(\frac{B_{n+1}}{b_{0}+w_{0}+n}|X_{1},\ldots,X_{n}\right)\\
+ & =\frac{1}{b_{0}+w_{0}+n}E\left(B_{n+1}|X_{1},\ldots,X_{n}\right)\\
+ & =\frac{1}{b_{0}+w_{0}+n}\left(B_{n}\left(1-Y_{n}\right)+\left(B_{n}+1\right)Y_{n}\right)\\
+ & =\frac{1}{b_{0}+w_{0}+n}\left(B_{n}-B_{n}Y_{n}+B_{n}Y_{n}+Y_{n}\right)\\
+ & =\frac{1}{b_{0}+w_{0}+n}\left(B_{n}+Y_{n}\right)\\
+ & =Y_{n}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Blackwell and MacQueen 1973
+\end_layout
+
+\begin_layout Standard
+Revisaremos la implicancias de este artículo en estadística bayesiana no
+ paramétrica.
 \end_layout
 
 \begin_layout Section
@@ -407,7 +530,7 @@ y seleccionamos valores que respeten la igualdad.
 \end_layout
 
 \begin_layout Paragraph*
-2.7.a
+2.7a.
 \end_layout
 
 \begin_layout Standard
@@ -438,6 +561,237 @@ p\left(\theta\right) & =\underbrace{p\left(\phi\right)}_{\propto1}\left|\frac{d\
 \end_inset
 
  .ver BDA (ecuación 2.19) 
+\end_layout
+
+\begin_layout Paragraph*
+2.7b.
+\end_layout
+
+\begin_layout Standard
+Muestre que si 
+\begin_inset Formula $y=0$
+\end_inset
+
+ o 
+\begin_inset Formula $n=0$
+\end_inset
+
+ la distribución posterior es impropia.
+ Sol: Si tenemos que 
+\begin_inset Formula 
+\begin{align*}
+p\left(\theta|y\right) & \propto p\left(y|\theta\right)p\left(\theta\right)\\
+ & =\binom{n}{y}\theta^{y}\left(1-\theta\right)^{n-y}\theta^{-1}\left(1-\theta\right)^{-1}\\
+ & \propto\theta^{y-1}\left(1-\theta\right)^{n-y-1}=\begin{cases}
+\theta^{-1}\left(1-\theta\right)^{n-1} & y=0\\
+\theta^{-1}\left(1-\theta\right)^{-1} & n=0\\
+\theta^{y-1}\left(1-\theta\right)^{n-y-1} & \text{otro caso}
+\end{cases}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+en los dos primeros casos no integra 1
+\end_layout
+
+\begin_layout Paragraph*
+2.8a.
+ 
+\end_layout
+
+\begin_layout Standard
+Distribución normal con media desconocida: Sea una muestra aleatoria de
+ 
+\begin_inset Formula $n$
+\end_inset
+
+ estudiantes extraidos de una población lo suficientemente grande para luego
+ medir su peso.
+ La media del peso viene dada por 
+\begin_inset Formula $\overline{y}=150$
+\end_inset
+
+.
+ Asuma que pero en la población se distribuye normal con media desconocida
+ 
+\begin_inset Formula $\theta$
+\end_inset
+
+ y desviación estandar de 
+\begin_inset Formula $20$
+\end_inset
+
+.
+ Suponga una distribución a priori para 
+\begin_inset Formula $\theta$
+\end_inset
+
+ normal con media 
+\begin_inset Formula $180$
+\end_inset
+
+ y desviación estandar de 
+\begin_inset Formula $40$
+\end_inset
+
+.
+ Encuentre la distribución a posterior de 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ Sol: Solo con el objetivo de ejercitar todos los pasos deduciremos la distribuc
+ión a posterior completamente.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+y|\theta & \sim N\left(\theta,\sigma^{2}\right)\\
+\theta & \sim N\left(\mu_{0},\tau_{0}^{2}\right)
+\end{align*}
+
+\end_inset
+
+entonces tenemos que 
+\begin_inset Formula 
+\begin{align*}
+p\left(\theta|y\right) & \propto p\left(y|\theta\right)p\left(\theta\right)\\
+ & =\prod_{i=1}^{n}\left[\left(2\pi\sigma^{2}\right)^{-1/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y_{i}-\theta\right)^{2}\right)\right]\left(2\pi\tau_{0}^{2}\right)^{-1/2}\exp\left(-\frac{1}{2\tau_{0}^{2}}\left(\theta-\mu_{0}\right)^{2}\right)\\
+ & \propto\exp\left(\frac{1}{2\sigma^{2}}\sum_{i=1}^{n}\left(y_{i}-\theta\right)^{2}\right)\exp\left(\frac{1}{2\tau_{0}^{2}}\left(\theta-\mu_{0}\right)^{2}\right)\\
+ & =\exp\left(-\frac{1}{2\sigma^{2}}\sum_{i=1}^{n}\left(y_{i}-\theta\right)^{2}-\frac{1}{2\tau_{0}^{2}}\left(\theta-\mu_{0}\right)^{2}\right)\\
+ & \propto\exp\left(-\frac{1}{2\sigma^{2}}\sum_{i=1}^{n}\left(y_{i}^{2}-2y_{i}\theta+\theta^{2}\right)-\frac{1}{2\tau_{0}^{2}}\left(\theta^{2}-2\theta\mu_{0}+\mu^{2}\right)\right)\\
+ & \propto\exp\left(-\frac{1}{2\sigma^{2}}\sum_{i=1}^{n}\left(\theta^{2}-2y_{i}\theta\right)-\frac{1}{2\tau_{0}^{2}}\left(\theta^{2}-2\theta\mu_{0}\right)\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+entonces 
+\begin_inset Formula 
+\[
+\theta|y\sim N\left(\frac{\frac{1}{\sigma^{2}}\mu_{0}+\frac{n}{\tau_{0}^{2}}\overline{y}}{\frac{1}{\sigma^{2}}+\frac{n}{\tau_{0}^{2}}},\frac{1}{\frac{1}{\sigma^{2}}+\frac{n}{\tau_{0}^{2}}}\right)
+\]
+
+\end_inset
+
+para nuestro caso tenemos que 
+\begin_inset Formula 
+\[
+\theta|y\sim N\left(\frac{\frac{1}{\sigma^{2}}\mu_{0}+\frac{n}{\tau_{0}^{2}}\overline{y}}{\frac{1}{\sigma^{2}}+\frac{n}{\tau_{0}^{2}}},\frac{1}{\frac{1}{\sigma^{2}}+\frac{n}{\tau_{0}^{2}}}\right)
+\]
+
+\end_inset
+
+en nuestro cado 
+\begin_inset Formula 
+\[
+\theta|y\sim N\left(\frac{\frac{1}{20^{2}}180+\frac{n}{40^{2}}150}{\frac{1}{20^{2}}+\frac{n}{40^{2}}},\frac{1}{\frac{1}{20^{2}}+\frac{n}{40^{2}}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+2.8b.
+\end_layout
+
+\begin_layout Standard
+La forma de encontrar la distribución predictiva en media esperanza y varianza
+ iterada.
+ 
+\begin_inset Formula 
+\[
+\tilde{y}|y\sim N\left(\widetilde{\mu},\widetilde{\sigma}^{2}\right)
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula 
+\begin{align*}
+\widetilde{\mu} & =E\left(\tilde{y}|y\right)\\
+ & =E\left(E\left(\tilde{y}|\theta,y\right)|y\right)\\
+ & =E\left(E\left(\tilde{y}|\theta\right)|y\right)\\
+ & =E\left(\theta|y\right)\\
+ & =\frac{\frac{1}{\sigma^{2}}\mu_{0}+\frac{n}{\tau_{0}^{2}}\overline{y}}{\frac{1}{\sigma^{2}}+\frac{n}{\tau_{0}^{2}}}
+\end{align*}
+
+\end_inset
+
+y la varianza 
+\begin_inset Formula 
+\begin{align*}
+\widetilde{\sigma}^{2} & =var\left(\tilde{y}|y\right)\\
+ & =var\left(E\left(\tilde{y}|\theta\right)|y\right)+E\left(var\left(\tilde{y}|\theta\right)|y\right)\\
+ & =var\left(\theta|y\right)+E\left(\sigma^{2}|y\right)\\
+ & =\frac{1}{\frac{1}{\sigma^{2}}+\frac{n}{\tau_{0}^{2}}}+\sigma^{2}
+\end{align*}
+
+\end_inset
+
+por lo tanto 
+\begin_inset Formula 
+\[
+\tilde{y}|y\sim N\left(\frac{\frac{1}{20^{2}}180+\frac{n}{40^{2}}150}{\frac{1}{20^{2}}+\frac{n}{40^{2}}},\frac{1}{\frac{1}{\sigma^{2}}+\frac{n}{\tau_{0}^{2}}}+\sigma^{2}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+4.2.a
+\end_layout
+
+\begin_layout Standard
+normalidad asintótica de la posterior: sea 
+\begin_inset Formula $y_{1}\ldots,y_{5}$
+\end_inset
+
+ muestras independientes de una distribución cauchy con parametro de posición
+ desconocido 
+\begin_inset Formula $\theta$
+\end_inset
+
+ y escala conicda 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ 
+\begin_inset Formula $p\left(y_{i}|\theta\right)\propto\frac{1}{1+\left(y_{i}-\theta\right)^{2}}$
+\end_inset
+
+.
+ Asuma que la distribución a priori para 
+\begin_inset Formula 
+\[
+\theta\sim\text{uniforme}\left(0,1\right)
+\]
+
+\end_inset
+
+ determine la derivada y la segunda derivada del logaritmo de la verosimilitud.
+ sol
+\begin_inset Formula 
+\[
+l\left(\theta|y\right)=\prod_{i=1}^{n}\frac{1}{1+\left(y_{i}-\theta\right)^{2}}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -535,7 +889,7 @@ calcular la distribución a posteriori marginal de
 \begin{align*}
 p\left(\mu|\mathbf{x}\right) & =\int_{0}^{\infty}p\left(\mu,\sigma^{2}|\mathbf{x}\right)d\sigma^{2}\\
  & \propto\int_{0}^{\infty}\left(\sigma^{2}\right)^{-3/2}\sigma^{-n/2}\exp\left(-\frac{1}{2\sigma^{2}}A\right)d\sigma^{2}\\
-A & =\left(\sum\left(x_{i}-\overline{x}\right)^{2}+n\left(\overline{x}-\mu\right)^{2}\right)
+A & =\sum\left(x_{i}-\overline{x}\right)^{2}+n\left(\overline{x}-\mu\right)^{2}
 \end{align*}
 
 \end_inset
@@ -639,12 +993,74 @@ Encontre la distribución a posterior de
 \end_inset
 
 .
- 
+ Conocido que la distribución a priori de 
+\begin_inset Formula $p\left(\beta,\sigma^{2}\right)\propto\sigma^{-2}$
+\end_inset
+
+
 \begin_inset Formula 
 \begin{align*}
 y|\beta,\sigma^{2},X & \sim N\left(X\beta,\sigma^{2}I\right)\\
-p\left(y|\beta,\sigma^{2},X\right) & \propto\left(\sigma^{2}\right)^{2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\hat{\beta}\right)^{t}\left(y-X\hat{\beta}\right)\right)\exp\left(-\frac{1}{2\sigma^{2}}\left(\beta-\hat{\beta}\right)^{t}X^{t}X\left(\beta-\hat{\beta}\right)\right)\\
-\implies
+p\left(y|\beta,\sigma^{2},X\right) & \propto\det\left(\sigma^{2}I\right)^{-1/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\beta\right)^{t}\left(y-X\beta\right)\right)\\
+ & =\left(\sigma^{2}\right)^{-1/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\beta\right)^{t}\left(y-X\beta\right)\right)\\
+ & =\\
+\implies p\left(\beta,\sigma^{2}|y,X\right) & \propto\left(\sigma^{2}\right)^{-n/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\beta\right)^{t}\left(y-X\beta\right)\right)\sigma^{-2}\\
+ & =\left(\sigma^{2}\right)^{-n/2-2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\beta\right)^{t}\left(y-X\beta\right)\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+4.5.2b.
+\end_layout
+
+\begin_layout Standard
+Demuestre que la distribución a posterior de 
+\series bold
+
+\begin_inset Formula $\beta$
+\end_inset
+
+ 
+\series default
+dado 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+ corresponde a una distribución normal
+\series bold
+ 
+\begin_inset Formula $\hat{\beta},\sigma^{2}\left(X^{t}X\right)^{-1}$
+\end_inset
+
+.
+ 
+\series default
+Sol: Sabemos que 
+\begin_inset Formula 
+\begin{align*}
+p\left(\beta,\sigma^{2}|y\right) & =p\left(\sigma^{2}|\beta,y\right)p\left(\beta|y\right) & \implies & p\left(\beta|y\right)=\frac{p\left(\beta,\sigma^{2}|y\right)}{p\left(\sigma^{2}|\beta,y\right)}=\frac{p\left(y|\beta,\sigma^{2}\right)p\left(\beta,\sigma^{2}\right)}{p\left(\sigma^{2}|\beta,y\right)}\\
+p\left(\beta,\sigma^{2}|y\right) & =p\left(\beta|\sigma^{2},y\right)p\left(\sigma^{2}|y\right) & \implies & p\left(\sigma^{2}|y\right)=\frac{p\left(y|\beta,\sigma^{2}\right)p\left(\beta,\sigma^{2}\right)}{p\left(\beta|\sigma^{2},y\right)}
+\end{align*}
+
+\end_inset
+
+El camino quizás es más simple si hacemos la siguiente operatoria:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+p\left(\beta|\sigma^{2},y\right) & =\frac{p\left(\beta,\sigma^{2}|,y\right)}{p\left(\sigma^{2}|y\right)}\\
+ & \propto p\left(\beta,\sigma^{2}|,y\right)\\
+ & =\left(\sigma^{2}\right)^{-n/2-2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\beta\right)^{t}\left(y-X\beta\right)\right)\\
+ & \propto\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\beta\right)^{t}\left(y-X\beta\right)\right)\\
+ & =\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\hat{\beta}\right)^{t}\left(y-X\hat{\beta}\right)-\frac{1}{2\sigma^{2}}\left(\beta-\hat{\beta}\right)^{t}X^{t}X\left(\beta-\hat{\beta}\right)\right)\\
+ & \propto\exp\left(-\frac{1}{2\sigma^{2}}\left(\beta-\hat{\beta}\right)^{t}X^{t}X\left(\beta-\hat{\beta}\right)\right)\\
+\implies\beta|\sigma^{2},y & \sim N\left(\hat{\beta},\sigma^{2}\left(X^{t}X\right)^{-1}\right)
 \end{align*}
 
 \end_inset
@@ -653,15 +1069,49 @@ p\left(y|\beta,\sigma^{2},X\right) & \propto\left(\sigma^{2}\right)^{2}\exp\left
 \end_layout
 
 \begin_layout Paragraph
-4.5.2b
+4.5.2c.
+\end_layout
+
+\begin_layout Standard
+Encuentre la distribución a posterior de 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+ , (ver ejercicio 14.4 BDA)
+\begin_inset Formula 
+\begin{align*}
+p\left(\sigma^{2}|y\right) & =\frac{p\left(\beta,\sigma^{2}|,y\right)}{p\left(\beta|\sigma^{2},y\right)}\\
+ & \propto\frac{\left(\sigma^{2}\right)^{-n/2-2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\beta\right)^{t}\left(y-X\beta\right)\right)}{\det\left(\sigma^{2}\left(X^{t}X\right)^{-1}\right)^{-1/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(\beta-\hat{\beta}\right)^{t}X^{t}X\left(\beta-\hat{\beta}\right)\right)}\\
+ & =\frac{\left(\sigma^{2}\right)^{-n/2-2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\hat{\beta}\right)^{t}\left(y-X\hat{\beta}\right)-\frac{1}{2\sigma^{2}}\left(\beta-\hat{\beta}\right)^{t}X^{t}X\left(\beta-\hat{\beta}\right)\right)}{\det\left(\sigma^{2}\left(X^{t}X\right)^{-1}\right)^{-1/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(\beta-\hat{\beta}\right)^{t}X^{t}X\left(\beta-\hat{\beta}\right)\right)}\\
+ & =\frac{\left(\sigma^{2}\right)^{-n/2-2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\hat{\beta}\right)^{t}\left(y-X\hat{\beta}\right)\right)}{\det\left(\sigma^{2}\left(X^{t}X\right)^{-1}\right)^{-1/2}\exp\left(0\right)}\\
+ & =\frac{\left(\sigma^{2}\right)^{-n/2-2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\hat{\beta}\right)^{t}\left(y-X\hat{\beta}\right)\right)}{\left(\sigma^{2k}\right)^{-1/2}\det\left(\left(X^{t}X\right)^{-1}\right)^{-1/2}\exp\left(0\right)}\\
+ & \propto\left(\sigma^{2}\right)^{-n/2-2+k/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\hat{\beta}\right)^{t}\left(y-X\hat{\beta}\right)\right)\\
+\implies\sigma^{2}|y & \sim Inv-\chi^{2}\left(n-k,s^{2}\right)
+\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
-4.5.2d
+4.5.2d 
 \end_layout
 
-\begin_layout Paragraph
-4.5.2e
+\begin_layout Standard
+Si 
+\begin_inset Formula $\widetilde{y}$
+\end_inset
+
+ es una nueva respuesta, existen 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $b$
+\end_inset
+
+ tales que 
 \end_layout
 
 \begin_layout Section

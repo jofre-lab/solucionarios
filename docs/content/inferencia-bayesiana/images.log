@@ -1,88 +1,84 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2020.7.15)  14 SEP 2020 21:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.10.4)  16 JAN 2021 06:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **./images.tex
 (./images.tex
-LaTeX2e <2017-04-15>
-Babel <3.18> and hyphenation patterns for 12 language(s) loaded.
-
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 )
-\c@part=\count79
-\c@section=\count80
-\c@subsection=\count81
-\c@subsubsection=\count82
-\c@paragraph=\count83
-\c@subparagraph=\count84
-\c@figure=\count85
-\c@table=\count86
-\abovecaptionskip=\skip41
-\belowcaptionskip=\skip42
-\bibindent=\dimen102
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
 ) (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 ) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
-File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
-LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2017/09/02 v2.17a AMS math features
-\@mathmargin=\skip43
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip49
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks14
-\ex@=\dimen103
+\ex@=\dimen135
 )) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen104
+\pmbraise@=\dimen136
 ) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count87
-LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count88
-\leftroot@=\count89
-LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count90
-\DOTSCASE@=\count91
-LaTeX Info: Redefining \ldots on input line 472.
-LaTeX Info: Redefining \dots on input line 475.
-LaTeX Info: Redefining \cdots on input line 596.
-\Mathstrutbox@=\box26
-\strutbox@=\box27
-\big@size=\dimen105
-LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count92
-\c@MaxMatrixCols=\count93
-\dotsspace@=\muskip10
-\c@parentequation=\count94
-\dspbrk@lvl=\count95
+\inf@bad=\count175
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count176
+\leftroot@=\count177
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count178
+\DOTSCASE@=\count179
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box45
+\strutbox@=\box46
+\big@size=\dimen137
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count180
+\c@MaxMatrixCols=\count181
+\dotsspace@=\muskip16
+\c@parentequation=\count182
+\dspbrk@lvl=\count183
 \tag@help=\toks15
-\row@=\count96
-\column@=\count97
-\maxfields@=\count98
+\row@=\count184
+\column@=\count185
+\maxfields@=\count186
 \andhelp@=\toks16
-\eqnshift@=\dimen106
-\alignsep@=\dimen107
-\tagshift@=\dimen108
-\tagwidth@=\dimen109
-\totwidth@=\dimen110
-\lineht@=\dimen111
+\eqnshift@=\dimen138
+\alignsep@=\dimen139
+\tagshift@=\dimen140
+\tagwidth@=\dimen141
+\totwidth@=\dimen142
+\lineht@=\dimen143
 \@envbody=\toks17
-\multlinegap=\skip44
-\multlinetaggap=\skip45
+\multlinegap=\skip50
+\multlinetaggap=\skip51
 \mathdisplay@stack=\toks18
-LaTeX Info: Redefining \[ on input line 2817.
-LaTeX Info: Redefining \] on input line 2818.
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
 ) (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2017/10/31 v2.20.4
 \thm@style=\toks19
@@ -90,54 +86,55 @@ Package: amsthm 2017/10/31 v2.20.4
 \thm@headfont=\toks21
 \thm@notefont=\toks22
 \thm@headpunct=\toks23
-\thm@preskip=\skip46
-\thm@postskip=\skip47
-\thm@headsep=\skip48
+\thm@preskip=\skip52
+\thm@postskip=\skip53
+\thm@headsep=\skip54
 \dth@everypar=\toks24
 )
-\c@thm=\count99
+\c@thm=\count187
 (/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty (/usr/share/texl
 ive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
-Package: pgfplots 2017/06/05 v1.15 Data Visualization (1.15)
+Package: pgfplots 2018/03/28 v1.16 Data Visualization (1.16)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks25
 ) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 ) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: dvips.def on input line 99.
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/dvips.def
-File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
+Package graphics Info: Driver file: pdftex.def on input line 105.
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen112
-\Gin@req@width=\dimen113
+\Gin@req@height=\dimen144
+\Gin@req@width=\dimen145
 ) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/sha
 re/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/share/texlive/texm
 f-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texlive/texmf-dist/tex/ge
 neric/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks26
-\pgfutil@tempdima=\dimen114
-\pgfutil@tempdimb=\dimen115
+\pgfutil@tempdima=\dimen146
+\pgfutil@tempdimb=\dimen147
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
 ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box28
+\pgfutil@abb=\box47
 (/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
-)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
-Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/u
+sr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2020/01/08 v3.1.5b (3.1.5b)
 ))
-Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
+Package: pgf 2020/01/08 v3.1.5b (3.1.5b)
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/share
 /texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/share/texlive/te
 xmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
-Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
+Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks27
 \pgfkeys@temptoks=\toks28
@@ -146,51 +143,54 @@ Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 ex
 \pgfkeys@tmptoks=\toks29
 ))
-\pgf@x=\dimen116
-\pgf@y=\dimen117
-\pgf@xa=\dimen118
-\pgf@ya=\dimen119
-\pgf@xb=\dimen120
-\pgf@yb=\dimen121
-\pgf@xc=\dimen122
-\pgf@yc=\dimen123
+\pgf@x=\dimen148
+\pgf@y=\dimen149
+\pgf@xa=\dimen150
+\pgf@ya=\dimen151
+\pgf@xb=\dimen152
+\pgf@yb=\dimen153
+\pgf@xc=\dimen154
+\pgf@yc=\dimen155
+\pgf@xd=\dimen156
+\pgf@yd=\dimen157
 \w@pgf@writea=\write3
-\r@pgf@reada=\read1
-\c@pgf@counta=\count100
-\c@pgf@countb=\count101
-\c@pgf@countc=\count102
-\c@pgf@countd=\count103
+\r@pgf@reada=\read2
+\c@pgf@counta=\count188
+\c@pgf@countb=\count189
+\c@pgf@countc=\count190
+\c@pgf@countd=\count191
 \t@pgf@toka=\toks30
 \t@pgf@tokb=\toks31
 \t@pgf@tokc=\toks32
+\pgf@sys@id@count=\count192
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
-File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
 )
-Driver file for pgf: pgfsys-dvips.def
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvips.def
-File: pgfsys-dvips.def 2014/07/09  (rcs-revision 1.25)
+Driver file for pgf: pgfsys-pdftex.def
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2020/01/08 v3.1.5b (3.1.5b)
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-postsc
-ript.def
-File: pgfsys-common-postscript.def 2008/10/01  (rcs-revision 1.22)
-\pgf@objectcount=\count104
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f
+File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
 tex
-File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count105
-\pgfsyssoftpath@bigbuffer@items=\count106
+File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfsyssoftpath@smallbuffer@items=\count193
+\pgfsyssoftpath@bigbuffer@items=\count194
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
 tex
-File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+File: pgfsysprotocol.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: dvips.def on input line 225.
+Package xcolor Info: Driver file: pdftex.def on input line 225.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
@@ -199,14 +199,14 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
-Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
+Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/shar
 e/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (/usr/share/texl
 ive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/share/texlive/t
 exmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen124
-\pgfmath@count=\count107
-\pgfmath@box=\box29
+\pgfmath@dimen=\dimen158
+\pgfmath@count=\count195
+\pgfmath@box=\box48
 \pgfmath@toks=\toks33
 \pgfmath@stack@operand=\toks34
 \pgfmath@stack@operation=\toks35
@@ -229,170 +229,175 @@ tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
 thmetics.code.tex))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmat
 hfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count108
-))
+\c@pgfmathroundto@lastzeros=\count196
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
 x
-File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen125
-\pgf@picmaxx=\dimen126
-\pgf@picminy=\dimen127
-\pgf@picmaxy=\dimen128
-\pgf@pathminx=\dimen129
-\pgf@pathmaxx=\dimen130
-\pgf@pathminy=\dimen131
-\pgf@pathmaxy=\dimen132
-\pgf@xx=\dimen133
-\pgf@xy=\dimen134
-\pgf@yx=\dimen135
-\pgf@yy=\dimen136
-\pgf@zx=\dimen137
-\pgf@zy=\dimen138
+File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@picminx=\dimen159
+\pgf@picmaxx=\dimen160
+\pgf@picminy=\dimen161
+\pgf@picmaxy=\dimen162
+\pgf@pathminx=\dimen163
+\pgf@pathmaxx=\dimen164
+\pgf@pathminy=\dimen165
+\pgf@pathmaxy=\dimen166
+\pgf@xx=\dimen167
+\pgf@xy=\dimen168
+\pgf@yx=\dimen169
+\pgf@yy=\dimen170
+\pgf@zx=\dimen171
+\pgf@zy=\dimen172
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
 code.tex
-File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen139
-\pgf@path@lasty=\dimen140
+File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@path@lastx=\dimen173
+\pgf@path@lasty=\dimen174
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
 .tex
-File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen141
-\pgf@shorten@start@additional=\dimen142
+File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@shorten@end@additional=\dimen175
+\pgf@shorten@start@additional=\dimen176
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
 x
-File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
-\pgfpic=\box30
-\pgf@hbox=\box31
-\pgf@layerbox@main=\box32
-\pgf@picture@serial@count=\count109
+File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfpic=\box49
+\pgf@hbox=\box50
+\pgf@layerbox@main=\box51
+\pgf@picture@serial@count=\count197
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
 ode.tex
-File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen143
+File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgflinewidth=\dimen177
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
 s.code.tex
-File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen144
-\pgf@pt@y=\dimen145
-\pgf@pt@temp=\dimen146
+File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@pt@x=\dimen178
+\pgf@pt@y=\dimen179
+\pgf@pt@temp=\dimen180
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
-File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+File: pgfcorequick.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
 ex
-File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+File: pgfcoreobjects.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
 .code.tex
-File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
 x
-File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen147
+File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfarrowsep=\dimen181
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
-File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen148
-\pgf@sys@shading@range@num=\count110
+File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@max=\dimen182
+\pgf@sys@shading@range@num=\count198
+\pgf@shadingcount=\count199
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
-File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
 tex
-File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
-\pgfexternal@startupbox=\box33
+File: pgfcoreexternal.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfexternal@startupbox=\box52
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
 x
-File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+File: pgfcorelayers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
 ode.tex
-File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+File: pgfcoretransparency.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
 tex
-File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+File: pgfcorepatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
-File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
-\pgfnodeparttextbox=\box34
+File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfnodeparttextbox=\box53
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
-File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
+File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
 .sty
-Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen149
-\pgf@nodesepend=\dimen150
+Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@nodesepstart=\dimen183
+\pgf@nodesepend=\dimen184
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
 .sty
-Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
+Package: pgfcomp-version-1-18 2020/01/08 v3.1.5b (3.1.5b)
 )) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/shar
 e/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/share/texlive/te
 xmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/share/texlive/texmf
 -dist/tex/latex/pgf/math/pgfmath.sty (/usr/share/texlive/texmf-dist/tex/generic
 /pgf/math/pgfmath.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/uti
 lities/pgffor.code.tex
-Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
+Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen151
-\pgffor@skip=\dimen152
+\pgffor@iter=\dimen185
+\pgffor@skip=\dimen186
 \pgffor@stack=\toks36
 \pgffor@toks=\toks37
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
-Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
-File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count111
-\pgfplotmarksize=\dimen153
+File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@plot@mark@count=\count266
+\pgfplotmarksize=\dimen187
 )
-\tikz@lastx=\dimen154
-\tikz@lasty=\dimen155
-\tikz@lastxsaved=\dimen156
-\tikz@lastysaved=\dimen157
-\tikzleveldistance=\dimen158
-\tikzsiblingdistance=\dimen159
-\tikz@figbox=\box35
-\tikz@figbox@bg=\box36
-\tikz@tempbox=\box37
-\tikz@tempbox@bg=\box38
-\tikztreelevel=\count112
-\tikznumberofchildren=\count113
-\tikznumberofcurrentchild=\count114
-\tikz@fig@count=\count115
+\tikz@lastx=\dimen188
+\tikz@lasty=\dimen189
+\tikz@lastxsaved=\dimen190
+\tikz@lastysaved=\dimen191
+\tikz@lastmovetox=\dimen192
+\tikz@lastmovetoy=\dimen193
+\tikzleveldistance=\dimen194
+\tikzsiblingdistance=\dimen195
+\tikz@figbox=\box54
+\tikz@figbox@bg=\box55
+\tikz@tempbox=\box56
+\tikz@tempbox@bg=\box57
+\tikztreelevel=\count267
+\tikznumberofchildren=\count268
+\tikznumberofcurrentchild=\count269
+\tikz@fig@count=\count270
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
-File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count116
-\pgfmatrixcurrentcolumn=\count117
-\pgf@matrix@numberofcolumns=\count118
+File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfmatrixcurrentrow=\count271
+\pgfmatrixcurrentcolumn=\count272
+\pgf@matrix@numberofcolumns=\count273
 )
-\tikz@expandcount=\count119
+\tikz@expandcount=\count274
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
+File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ))) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex (/usr
 /share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
 \t@pgfplots@toka=\toks38
 \t@pgfplots@tokb=\toks39
 \t@pgfplots@tokc=\toks40
-\pgfplots@tmpa=\dimen160
-\c@pgfplots@coordindex=\count120
-\c@pgfplots@scanlineindex=\count121
+\pgfplots@tmpa=\dimen196
+\c@pgfplots@coordindex=\count275
+\c@pgfplots@scanlineindex=\count276
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code
 .tex))
@@ -401,14 +406,6 @@ ex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
 gfsupp_loader.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
-)
-Package pgfplots: loading complementary arithmetics for your pgf version...
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
-gfsupp_pgflibraryfpu.code.tex)
-(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
-gfsupp_pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count122
 )) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.t
 ex
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
@@ -417,13 +414,13 @@ tructure.code.tex)
 tructureext.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray
 .code.tex
-\c@pgfplotsarray@tmp=\count123
+\c@pgfplotsarray@tmp=\count277
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatri
 x.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshare
 d.code.tex
-\c@pgfplotstable@counta=\count124
+\c@pgfplotstable@counta=\count278
 \t@pgfplotstable@a=\toks41
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque
@@ -436,10 +433,10 @@ de.tex))
 .tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.sur
 fshading.code.tex
-\c@pgfplotslibrarysurf@no=\count125
+\c@pgfplotslibrarysurf@no=\count279
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surf
-shading.pgfsys-dvips.def)))
+shading.pgfsys-pdftex.def)))
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.
 tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex
@@ -463,16 +460,16 @@ e.tex)
 zlibrarydecorations.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
 e.tex
-\pgfdecoratedcompleteddistance=\dimen161
-\pgfdecoratedremainingdistance=\dimen162
-\pgfdecoratedinputsegmentcompleteddistance=\dimen163
-\pgfdecoratedinputsegmentremainingdistance=\dimen164
-\pgf@decorate@distancetomove=\dimen165
-\pgf@decorate@repeatstate=\count126
-\pgfdecorationsegmentamplitude=\dimen166
-\pgfdecorationsegmentlength=\dimen167
+\pgfdecoratedcompleteddistance=\dimen197
+\pgfdecoratedremainingdistance=\dimen198
+\pgfdecoratedinputsegmentcompleteddistance=\dimen199
+\pgfdecoratedinputsegmentremainingdistance=\dimen256
+\pgf@decorate@distancetomove=\dimen257
+\pgf@decorate@repeatstate=\count280
+\pgfdecorationsegmentamplitude=\dimen258
+\pgfdecorationsegmentlength=\dimen259
 )
-\tikz@lib@dec@box=\box39
+\tikz@lib@dec@box=\box58
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarydecorations.pathmorphing.code.tex
@@ -482,77 +479,150 @@ decorations.pathmorphing.code.tex))
 zlibrarydecorations.pathreplacing.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
 decorations.pathreplacing.code.tex))
-\pgfplots@numplots=\count127
-\pgfplots@xmin@reg=\dimen168
-\pgfplots@xmax@reg=\dimen169
-\pgfplots@ymin@reg=\dimen170
-\pgfplots@ymax@reg=\dimen171
-\pgfplots@zmin@reg=\dimen172
-\pgfplots@zmax@reg=\dimen173
+\pgfplots@numplots=\count281
+\pgfplots@xmin@reg=\dimen260
+\pgfplots@xmax@reg=\dimen261
+\pgfplots@ymin@reg=\dimen262
+\pgfplots@ymax@reg=\dimen263
+\pgfplots@zmin@reg=\dimen264
+\pgfplots@zmax@reg=\dimen265
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibraryplotmarks.code.tex
-File: tikzlibraryplotmarks.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+File: tikzlibraryplotmarks.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.co
 de.tex
-File: pgflibraryplotmarks.code.tex 2015/08/03 v3.0.1a (rcs-revision 1.14)
+File: pgflibraryplotmarks.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ))) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
-Package: enumitem 2011/09/28 v3.5.2 Customized lists
-\labelindent=\skip49
-\enit@outerparindent=\dimen174
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip55
+\enit@outerparindent=\dimen266
 \enit@toks=\toks42
-\enit@inbox=\box40
-\enitdp@description=\count128
+\enit@inbox=\box59
+\enit@count@id=\count282
+\enitdp@description=\count283
 ) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2018/02/14 3.18 The Babel package
+Package: babel 2020/02/14 3.40 The Babel package
 (/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
-File: switch.def 2018/02/14 3.18 Babel switching mechanism
+File: switch.def 2020/02/14 3.40 Babel switching mechanism
 ) (/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2018/02/14 3.18 Babel common definitions
-\babel@savecnt=\count129
-\U@D=\dimen175
+File: babel.def 2020/02/14 3.40 Babel common definitions
+\babel@savecnt=\count284
+\U@D=\dimen267
 (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
-\bbl@dirlevel=\count130
+\bbl@readstream=\read3
+\bbl@dirlevel=\count285
 )
-\l@british = a dialect from \language\l@english 
-\l@UKenglish = a dialect from \language\l@english 
-\l@canadian = a dialect from \language\l@american 
-\l@australian = a dialect from \language\l@british 
-\l@newzealand = a dialect from \language\l@british 
+Package babel Info: \l@british = using hyphenrules for english
+(babel)             (\language0) on input line 82.
+Package babel Info: \l@UKenglish = using hyphenrules for english
+(babel)             (\language0) on input line 83.
+Package babel Info: \l@canadian = using hyphenrules for english
+(babel)             (\language0) on input line 102.
+Package babel Info: \l@australian = using hyphenrules for english
+(babel)             (\language0) on input line 105.
+Package babel Info: \l@newzealand = using hyphenrules for english
+(babel)             (\language0) on input line 108.
 )) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2015/03/17 v1.2c Input encoding file
+Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks43
 \inpenc@posthook=\toks44
 (/usr/share/texlive/texmf-dist/tex/latex/base/latin1.def
-File: latin1.def 2015/03/17 v1.2c Input encoding file
+File: latin1.def 2018/08/11 v1.3c Input encoding file
 ))
-\sizebox=\box41
+\sizebox=\box60
 \lthtmlwrite=\write4
-(./images.aux)
+(/usr/share/texmf/tex/latex/preview/preview.sty
+Package: preview 2017/04/24 11.91 (AUCTeX/preview-latex)
+(/usr/share/texmf/tex/latex/preview/prtightpage.def
+\PreviewBorder=\dimen268
+)
+\pr@snippet=\count286
+\pr@box=\box61
+\pr@output=\toks45
+)
+\lthtmlPageBox=\box62
+\lthtmlCropMarkHeight=\dimen269
+\lthtmlCropMarkDepth=\dimen270
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count287
+\l__pdf_internal_box=\box63
+) (./images.aux)
 \openout1 = `images.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
-ABD: EveryShipout initializing macros
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count288
+\scratchdimen=\dimen271
+\scratchbox=\box64
+\nofMPsegments=\count289
+\nofMParguments=\count290
+\everyMPshowfont=\toks46
+\MPscratchCnt=\count291
+\MPscratchDim=\dimen272
+\MPnumerator=\count292
+\makeMPintoPDFobject=\count293
+\everyMPtoPDFconversion=\toks47
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)) (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)) (/usr/share/texlive/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2019/11/07 v1.0c TeX engine tests
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)) ABD: EveryShipout initializing macros
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
-ick labels; missing features). Consider writing \pgfplotsset{compat=1.15} into 
+ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into 
 your preamble.
- on input line 155.
+ on input line 135.
 
+Preview: Fontsize 10pt
+Preview: PDFoutput 1
 
 latex2htmlLength hsize=349.0pt
 
@@ -576,44 +646,1318 @@ latex2htmlLength oddsidemargin=62.0pt
 
 latex2htmlLength evensidemargin=62.0pt
 
-l2hSize :tex2html_wrap_inline854:12.00008pt::12.00008pt::96.4911pt.
-[1
+
+:tex2html_wrap_indisplay1470:lthtmlCropMarkHeight:=22.51393pt
+
+:tex2html_wrap_indisplay1470:lthtmlCropMarkDepth:=13.63199pt:1ex:=4.3045pt
+Preview: Tightpage -32891 -32891 32891 32891
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+:tex2html_wrap_inline1477:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_inline1477:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[2]
+
+:tex2html_wrap_inline1479:lthtmlCropMarkHeight:=12.83331pt
+
+:tex2html_wrap_inline1479:lthtmlCropMarkDepth:=1.94444pt:1ex:=4.3045pt
+[3]
+
+:tex2html_wrap_inline1481:lthtmlCropMarkHeight:=12.94444pt
+
+:tex2html_wrap_inline1481:lthtmlCropMarkDepth:=0.0pt:1ex:=4.3045pt
+[4]
+
+:tex2html_wrap_inline1485:lthtmlCropMarkHeight:=12.74837pt
+
+:tex2html_wrap_inline1485:lthtmlCropMarkDepth:=0.0pt:1ex:=4.3045pt
+[5]
+
+:tex2html_wrap_indisplay1487:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1487:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[6]
+
+:tex2html_wrap_indisplay1488:lthtmlCropMarkHeight:=19.61122pt
+
+:tex2html_wrap_indisplay1488:lthtmlCropMarkDepth:=8.61124pt:1ex:=4.3045pt
+[7]
+
+:tex2html_wrap_indisplay1489:lthtmlCropMarkHeight:=22.51393pt
+
+:tex2html_wrap_indisplay1489:lthtmlCropMarkDepth:=12.79865pt:1ex:=4.3045pt
+[8]
+
+:tex2html_wrap_indisplay1490:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1490:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[9]
+
+:tex2html_wrap_inline1492:lthtmlCropMarkHeight:=12.44444pt
+
+:tex2html_wrap_inline1492:lthtmlCropMarkDepth:=0.83333pt:1ex:=4.3045pt
+[10]
+
+:tex2html_wrap_indisplay1493:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1493:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[11]
+
+:tex2html_wrap_indisplay1494:lthtmlCropMarkHeight:=22.51393pt
+
+:tex2html_wrap_indisplay1494:lthtmlCropMarkDepth:=12.79865pt:1ex:=4.3045pt
+[12]
+
+:tex2html_wrap_indisplay1496:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1496:lthtmlCropMarkDepth:=7.0pt:1ex:=4.3045pt
+[13]
+
+:tex2html_wrap_indisplay1498:lthtmlCropMarkHeight:=20.5001pt
+
+:tex2html_wrap_indisplay1498:lthtmlCropMarkDepth:=9.50012pt:1ex:=4.3045pt
+[14]
+
+:tex2html_wrap_inline1500:lthtmlCropMarkHeight:=12.83331pt
+
+:tex2html_wrap_inline1500:lthtmlCropMarkDepth:=0.39098pt:1ex:=4.3045pt
+[15]
+
+:tex2html_wrap_indisplay1502:lthtmlCropMarkHeight:=16.50006pt
+
+:tex2html_wrap_indisplay1502:lthtmlCropMarkDepth:=5.50006pt:1ex:=4.3045pt
+[16]
+
+:tex2html_wrap_inline1505:lthtmlCropMarkHeight:=12.94444pt
+
+:tex2html_wrap_inline1505:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.3045pt
+[17]
+
+:tex2html_wrap_inline1507:lthtmlCropMarkHeight:=10.30554pt
+
+:tex2html_wrap_inline1507:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.3045pt
+[18]
+
+:tex2html_wrap_inline1509:lthtmlCropMarkHeight:=12.83331pt
+
+:tex2html_wrap_inline1509:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.3045pt
+[19]
+
+:tex2html_wrap_inline1511:lthtmlCropMarkHeight:=10.30554pt
+
+:tex2html_wrap_inline1511:lthtmlCropMarkDepth:=0.0pt:1ex:=4.3045pt
+[20]
+
+:tex2html_wrap_indisplay1513:lthtmlCropMarkHeight:=20.5001pt
+
+:tex2html_wrap_indisplay1513:lthtmlCropMarkDepth:=9.50012pt:1ex:=4.3045pt
+[21]
+
+:tex2html_wrap_indisplay1514:lthtmlCropMarkHeight:=12.83331pt
+
+:tex2html_wrap_indisplay1514:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.3045pt
+[22]
+
+:tex2html_wrap_indisplay1515:lthtmlCropMarkHeight:=12.94444pt
+
+:tex2html_wrap_indisplay1515:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.3045pt
+[23]
+
+:tex2html_wrap_indisplay1516:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1516:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[24]
+
+:tex2html_wrap_indisplay1517:lthtmlCropMarkHeight:=12.44444pt
+
+:tex2html_wrap_indisplay1517:lthtmlCropMarkDepth:=0.0pt:1ex:=4.3045pt
+[25]
+
+:tex2html_wrap_indisplay1518:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1518:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[26]
+
+:tex2html_wrap_indisplay1519:lthtmlCropMarkHeight:=19.70952pt
+
+:tex2html_wrap_indisplay1519:lthtmlCropMarkDepth:=8.3595pt:1ex:=4.3045pt
+[27]
+
+:tex2html_wrap_inline1521:lthtmlCropMarkHeight:=12.44444pt
+
+:tex2html_wrap_inline1521:lthtmlCropMarkDepth:=0.0pt:1ex:=4.3045pt
+[28]
+
+:tex2html_wrap_indisplay1522:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1522:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[29]
+
+:tex2html_wrap_indisplay1523:lthtmlCropMarkHeight:=19.20952pt
+
+:tex2html_wrap_indisplay1523:lthtmlCropMarkDepth:=8.3595pt:1ex:=4.3045pt
+[30]
+
+:tex2html_wrap_indisplay1524:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1524:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[31]
+
+:tex2html_wrap_indisplay1525:lthtmlCropMarkHeight:=19.70952pt
+
+:tex2html_wrap_indisplay1525:lthtmlCropMarkDepth:=8.3595pt:1ex:=4.3045pt
+[32]
+
+:tex2html_wrap_indisplay1526:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1526:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[33]
+
+:tex2html_wrap_indisplay1527:lthtmlCropMarkHeight:=19.70952pt
+
+:tex2html_wrap_indisplay1527:lthtmlCropMarkDepth:=8.3595pt:1ex:=4.3045pt
+[34]
+
+:tex2html_wrap_inline1529:lthtmlCropMarkHeight:=12.83331pt
+
+:tex2html_wrap_inline1529:lthtmlCropMarkDepth:=1.94444pt:1ex:=4.3045pt
+[35]
+
+:tex2html_wrap_inline1533:lthtmlCropMarkHeight:=12.83331pt
+
+:tex2html_wrap_inline1533:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.3045pt
+[36]
+
+:tex2html_wrap_indisplay1537:lthtmlCropMarkHeight:=19.59839pt
+
+:tex2html_wrap_indisplay1537:lthtmlCropMarkDepth:=8.3595pt:1ex:=4.3045pt
+[37]
+
+:tex2html_wrap_indisplay1539:lthtmlCropMarkHeight:=23.50014pt
+
+:tex2html_wrap_indisplay1539:lthtmlCropMarkDepth:=12.50015pt:1ex:=4.3045pt
+[38]
+
+:tex2html_wrap_indisplay1540:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1540:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[39]
+
+:tex2html_wrap_indisplay1541:lthtmlCropMarkHeight:=20.5001pt
+
+:tex2html_wrap_indisplay1541:lthtmlCropMarkDepth:=9.50012pt:1ex:=4.3045pt
+[40]
+
+:tex2html_wrap_indisplay1542:lthtmlCropMarkHeight:=19.20952pt
+
+:tex2html_wrap_indisplay1542:lthtmlCropMarkDepth:=8.3595pt:1ex:=4.3045pt
+[41]
+
+:tex2html_wrap_indisplay1543:lthtmlCropMarkHeight:=19.20952pt
+
+:tex2html_wrap_indisplay1543:lthtmlCropMarkDepth:=8.3595pt:1ex:=4.3045pt
+[42]
+
+:tex2html_wrap_indisplay1544:lthtmlCropMarkHeight:=19.20952pt
+
+:tex2html_wrap_indisplay1544:lthtmlCropMarkDepth:=8.3595pt:1ex:=4.3045pt
+[43]
+
+:tex2html_wrap_indisplay1545:lthtmlCropMarkHeight:=19.20952pt
+
+:tex2html_wrap_indisplay1545:lthtmlCropMarkDepth:=8.3595pt:1ex:=4.3045pt
+[44]
+
+:tex2html_wrap_indisplay1546:lthtmlCropMarkHeight:=12.83331pt
+
+:tex2html_wrap_indisplay1546:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.3045pt
+[45]
+
+:tex2html_wrap_inline1561:lthtmlCropMarkHeight:=12.44444pt
+
+:tex2html_wrap_inline1561:lthtmlCropMarkDepth:=1.94444pt:1ex:=4.3045pt
+[46]
+
+:tex2html_wrap_indisplay1563:lthtmlCropMarkHeight:=21.65013pt
+
+:tex2html_wrap_indisplay1563:lthtmlCropMarkDepth:=9.11122pt:1ex:=4.3045pt
+[47]
+
+:tex2html_wrap_inline1565:lthtmlCropMarkHeight:=12.94444pt
+
+:tex2html_wrap_inline1565:lthtmlCropMarkDepth:=1.94444pt:1ex:=4.3045pt
+[48]
+
+:tex2html_wrap_indisplay1566:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1566:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[49]
+
+:tex2html_wrap_indisplay1567:lthtmlCropMarkHeight:=21.65013pt
+
+:tex2html_wrap_indisplay1567:lthtmlCropMarkDepth:=9.11122pt:1ex:=4.3045pt
+[50]
+
+:tex2html_wrap_indisplay1568:lthtmlCropMarkHeight:=21.65013pt
+
+:tex2html_wrap_indisplay1568:lthtmlCropMarkDepth:=16.87773pt:1ex:=4.3045pt
+[51]
+
+:tex2html_wrap_indisplay1569:lthtmlCropMarkHeight:=21.65013pt
+
+:tex2html_wrap_indisplay1569:lthtmlCropMarkDepth:=9.11122pt:1ex:=4.3045pt
+[52]
+
+:tex2html_wrap_indisplay1570:lthtmlCropMarkHeight:=21.65013pt
+
+:tex2html_wrap_indisplay1570:lthtmlCropMarkDepth:=9.50012pt:1ex:=4.3045pt
+[53]
+
+:tex2html_wrap_indisplay1571:lthtmlCropMarkHeight:=21.65013pt
+
+:tex2html_wrap_indisplay1571:lthtmlCropMarkDepth:=9.50012pt:1ex:=4.3045pt
+[54]
+
+:tex2html_wrap_indisplay1572:lthtmlCropMarkHeight:=20.5001pt
+
+:tex2html_wrap_indisplay1572:lthtmlCropMarkDepth:=9.50012pt:1ex:=4.3045pt
+[55]
+
+:tex2html_wrap_indisplay1573:lthtmlCropMarkHeight:=20.5001pt
+
+:tex2html_wrap_indisplay1573:lthtmlCropMarkDepth:=9.50012pt:1ex:=4.3045pt
+[56]
+
+:tex2html_wrap_indisplay1574:lthtmlCropMarkHeight:=19.20952pt
+
+:tex2html_wrap_indisplay1574:lthtmlCropMarkDepth:=7.69284pt:1ex:=4.3045pt
+[57]
+
+:tex2html_wrap_indisplay1575:lthtmlCropMarkHeight:=21.65013pt
+
+:tex2html_wrap_indisplay1575:lthtmlCropMarkDepth:=9.35951pt:1ex:=4.3045pt
+[58]
+
+:tex2html_wrap_indisplay1577:lthtmlCropMarkHeight:=21.65013pt
+
+:tex2html_wrap_indisplay1577:lthtmlCropMarkDepth:=9.11122pt:1ex:=4.3045pt
+[59]
+
+:tex2html_wrap_indisplay1578:lthtmlCropMarkHeight:=20.26508pt
+
+:tex2html_wrap_indisplay1578:lthtmlCropMarkDepth:=9.35951pt:1ex:=4.3045pt
+[60]
+
+:tex2html_wrap_indisplay1579:lthtmlCropMarkHeight:=21.65013pt
+
+:tex2html_wrap_indisplay1579:lthtmlCropMarkDepth:=9.11122pt:1ex:=4.3045pt
+[61]
+
+:tex2html_wrap_indisplay1580:lthtmlCropMarkHeight:=20.26508pt
+
+:tex2html_wrap_indisplay1580:lthtmlCropMarkDepth:=9.35951pt:1ex:=4.3045pt
+[62]
+
+:tex2html_wrap_inline1582:lthtmlCropMarkHeight:=12.94444pt
+
+:tex2html_wrap_inline1582:lthtmlCropMarkDepth:=0.0pt:1ex:=4.3045pt
+[63]
+
+:tex2html_wrap_inline1583:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_inline1583:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[64]
+
+:tex2html_wrap_inline1585:lthtmlCropMarkHeight:=10.30554pt
+
+:tex2html_wrap_inline1585:lthtmlCropMarkDepth:=1.94444pt:1ex:=4.3045pt
+[65]
+
+:tex2html_wrap_indisplay1588:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1588:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[66]
+
+:tex2html_wrap_indisplay1589:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1589:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[67]
+
+:tex2html_wrap_indisplay1590:lthtmlCropMarkHeight:=20.5001pt
+
+:tex2html_wrap_indisplay1590:lthtmlCropMarkDepth:=9.50012pt:1ex:=4.3045pt
+[68]
+
+:tex2html_wrap_indisplay1591:lthtmlCropMarkHeight:=15.8889pt
+
+:tex2html_wrap_indisplay1591:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[69]
+
+:tex2html_wrap_indisplay1592:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1592:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[70]
+
+:tex2html_wrap_indisplay1593:lthtmlCropMarkHeight:=9.66875pt
+
+:tex2html_wrap_indisplay1593:lthtmlCropMarkDepth:=0.0pt:1ex:=4.3045pt
+[71]
+
+:tex2html_wrap_indisplay1594:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1594:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[72]
+
+:tex2html_wrap_indisplay1595:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1595:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[73]
+
+:tex2html_wrap_indisplay1596:lthtmlCropMarkHeight:=18.5984pt
+
+:tex2html_wrap_indisplay1596:lthtmlCropMarkDepth:=8.80396pt:1ex:=4.3045pt
+[74]
+
+:tex2html_wrap_indisplay1597:lthtmlCropMarkHeight:=18.5984pt
+
+:tex2html_wrap_indisplay1597:lthtmlCropMarkDepth:=8.80396pt:1ex:=4.3045pt
+[75]
+
+:tex2html_wrap_indisplay1598:lthtmlCropMarkHeight:=17.07062pt
+
+:tex2html_wrap_indisplay1598:lthtmlCropMarkDepth:=8.80396pt:1ex:=4.3045pt
+[76]
+
+:tex2html_wrap_indisplay1599:lthtmlCropMarkHeight:=19.70952pt
+
+:tex2html_wrap_indisplay1599:lthtmlCropMarkDepth:=8.80396pt:1ex:=4.3045pt
+[77]
+
+:tex2html_wrap_indisplay1600:lthtmlCropMarkHeight:=19.70952pt
+
+:tex2html_wrap_indisplay1600:lthtmlCropMarkDepth:=25.67058pt:1ex:=4.3045pt
+[78]
+
+:tex2html_wrap_inline1604:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_inline1604:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[79]
+
+:tex2html_wrap_indisplay1605:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1605:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[80]
+
+:tex2html_wrap_indisplay1606:lthtmlCropMarkHeight:=20.26508pt
+
+:tex2html_wrap_indisplay1606:lthtmlCropMarkDepth:=10.93884pt:1ex:=4.3045pt
+[81]
+
+:tex2html_wrap_indisplay1607:lthtmlCropMarkHeight:=20.26508pt
+
+:tex2html_wrap_indisplay1607:lthtmlCropMarkDepth:=10.93884pt:1ex:=4.3045pt
+[82]
+
+:tex2html_wrap_indisplay1608:lthtmlCropMarkHeight:=20.26508pt
+
+:tex2html_wrap_indisplay1608:lthtmlCropMarkDepth:=10.93884pt:1ex:=4.3045pt
+[83]
+
+:tex2html_wrap_indisplay1609:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1609:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[84]
+
+:tex2html_wrap_indisplay1618:lthtmlCropMarkHeight:=20.26508pt
+
+:tex2html_wrap_indisplay1618:lthtmlCropMarkDepth:=10.93884pt:1ex:=4.3045pt
+[85]
+
+:tex2html_wrap_inline1621:lthtmlCropMarkHeight:=10.30554pt
+
+:tex2html_wrap_inline1621:lthtmlCropMarkDepth:=1.94444pt:1ex:=4.3045pt
+[86]
+
+:tex2html_wrap_inline1622:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_inline1622:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[87]
+
+:tex2html_wrap_inline1624:lthtmlCropMarkHeight:=15.53891pt
+
+:tex2html_wrap_inline1624:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[88]
+
+:tex2html_wrap_inline1626:lthtmlCropMarkHeight:=17.50008pt
+
+:tex2html_wrap_inline1626:lthtmlCropMarkDepth:=6.50009pt:1ex:=4.3045pt
+[89]
+
+:tex2html_wrap_indisplay1627:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1627:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[90]
+
+:tex2html_wrap_indisplay1628:lthtmlCropMarkHeight:=20.50012pt
+
+:tex2html_wrap_indisplay1628:lthtmlCropMarkDepth:=16.87773pt:1ex:=4.3045pt
+[91]
+
+:tex2html_wrap_indisplay1629:lthtmlCropMarkHeight:=20.50012pt
+
+:tex2html_wrap_indisplay1629:lthtmlCropMarkDepth:=9.50012pt:1ex:=4.3045pt
+[92]
+
+:tex2html_wrap_indisplay1630:lthtmlCropMarkHeight:=19.20952pt
+
+:tex2html_wrap_indisplay1630:lthtmlCropMarkDepth:=7.69284pt:1ex:=4.3045pt
+[93]
+
+:tex2html_wrap_indisplay1631:lthtmlCropMarkHeight:=15.53891pt
+
+:tex2html_wrap_indisplay1631:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[94]
+
+:tex2html_wrap_inline1634:lthtmlCropMarkHeight:=12.44444pt
+
+:tex2html_wrap_inline1634:lthtmlCropMarkDepth:=1.94444pt:1ex:=4.3045pt
+[95]
+
+:tex2html_wrap_inline1636:lthtmlCropMarkHeight:=12.44444pt
+
+:tex2html_wrap_inline1636:lthtmlCropMarkDepth:=0.0pt:1ex:=4.3045pt
+[96]
+
+:tex2html_wrap_indisplay1639:lthtmlCropMarkHeight:=20.5001pt
+
+:tex2html_wrap_indisplay1639:lthtmlCropMarkDepth:=9.50012pt:1ex:=4.3045pt
+[97]
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.764 \lthtmlindisplaymathZ
+                           
+I'm guessing that you meant to end an alignment here.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.764 \lthtmlindisplaymathZ
+                           
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
 
+:tex2html_wrap_indisplay1640:lthtmlCropMarkHeight:=6.0pt
 
-]
-l2hSize :tex2html_wrap_indisplay855:8.0pt::8.0pt::19.9478pt.
-[2
+:tex2html_wrap_indisplay1640:lthtmlCropMarkDepth:=0.0pt:1ex:=4.3045pt
+[98]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.765 \lthtmlcheckvsize
+                       \clearpage}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing \right. inserted.
+<inserted text> 
+                \right .
+l.765 \lthtmlcheckvsize
+                       \clearpage}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.765 \lthtmlcheckvsize
+                       \clearpage}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.765 \lthtmlcheckvsize
+                       \clearpage}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Misplaced \crcr.
+\endarray ->\crcr 
+                  \egroup \egroup 
+l.770 \lthtmlindisplaymathZ
+                           
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Extra }, or forgotten $.
+\endarray ->\crcr \egroup 
+                          \egroup 
+l.770 \lthtmlindisplaymathZ
+                           
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\endarray ->\crcr \egroup \egroup 
+                                  
+l.770 \lthtmlindisplaymathZ
+                           
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra \right.
+\endcases ->\endarray \right .
+                              
+l.770 \lthtmlindisplaymathZ
+                           
+I'm ignoring a \right that had no matching \left.
 
 
-]
-l2hSize :tex2html_wrap_indisplay856:17.37773pt::17.37773pt::53.38591pt.
-[3
+! LaTeX Error: \begin{document} ended by \end{cases}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.770 \lthtmlindisplaymathZ
+                           
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.770 \lthtmlindisplaymathZ
+                           
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.770 \lthtmlindisplaymathZ
+                           
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.770 \lthtmlindisplaymathZ
+                           
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.770 \lthtmlindisplaymathZ
+                           
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.770 \lthtmlindisplaymathZ
+                           
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.770 \lthtmlindisplaymathZ
+                           
+Things are pretty mixed up, but I think the worst is over.
+
+! Extra }, or forgotten $.
+<recently read> }
+                 
+l.770 \lthtmlindisplaymathZ
+                           
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\lthtmlTightVBox ...ox {\hbox {\catcode `\_=8 #2}}
+                                                  \lthtmlCropMarkHeight =\ht...
+l.770 \lthtmlindisplaymathZ
+                           
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
 
-]
-l2hSize :tex2html_wrap_indisplay857:15.00012pt::15.00012pt::85.86575pt.
-[4
+:tex2html_wrap_indisplay1641:lthtmlCropMarkHeight:=6.0pt
+
+:tex2html_wrap_indisplay1641:lthtmlCropMarkDepth:=0.0pt:1ex:=4.3045pt
+[99]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.771 \lthtmlcheckvsize
+                       \clearpage}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Too many }'s.
+l.771 \lthtmlcheckvsize\clearpage}
+                                  
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
 
 
-]
-l2hSize :tex2html_wrap_indisplay858:13.70952pt::13.70952pt::55.27193pt.
-[5
+:tex2html_wrap_inline1646:lthtmlCropMarkHeight:=12.44444pt
 
+:tex2html_wrap_inline1646:lthtmlCropMarkDepth:=1.94444pt:1ex:=4.3045pt
+[100]
 
-]
-l2hSize :tex2html_wrap_indisplay859:10.03891pt::10.03891pt::69.13873pt.
-[6
+:tex2html_wrap_inline1650:lthtmlCropMarkHeight:=12.44444pt
 
+:tex2html_wrap_inline1650:lthtmlCropMarkDepth:=0.0pt:1ex:=4.3045pt
+[101]
 
-] (./images.aux) ) 
+:tex2html_wrap_inline1654:lthtmlCropMarkHeight:=12.44444pt
+
+:tex2html_wrap_inline1654:lthtmlCropMarkDepth:=0.0pt:1ex:=4.3045pt
+[102]
+
+:tex2html_wrap_inline1656:lthtmlCropMarkHeight:=12.44444pt
+
+:tex2html_wrap_inline1656:lthtmlCropMarkDepth:=0.0pt:1ex:=4.3045pt
+[103]
+
+:tex2html_wrap_indisplay1659:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1659:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[104]
+
+:tex2html_wrap_indisplay1660:lthtmlCropMarkHeight:=14.64003pt
+
+:tex2html_wrap_indisplay1660:lthtmlCropMarkDepth:=3.50006pt:1ex:=4.3045pt
+[105]
+
+:tex2html_wrap_indisplay1661:lthtmlCropMarkHeight:=12.94444pt
+
+:tex2html_wrap_indisplay1661:lthtmlCropMarkDepth:=0.0pt:1ex:=4.3045pt
+[106]
+
+:tex2html_wrap_indisplay1662:lthtmlCropMarkHeight:=14.64003pt
+
+:tex2html_wrap_indisplay1662:lthtmlCropMarkDepth:=3.50006pt:1ex:=4.3045pt
+[107]
+
+:tex2html_wrap_indisplay1665:lthtmlCropMarkHeight:=22.51393pt
+
+:tex2html_wrap_indisplay1665:lthtmlCropMarkDepth:=12.79865pt:1ex:=4.3045pt
+[108]
+
+:tex2html_wrap_indisplay1666:lthtmlCropMarkHeight:=23.50014pt
+
+:tex2html_wrap_indisplay1666:lthtmlCropMarkDepth:=12.79865pt:1ex:=4.3045pt
+[109]
+
+:tex2html_wrap_indisplay1667:lthtmlCropMarkHeight:=23.50014pt
+
+:tex2html_wrap_indisplay1667:lthtmlCropMarkDepth:=12.79865pt:1ex:=4.3045pt
+[110]
+
+:tex2html_wrap_indisplay1668:lthtmlCropMarkHeight:=23.50014pt
+
+:tex2html_wrap_indisplay1668:lthtmlCropMarkDepth:=12.79865pt:1ex:=4.3045pt
+[111]
+
+:tex2html_wrap_indisplay1669:lthtmlCropMarkHeight:=23.50014pt
+
+:tex2html_wrap_indisplay1669:lthtmlCropMarkDepth:=12.79865pt:1ex:=4.3045pt
+[112]
+
+:tex2html_wrap_indisplay1671:lthtmlCropMarkHeight:=24.25269pt
+
+:tex2html_wrap_indisplay1671:lthtmlCropMarkDepth:=13.25269pt:1ex:=4.3045pt
+[113]
+
+:tex2html_wrap_indisplay1675:lthtmlCropMarkHeight:=21.79677pt
+
+:tex2html_wrap_indisplay1675:lthtmlCropMarkDepth:=10.79677pt:1ex:=4.3045pt
+[114]
+
+:tex2html_wrap_indisplay1678:lthtmlCropMarkHeight:=14.64003pt
+
+:tex2html_wrap_indisplay1678:lthtmlCropMarkDepth:=3.50006pt:1ex:=4.3045pt
+[115]
+
+:tex2html_wrap_indisplay1679:lthtmlCropMarkHeight:=13.22223pt
+
+:tex2html_wrap_indisplay1679:lthtmlCropMarkDepth:=1.94444pt:1ex:=4.3045pt
+[116]
+
+:tex2html_wrap_indisplay1680:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1680:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[117]
+
+:tex2html_wrap_indisplay1681:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1681:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[118]
+
+:tex2html_wrap_indisplay1682:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1682:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[119]
+
+:tex2html_wrap_indisplay1683:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1683:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[120]
+
+:tex2html_wrap_indisplay1684:lthtmlCropMarkHeight:=24.25269pt
+
+:tex2html_wrap_indisplay1684:lthtmlCropMarkDepth:=13.25269pt:1ex:=4.3045pt
+[121]
+
+:tex2html_wrap_indisplay1685:lthtmlCropMarkHeight:=14.64003pt
+
+:tex2html_wrap_indisplay1685:lthtmlCropMarkDepth:=0.0pt:1ex:=4.3045pt
+[122]
+
+:tex2html_wrap_indisplay1686:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1686:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[123]
+
+:tex2html_wrap_indisplay1687:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1687:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[124]
+
+:tex2html_wrap_indisplay1688:lthtmlCropMarkHeight:=14.64003pt
+
+:tex2html_wrap_indisplay1688:lthtmlCropMarkDepth:=3.50006pt:1ex:=4.3045pt
+[125]
+
+:tex2html_wrap_indisplay1689:lthtmlCropMarkHeight:=19.20952pt
+
+:tex2html_wrap_indisplay1689:lthtmlCropMarkDepth:=13.25269pt:1ex:=4.3045pt
+[126]
+
+:tex2html_wrap_indisplay1691:lthtmlCropMarkHeight:=23.50014pt
+
+:tex2html_wrap_indisplay1691:lthtmlCropMarkDepth:=13.25269pt:1ex:=4.3045pt
+[127]
+
+:tex2html_wrap_inline1694:lthtmlCropMarkHeight:=10.30554pt
+
+:tex2html_wrap_inline1694:lthtmlCropMarkDepth:=1.94444pt:1ex:=4.3045pt
+[128]
+
+:tex2html_wrap_inline1698:lthtmlCropMarkHeight:=12.44444pt
+
+:tex2html_wrap_inline1698:lthtmlCropMarkDepth:=0.0pt:1ex:=4.3045pt
+[129]
+
+:tex2html_wrap_inline1700:lthtmlCropMarkHeight:=14.44843pt
+
+:tex2html_wrap_inline1700:lthtmlCropMarkDepth:=5.84996pt:1ex:=4.3045pt
+[130]
+
+:tex2html_wrap_indisplay1702:lthtmlCropMarkHeight:=12.94444pt
+
+:tex2html_wrap_indisplay1702:lthtmlCropMarkDepth:=0.0pt:1ex:=4.3045pt
+[131]
+
+:tex2html_wrap_indisplay1703:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1703:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[132]
+
+:tex2html_wrap_indisplay1705:lthtmlCropMarkHeight:=22.51393pt
+
+:tex2html_wrap_indisplay1705:lthtmlCropMarkDepth:=12.79865pt:1ex:=4.3045pt
+[133]
+
+:tex2html_wrap_inline1714:lthtmlCropMarkHeight:=10.30554pt
+
+:tex2html_wrap_inline1714:lthtmlCropMarkDepth:=1.49998pt:1ex:=4.3045pt
+[134]
+
+:tex2html_wrap_inline1716:lthtmlCropMarkHeight:=17.27785pt
+
+:tex2html_wrap_inline1716:lthtmlCropMarkDepth:=3.50006pt:1ex:=4.3045pt
+[135]
+
+:tex2html_wrap_indisplay1717:lthtmlCropMarkHeight:=14.64003pt
+
+:tex2html_wrap_indisplay1717:lthtmlCropMarkDepth:=3.50006pt:1ex:=4.3045pt
+[136]
+
+:tex2html_wrap_indisplay1718:lthtmlCropMarkHeight:=14.64003pt
+
+:tex2html_wrap_indisplay1718:lthtmlCropMarkDepth:=3.50006pt:1ex:=4.3045pt
+[137]
+
+:tex2html_wrap_indisplay1719:lthtmlCropMarkHeight:=20.5001pt
+
+:tex2html_wrap_indisplay1719:lthtmlCropMarkDepth:=9.50012pt:1ex:=4.3045pt
+[138]
+
+:tex2html_wrap_indisplay1720:lthtmlCropMarkHeight:=20.5001pt
+
+:tex2html_wrap_indisplay1720:lthtmlCropMarkDepth:=9.50012pt:1ex:=4.3045pt
+[139]
+
+:tex2html_wrap_indisplay1721:lthtmlCropMarkHeight:=20.5001pt
+
+:tex2html_wrap_indisplay1721:lthtmlCropMarkDepth:=9.50012pt:1ex:=4.3045pt
+[140]
+
+:tex2html_wrap_indisplay1722:lthtmlCropMarkHeight:=20.5001pt
+
+:tex2html_wrap_indisplay1722:lthtmlCropMarkDepth:=9.50012pt:1ex:=4.3045pt
+[141]
+
+:tex2html_wrap_indisplay1723:lthtmlCropMarkHeight:=20.5001pt
+
+:tex2html_wrap_indisplay1723:lthtmlCropMarkDepth:=9.50012pt:1ex:=4.3045pt
+[142]
+
+:tex2html_wrap_indisplay1724:lthtmlCropMarkHeight:=14.64003pt
+
+:tex2html_wrap_indisplay1724:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[143]
+
+:tex2html_wrap_indisplay1725:lthtmlCropMarkHeight:=14.64003pt
+
+:tex2html_wrap_indisplay1725:lthtmlCropMarkDepth:=3.50006pt:1ex:=4.3045pt
+[144]
+
+:tex2html_wrap_indisplay1728:lthtmlCropMarkHeight:=20.5001pt
+
+:tex2html_wrap_indisplay1728:lthtmlCropMarkDepth:=9.50012pt:1ex:=4.3045pt
+[145]
+
+:tex2html_wrap_indisplay1729:lthtmlCropMarkHeight:=20.5001pt
+
+:tex2html_wrap_indisplay1729:lthtmlCropMarkDepth:=24.18779pt:1ex:=4.3045pt
+[146]
+
+:tex2html_wrap_indisplay1730:lthtmlCropMarkHeight:=14.64003pt
+
+:tex2html_wrap_indisplay1730:lthtmlCropMarkDepth:=3.50006pt:1ex:=4.3045pt
+[147]
+
+:tex2html_wrap_indisplay1731:lthtmlCropMarkHeight:=20.5001pt
+
+:tex2html_wrap_indisplay1731:lthtmlCropMarkDepth:=9.50012pt:1ex:=4.3045pt
+[148]
+
+:tex2html_wrap_indisplay1732:lthtmlCropMarkHeight:=14.64003pt
+
+:tex2html_wrap_indisplay1732:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[149]
+
+:tex2html_wrap_indisplay1733:lthtmlCropMarkHeight:=14.64003pt
+
+:tex2html_wrap_indisplay1733:lthtmlCropMarkDepth:=3.50006pt:1ex:=4.3045pt
+[150]
+
+:tex2html_wrap_inline1736:lthtmlCropMarkHeight:=10.30554pt
+
+:tex2html_wrap_inline1736:lthtmlCropMarkDepth:=1.94444pt:1ex:=4.3045pt
+[151]
+
+:tex2html_wrap_indisplay1737:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1737:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[152]
+
+:tex2html_wrap_indisplay1738:lthtmlCropMarkHeight:=20.15291pt
+
+:tex2html_wrap_indisplay1738:lthtmlCropMarkDepth:=9.11122pt:1ex:=4.3045pt
+[153]
+
+:tex2html_wrap_indisplay1739:lthtmlCropMarkHeight:=20.5001pt
+
+:tex2html_wrap_indisplay1739:lthtmlCropMarkDepth:=9.50012pt:1ex:=4.3045pt
+[154]
+
+:tex2html_wrap_indisplay1740:lthtmlCropMarkHeight:=12.83331pt
+
+:tex2html_wrap_indisplay1740:lthtmlCropMarkDepth:=0.0pt:1ex:=4.3045pt
+[155]
+
+:tex2html_wrap_indisplay1741:lthtmlCropMarkHeight:=16.50006pt
+
+:tex2html_wrap_indisplay1741:lthtmlCropMarkDepth:=5.50006pt:1ex:=4.3045pt
+[156]
+
+:tex2html_wrap_inline1743:lthtmlCropMarkHeight:=14.50005pt
+
+:tex2html_wrap_inline1743:lthtmlCropMarkDepth:=3.50006pt:1ex:=4.3045pt
+[157]
+
+:tex2html_wrap_inline1277:lthtmlCropMarkHeight:=14.14003pt
+
+:tex2html_wrap_inline1277:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[158]
+
+:tex2html_wrap_inline1746:lthtmlCropMarkHeight:=14.72066pt
+
+:tex2html_wrap_inline1746:lthtmlCropMarkDepth:=3.44841pt:1ex:=4.3045pt
+[159]
+
+:tex2html_wrap_indisplay1748:lthtmlCropMarkHeight:=23.27791pt
+
+:tex2html_wrap_indisplay1748:lthtmlCropMarkDepth:=9.50012pt:1ex:=4.3045pt
+[160]
+
+:tex2html_wrap_indisplay1749:lthtmlCropMarkHeight:=23.27791pt
+
+:tex2html_wrap_indisplay1749:lthtmlCropMarkDepth:=9.50012pt:1ex:=4.3045pt
+[161]
+
+:tex2html_wrap_inline1752:lthtmlCropMarkHeight:=12.83331pt
+
+:tex2html_wrap_inline1752:lthtmlCropMarkDepth:=1.94444pt:1ex:=4.3045pt
+[162]
+
+:tex2html_wrap_inline1754:lthtmlCropMarkHeight:=14.87892pt
+
+:tex2html_wrap_inline1754:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[163]
+
+:tex2html_wrap_inline1756:lthtmlCropMarkHeight:=14.87892pt
+
+:tex2html_wrap_inline1756:lthtmlCropMarkDepth:=3.50006pt:1ex:=4.3045pt
+[164]
+
+:tex2html_wrap_inline1758:lthtmlCropMarkHeight:=14.87892pt
+
+:tex2html_wrap_inline1758:lthtmlCropMarkDepth:=3.50006pt:1ex:=4.3045pt
+[165]
+
+:tex2html_wrap_inline1761:lthtmlCropMarkHeight:=14.50005pt
+
+:tex2html_wrap_inline1761:lthtmlCropMarkDepth:=3.50006pt:1ex:=4.3045pt
+[166]
+
+:tex2html_wrap_indisplay1764:lthtmlCropMarkHeight:=14.64003pt
+
+:tex2html_wrap_indisplay1764:lthtmlCropMarkDepth:=3.50006pt:1ex:=4.3045pt
+[167]
+
+:tex2html_wrap_indisplay1765:lthtmlCropMarkHeight:=9.66875pt
+
+:tex2html_wrap_indisplay1765:lthtmlCropMarkDepth:=0.0pt:1ex:=4.3045pt
+[168]
+
+:tex2html_wrap_inline1768:lthtmlCropMarkHeight:=14.14003pt
+
+:tex2html_wrap_inline1768:lthtmlCropMarkDepth:=1.94444pt:1ex:=4.3045pt
+[169]
+
+:tex2html_wrap_inline1770:lthtmlCropMarkHeight:=14.50005pt
+
+:tex2html_wrap_inline1770:lthtmlCropMarkDepth:=3.50006pt:1ex:=4.3045pt
+[170]
+
+:tex2html_wrap_indisplay1771:lthtmlCropMarkHeight:=14.64003pt
+
+:tex2html_wrap_indisplay1771:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[171]
+
+:tex2html_wrap_indisplay1772:lthtmlCropMarkHeight:=14.64003pt
+
+:tex2html_wrap_indisplay1772:lthtmlCropMarkDepth:=3.50006pt:1ex:=4.3045pt
+[172]
+
+:tex2html_wrap_indisplay1773:lthtmlCropMarkHeight:=14.64003pt
+
+:tex2html_wrap_indisplay1773:lthtmlCropMarkDepth:=3.50006pt:1ex:=4.3045pt
+[173]
+
+:tex2html_wrap_indisplay1774:lthtmlCropMarkHeight:=20.5001pt
+
+:tex2html_wrap_indisplay1774:lthtmlCropMarkDepth:=9.50012pt:1ex:=4.3045pt
+[174]
+
+:tex2html_wrap_indisplay1775:lthtmlCropMarkHeight:=20.5001pt
+
+:tex2html_wrap_indisplay1775:lthtmlCropMarkDepth:=9.50012pt:1ex:=4.3045pt
+[175]
+
+:tex2html_wrap_indisplay1777:lthtmlCropMarkHeight:=14.64003pt
+
+:tex2html_wrap_indisplay1777:lthtmlCropMarkDepth:=3.50006pt:1ex:=4.3045pt
+[176]
+
+:tex2html_wrap_indisplay1778:lthtmlCropMarkHeight:=20.5001pt
+
+:tex2html_wrap_indisplay1778:lthtmlCropMarkDepth:=9.50012pt:1ex:=4.3045pt
+[177]
+
+:tex2html_wrap_indisplay1779:lthtmlCropMarkHeight:=20.5001pt
+
+:tex2html_wrap_indisplay1779:lthtmlCropMarkDepth:=9.50012pt:1ex:=4.3045pt
+[178]
+
+:tex2html_wrap_inline1782:lthtmlCropMarkHeight:=12.94444pt
+
+:tex2html_wrap_inline1782:lthtmlCropMarkDepth:=1.94444pt:1ex:=4.3045pt
+[179]
+
+:tex2html_wrap_inline1784:lthtmlCropMarkHeight:=14.14003pt
+
+:tex2html_wrap_inline1784:lthtmlCropMarkDepth:=0.0pt:1ex:=4.3045pt
+[180]
+
+:tex2html_wrap_inline1786:lthtmlCropMarkHeight:=15.97339pt
+
+:tex2html_wrap_inline1786:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[181]
+
+:tex2html_wrap_indisplay1787:lthtmlCropMarkHeight:=14.64003pt
+
+:tex2html_wrap_indisplay1787:lthtmlCropMarkDepth:=3.50006pt:1ex:=4.3045pt
+[182]
+
+:tex2html_wrap_indisplay1788:lthtmlCropMarkHeight:=14.64003pt
+
+:tex2html_wrap_indisplay1788:lthtmlCropMarkDepth:=3.50006pt:1ex:=4.3045pt
+[183]
+
+:tex2html_wrap_indisplay1789:lthtmlCropMarkHeight:=9.66875pt
+
+:tex2html_wrap_indisplay1789:lthtmlCropMarkDepth:=0.0pt:1ex:=4.3045pt
+[184]
+
+:tex2html_wrap_indisplay1790:lthtmlCropMarkHeight:=21.90004pt
+
+:tex2html_wrap_indisplay1790:lthtmlCropMarkDepth:=9.35951pt:1ex:=4.3045pt
+[185]
+
+:tex2html_wrap_indisplay1792:lthtmlCropMarkHeight:=14.64003pt
+
+:tex2html_wrap_indisplay1792:lthtmlCropMarkDepth:=3.50006pt:1ex:=4.3045pt
+[186]
+
+:tex2html_wrap_indisplay1794:lthtmlCropMarkHeight:=21.90004pt
+
+:tex2html_wrap_indisplay1794:lthtmlCropMarkDepth:=9.35951pt:1ex:=4.3045pt
+[187]
+
+:tex2html_wrap_indisplay1795:lthtmlCropMarkHeight:=14.64003pt
+
+:tex2html_wrap_indisplay1795:lthtmlCropMarkDepth:=3.50006pt:1ex:=4.3045pt
+[188]
+
+:tex2html_wrap_indisplay1796:lthtmlCropMarkHeight:=21.90004pt
+
+:tex2html_wrap_indisplay1796:lthtmlCropMarkDepth:=9.35951pt:1ex:=4.3045pt
+[189]
+
+:tex2html_wrap_indisplay1797:lthtmlCropMarkHeight:=14.64003pt
+
+:tex2html_wrap_indisplay1797:lthtmlCropMarkDepth:=3.50006pt:1ex:=4.3045pt
+[190]
+
+:tex2html_wrap_indisplay1799:lthtmlCropMarkHeight:=20.5001pt
+
+:tex2html_wrap_indisplay1799:lthtmlCropMarkDepth:=9.50012pt:1ex:=4.3045pt
+[191]
+
+:tex2html_wrap_indisplay1800:lthtmlCropMarkHeight:=20.5001pt
+
+:tex2html_wrap_indisplay1800:lthtmlCropMarkDepth:=9.50012pt:1ex:=4.3045pt
+[192]
+
+:tex2html_wrap_indisplay1801:lthtmlCropMarkHeight:=20.5001pt
+
+:tex2html_wrap_indisplay1801:lthtmlCropMarkDepth:=9.50012pt:1ex:=4.3045pt
+[193]
+
+:tex2html_wrap_indisplay1802:lthtmlCropMarkHeight:=14.64003pt
+
+:tex2html_wrap_indisplay1802:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[194]
+
+:tex2html_wrap_indisplay1803:lthtmlCropMarkHeight:=17.50008pt
+
+:tex2html_wrap_indisplay1803:lthtmlCropMarkDepth:=6.50009pt:1ex:=4.3045pt
+[195]
+
+:tex2html_wrap_indisplay1807:lthtmlCropMarkHeight:=14.64003pt
+
+:tex2html_wrap_indisplay1807:lthtmlCropMarkDepth:=3.50006pt:1ex:=4.3045pt
+[196]
+
+:tex2html_wrap_indisplay1808:lthtmlCropMarkHeight:=21.90004pt
+
+:tex2html_wrap_indisplay1808:lthtmlCropMarkDepth:=9.35951pt:1ex:=4.3045pt
+[197]
+
+:tex2html_wrap_indisplay1809:lthtmlCropMarkHeight:=27.9001pt
+
+:tex2html_wrap_indisplay1809:lthtmlCropMarkDepth:=22.90016pt:1ex:=4.3045pt
+[198]
+
+:tex2html_wrap_indisplay1810:lthtmlCropMarkHeight:=33.90016pt
+
+:tex2html_wrap_indisplay1810:lthtmlCropMarkDepth:=22.90016pt:1ex:=4.3045pt
+[199]
+
+:tex2html_wrap_indisplay1811:lthtmlCropMarkHeight:=33.90016pt
+
+:tex2html_wrap_indisplay1811:lthtmlCropMarkDepth:=19.6779pt:1ex:=4.3045pt
+[200]
+
+:tex2html_wrap_indisplay1812:lthtmlCropMarkHeight:=33.90016pt
+
+:tex2html_wrap_indisplay1812:lthtmlCropMarkDepth:=19.6779pt:1ex:=4.3045pt
+[201]
+
+:tex2html_wrap_indisplay1813:lthtmlCropMarkHeight:=20.5001pt
+
+:tex2html_wrap_indisplay1813:lthtmlCropMarkDepth:=9.50012pt:1ex:=4.3045pt
+[202]
+
+:tex2html_wrap_indisplay1814:lthtmlCropMarkHeight:=14.64003pt
+
+:tex2html_wrap_indisplay1814:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[203]
+
+:tex2html_wrap_indisplay1815:lthtmlCropMarkHeight:=14.64003pt
+
+:tex2html_wrap_indisplay1815:lthtmlCropMarkDepth:=3.50006pt:1ex:=4.3045pt
+[204]
+
+:tex2html_wrap_inline1818:lthtmlCropMarkHeight:=13.22223pt
+
+:tex2html_wrap_inline1818:lthtmlCropMarkDepth:=1.94444pt:1ex:=4.3045pt
+[205]
+
+:tex2html_wrap_inline1820:lthtmlCropMarkHeight:=10.30554pt
+
+:tex2html_wrap_inline1820:lthtmlCropMarkDepth:=0.0pt:1ex:=4.3045pt
+[206]
+
+:tex2html_wrap_inline1822:lthtmlCropMarkHeight:=12.94444pt
+
+:tex2html_wrap_inline1822:lthtmlCropMarkDepth:=0.0pt:1ex:=4.3045pt
+[207]
+
+:tex2html_wrap_inline1825:lthtmlCropMarkHeight:=14.50005pt
+
+:tex2html_wrap_inline1825:lthtmlCropMarkDepth:=3.50006pt:1ex:=4.3045pt
+[208]
+
+:tex2html_wrap_indisplay1830:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1830:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[209]
+
+:tex2html_wrap_indisplay1832:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1832:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[210]
+
+:tex2html_wrap_indisplay1833:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1833:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[211]
+
+:tex2html_wrap_indisplay1834:lthtmlCropMarkHeight:=14.64003pt
+
+:tex2html_wrap_indisplay1834:lthtmlCropMarkDepth:=3.50006pt:1ex:=4.3045pt
+[212]
+
+:tex2html_wrap_indisplay1835:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1835:lthtmlCropMarkDepth:=2.5pt:1ex:=4.3045pt
+[213]
+
+:tex2html_wrap_indisplay1836:lthtmlCropMarkHeight:=20.5001pt
+
+:tex2html_wrap_indisplay1836:lthtmlCropMarkDepth:=9.50012pt:1ex:=4.3045pt
+[214]
+
+:tex2html_wrap_indisplay1838:lthtmlCropMarkHeight:=13.5pt
+
+:tex2html_wrap_indisplay1838:lthtmlCropMarkDepth:=2.86108pt:1ex:=4.3045pt
+[215]
+
+:tex2html_wrap_inline1841:lthtmlCropMarkHeight:=12.44444pt
+
+:tex2html_wrap_inline1841:lthtmlCropMarkDepth:=0.83333pt:1ex:=4.3045pt
+[216] (./images.aux) ) 
 Here is how much of TeX's memory you used:
- 21949 strings out of 494799
- 568177 string characters out of 6176826
- 754674 words of memory out of 5000000
- 24953 multiletter control sequences out of 15000+600000
- 4857 words of font info for 17 fonts, out of 8000000 for 9000
+ 23731 strings out of 483057
+ 600585 string characters out of 5962301
+ 948680 words of memory out of 5000000
+ 38370 multiletter control sequences out of 15000+600000
+ 536016 words of font info for 32 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 62i,9n,96p,725b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,12n,98p,725b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </root/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/e
+c/ecrm0700.600pk> </root/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecr
+m1000.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy7.pfb>
+Output written on images.pdf (216 pages, 179377 bytes).
+PDF statistics:
+ 771 PDF objects out of 1000 (max. 8388607)
+ 517 compressed objects within 6 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-Output written on images.dvi (6 pages, 7052 bytes).

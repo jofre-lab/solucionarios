@@ -1,86 +1,280 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE HTML>
 
-<!--Converted with LaTeX2HTML 2018 (Released Feb 1, 2018) -->
-<HTML>
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
 <HEAD>
-<TITLE>2.5d. </TITLE>
-<META NAME="description" CONTENT="2.5d. ">
+<TITLE>Modelos uniparamétricos</TITLE>
+<META NAME="description" CONTENT="Modelos uniparamétricos">
 <META NAME="keywords" CONTENT="inferencia-bayesiana">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
 
-<META NAME="Generator" CONTENT="LaTeX2HTML v2018">
-<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
 
 <LINK REL="STYLESHEET" HREF="inferencia-bayesiana.css">
 
-<LINK REL="next" HREF="node8.html">
 <LINK REL="previous" HREF="node6.html">
-<LINK REL="up" HREF="node5.html">
 <LINK REL="next" HREF="node8.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation"><!--Navigation Panel-->
-<A NAME="tex2html104"
-  HREF="node8.html">
-<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html102"
-  HREF="node5.html">
-<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html96"
-  HREF="node6.html">
-<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A>   
+<A
+ HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node5.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
 <BR>
-<B> Next:</B> <A NAME="tex2html105"
-  HREF="node8.html">2.7.a</A>
-<B> Up:</B> <A NAME="tex2html103"
-  HREF="node5.html">Modelos uniparam&#233;tricos</A>
-<B> Previous:</B> <A NAME="tex2html97"
-  HREF="node6.html">2.5c.</A>
+<B> Next:</B> <A
+ HREF="node8.html">2.5c.</A>
+<B> Up:</B> <A
+ HREF="node5.html">BDA 3</A>
+<B> Previous:</B> <A
+ HREF="node6.html">Introducció y motivación</A>
 <BR>
 <BR></DIV>
 <!--End of Navigation Panel-->
 
-<H4><A NAME="SECTION00032020000000000000">
-2.5d. </A>
-</H4>
-
+<H2><A ID="SECTION00022000000000000000">
+Modelos uniparamétricos</A>
+</H2>
 <P>
-De un ejemplo de una priori <!-- MATH
- $\text{beta}\left(\alpha,\beta\right)$
- -->
-<SPAN CLASS="MATH">beta<IMG
- WIDTH="43" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img37.png"
- ALT="$\left(\alpha,\beta\right)$"></SPAN>
-con <SPAN CLASS="MATH"><IMG
- WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
- SRC="img38.png"
- ALT="$y$"></SPAN> y <SPAN CLASS="MATH"><IMG
- WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
- SRC="img17.png"
- ALT="$n$"></SPAN> donde va varianza posterior es menor a la varianza
-a priori. Sol. 
+<DIV><B>Problem <SPAN CLASS="arabic">2</SPAN></B> (cap2.prob5)  &nbsp; 
+La distribución a posterior es un compromiso entre la priori
+y los datos: Sea <SPAN CLASS="MATH"><IMG STYLE="height: 1.23ex; vertical-align: -0.12ex; " SRC="img20.svg"
+ ALT="$n$"></SPAN> el número de lanzamientos de una moneda,
+la cual tiene probabilidad de <SPAN CLASS="MATH"><IMG STYLE="height: 1.84ex; vertical-align: -0.12ex; " SRC="img4.svg"
+ ALT="$\theta$"></SPAN> de ser cara. (a) Si la distribución
+a priori es una uniforme entre <SPAN CLASS="MATH"><IMG STYLE="height: 2.17ex; vertical-align: -0.57ex; " SRC="img46.svg"
+ ALT="$0,1$"></SPAN>, derive la distribución
+predictiva 
 <P><!-- MATH
  \begin{displaymath}
-\frac{\left(\alpha+y\right)\left(\beta+n-y\right)}{\left(\alpha+\beta+n\right)^{2}\left(\alpha+\beta+n+1\right)}\leq\frac{\alpha\beta}{\left(\alpha+\beta\right)^{2}\left(\alpha+\beta+1\right)}
+p\left(y=k\right)=\int_{0}^{1}p\left(y=k|\theta\right)d\theta
 \end{displaymath}
  -->
 </P>
-<DIV ALIGN="CENTER" CLASS="mathdisplay">
-<IMG
- WIDTH="373" HEIGHT="53" ALIGN="MIDDLE" BORDER="0"
- SRC="img58.png"
- ALT="$\displaystyle \frac{\left(\alpha+y\right)\left(\beta+n-y\right)}{\left(\alpha+\...
-...eq\frac{\alpha\beta}{\left(\alpha+\beta\right)^{2}\left(\alpha+\beta+1\right)}
+<DIV CLASS="mathdisplay">
+<IMG STYLE="height: 5.96ex; vertical-align: -2.23ex; " SRC="img47.svg"
+ ALT="$\displaystyle p\left(y=k\right)=\int_{0}^{1}p\left(y=k\vert\theta\right)d\theta
 $">
 </DIV><P></P>
-y seleccionamos valores que respeten la igualdad.
+para cada <!-- MATH
+ $k=1,\ldots,n$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.29ex; vertical-align: -0.57ex; " SRC="img48.svg"
+ ALT="$k=1,\ldots,n$"></SPAN>. Sol: 
+<P></P>
+<DIV CLASS="mathdisplay"><TABLE CLASS="equation" >
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img49.svg"
+ ALT="$\displaystyle p\left(y=k\right)$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.96ex; vertical-align: -2.23ex; " SRC="img50.svg"
+ ALT="$\displaystyle =\int_{0}^{1}p\left(y=k,\theta\right)d\theta$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 7.76ex; vertical-align: -4.04ex; " SRC="img51.svg"
+ ALT="$\displaystyle =\int_{0}^{1}p\left(y=k\vert\theta\right)\underbrace{p\left(\theta\right)}_{1}d\theta$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.96ex; vertical-align: -2.23ex; " SRC="img52.svg"
+ ALT="$\displaystyle =\int_{0}^{1}p\left(y=k\vert\theta\right)d\theta$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.05ex; vertical-align: -2.32ex; " SRC="img53.svg"
+ ALT="$\displaystyle =\int_{0}^{1}\binom{n}{k}\theta^{k}\left(1-\theta\right)^{n-k}d\theta$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.05ex; vertical-align: -2.32ex; " SRC="img54.svg"
+ ALT="$\displaystyle =\binom{n}{k}\int_{0}^{1}\theta^{k}\left(1-\theta\right)^{n-k}d\theta$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.79ex; vertical-align: -2.32ex; " SRC="img55.svg"
+ ALT="$\displaystyle =\binom{n}{k}\frac{\Gamma\left(k+1\right)\Gamma\left(n-k+1\right)}{\Gamma\left(n+2\right)}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.79ex; vertical-align: -2.32ex; " SRC="img56.svg"
+ ALT="$\displaystyle =\binom{n}{k}\frac{k!\left(n-k\right)!}{\left(n+1\right)!}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.07ex; vertical-align: -1.90ex; " SRC="img57.svg"
+ ALT="$\displaystyle =\frac{1}{n+1}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<P></P>
+usamos el siguiente resultado 
+<P></P>
+<DIV CLASS="mathdisplay"><TABLE CLASS="equation" >
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.02ex; vertical-align: -2.29ex; " SRC="img58.svg"
+ ALT="$\displaystyle \int_{0}^{1}\frac{\Gamma\left(\alpha+\beta\right)}{\Gamma\left(\a...
+...Gamma\left(\beta\right)}\theta^{\alpha-1}\left(1-\theta\right)^{\beta-1}d\theta$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.72ex; vertical-align: -0.12ex; " SRC="img25.svg"
+ ALT="$\displaystyle =1$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.96ex; vertical-align: -2.23ex; " SRC="img59.svg"
+ ALT="$\displaystyle \implies\int_{0}^{1}\theta^{\alpha-1}\left(1-\theta\right)^{\beta-1}d\theta$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.70ex; vertical-align: -2.29ex; " SRC="img60.svg"
+ ALT="$\displaystyle =\frac{\Gamma\left(\alpha\right)\Gamma\left(\beta\right)}{\Gamma\left(\alpha+\beta\right)}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.96ex; vertical-align: -2.23ex; " SRC="img61.svg"
+ ALT="$\displaystyle \implies\int_{0}^{1}\theta^{k}\left(1-\theta\right)^{n-k}d\theta$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.70ex; vertical-align: -2.29ex; " SRC="img62.svg"
+ ALT="$\displaystyle =\frac{\Gamma\left(k+1\right)\Gamma\left(n-k+1\right)}{\Gamma\lef...
+...}=\frac{\Gamma\left(k+1\right)\Gamma\left(n-k+1\right)}{\Gamma\left(n+2\right)}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<P></P>
+(b) Supona que asigna una distribución <!-- MATH
+ $\theta\sim\text{beta}\left(\alpha,\beta\right)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.84ex; vertical-align: -0.12ex; " SRC="img63.svg"
+ ALT="$\theta\sim$">beta<IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img64.svg"
+ ALT="$\left(\alpha,\beta\right)$"></SPAN>
+y usted observa <SPAN CLASS="MATH"><IMG STYLE="height: 1.68ex; vertical-align: -0.57ex; " SRC="img65.svg"
+ ALT="$y$"></SPAN> caras en sus <SPAN CLASS="MATH"><IMG STYLE="height: 1.23ex; vertical-align: -0.12ex; " SRC="img20.svg"
+ ALT="$n$"></SPAN> lanzamientos. Muestre algebraicamente
+que la media posterior involucra a la media a priori y la media de
+los datos. 
+<P></P>
+<DIV CLASS="mathdisplay"><TABLE CLASS="equation" >
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img66.svg"
+ ALT="$\displaystyle p\left(\theta\vert y\right)$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img67.svg"
+ ALT="$\displaystyle \propto p\left(y\vert\theta\right)p\left(\theta\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.79ex; vertical-align: -2.32ex; " SRC="img68.svg"
+ ALT="$\displaystyle =\binom{n}{y}\theta^{y}\left(1-\theta\right)^{n-y}\frac{\Gamma\le...
+...right)\Gamma\left(\beta\right)}\theta^{\alpha-1}\left(1-\theta\right)^{\beta-1}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.10ex; vertical-align: -0.70ex; " SRC="img69.svg"
+ ALT="$\displaystyle \propto\theta^{\alpha+y-1}\left(1-\theta\right)^{\beta+n-y-1}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img70.svg"
+ ALT="$\displaystyle \implies\theta\vert y$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.08ex; vertical-align: -0.12ex; " SRC="img71.svg"
+ ALT="$\displaystyle \sim$">beta<IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img72.svg"
+ ALT="$\displaystyle \left(\alpha+y,\beta+n-y\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<P></P>
+luego, la media condicional 
+<P></P>
+<DIV CLASS="mathdisplay"><TABLE CLASS="equation" >
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img73.svg"
+ ALT="$\displaystyle E\left(\theta\vert y\right)$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.19ex; vertical-align: -2.16ex; " SRC="img74.svg"
+ ALT="$\displaystyle =\frac{\alpha+y}{\alpha+y+\beta+n-y}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.19ex; vertical-align: -2.16ex; " SRC="img75.svg"
+ ALT="$\displaystyle =\frac{\alpha+y}{\alpha+\beta+n}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 4.83ex; vertical-align: -2.16ex; " SRC="img76.svg"
+ ALT="$\displaystyle =\frac{\alpha}{\alpha+\beta+n}+\frac{y}{\alpha+\beta+n}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.44ex; vertical-align: -2.16ex; " SRC="img77.svg"
+ ALT="$\displaystyle =\frac{\alpha+\beta}{\alpha+\beta}\frac{\alpha}{\alpha+\beta+n}+\frac{n}{n}\frac{y}{\alpha+\beta+n}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 9.35ex; vertical-align: -6.08ex; " SRC="img78.svg"
+ ALT="$\displaystyle =\frac{\alpha+\beta}{\alpha+\beta+n}\underbrace{\frac{\alpha}{\alpha+\beta}}_{E\left(\theta\right)}+\frac{n}{\alpha+\beta+n}\frac{y}{n}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<P></P></DIV><P></P>
 
 <P>
 <BR><HR>
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><UL>
+<LI><A ID="tex2html45"
+  HREF="node8.html">2.5c. </A>
+<LI><A ID="tex2html46"
+  HREF="node9.html">2.5d. </A>
+<LI><A ID="tex2html47"
+  HREF="node10.html">2.7a.</A>
+<LI><A ID="tex2html48"
+  HREF="node11.html">2.7b.</A>
+<LI><A ID="tex2html49"
+  HREF="node12.html">2.8a. </A>
+<LI><A ID="tex2html50"
+  HREF="node13.html">2.8b.</A>
+<LI><A ID="tex2html51"
+  HREF="node14.html">4.2.a</A>
+</UL></UL>
+<!--End of Table of Child-Links-->
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node5.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node8.html">2.5c.</A>
+<B> Up:</B> <A
+ HREF="node5.html">BDA 3</A>
+<B> Previous:</B> <A
+ HREF="node6.html">Introducció y motivación</A></DIV>
+<!--End of Navigation Panel-->
 
 </BODY>
 </HTML>

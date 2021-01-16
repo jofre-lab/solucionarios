@@ -1,51 +1,181 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE HTML>
 
-<!--Converted with LaTeX2HTML 2018 (Released Feb 1, 2018) -->
-<HTML>
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
 <HEAD>
-<TITLE>Ayudant&#237;a 3</TITLE>
-<META NAME="description" CONTENT="Ayudant&#237;a 3">
+<TITLE>2.8a. </TITLE>
+<META NAME="description" CONTENT="2.8a. ">
 <META NAME="keywords" CONTENT="inferencia-bayesiana">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
 
-<META NAME="Generator" CONTENT="LaTeX2HTML v2018">
-<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
 
 <LINK REL="STYLESHEET" HREF="inferencia-bayesiana.css">
 
 <LINK REL="next" HREF="node13.html">
 <LINK REL="previous" HREF="node11.html">
-<LINK REL="up" HREF="node9.html">
 <LINK REL="next" HREF="node13.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation"><!--Navigation Panel-->
-<A NAME="tex2html166"
-  HREF="node13.html">
-<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html164"
-  HREF="node9.html">
-<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html158"
-  HREF="node11.html">
-<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A>   
+<A
+ HREF="node13.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node11.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
 <BR>
-<B> Next:</B> <A NAME="tex2html167"
-  HREF="node13.html">Ayudant&#237;a 4</A>
-<B> Up:</B> <A NAME="tex2html165"
-  HREF="node9.html">Ayudant&#237;a</A>
-<B> Previous:</B> <A NAME="tex2html159"
-  HREF="node11.html">Ayudant&#237;a 2</A>
+<B> Next:</B> <A
+ HREF="node13.html">2.8b.</A>
+<B> Up:</B> <A
+ HREF="node7.html">Modelos uniparamétricos</A>
+<B> Previous:</B> <A
+ HREF="node11.html">2.7b.</A>
 <BR>
 <BR></DIV>
 <!--End of Navigation Panel-->
 
-<H2><A NAME="SECTION00043000000000000000">
-Ayudant&#237;a 3</A>
-</H2>
+<H4><A ID="SECTION00022050000000000000">
+2.8a. </A>
+</H4>
+
+<P>
+Distribución normal con media desconocida: Sea una muestra aleatoria
+de <SPAN CLASS="MATH"><IMG STYLE="height: 1.23ex; vertical-align: -0.12ex; " SRC="img20.svg"
+ ALT="$n$"></SPAN> estudiantes extraidos de una población lo suficientemente
+grande para luego medir su peso. La media del peso viene dada por
+<!-- MATH
+ $\overline{y}=150$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.17ex; vertical-align: -0.57ex; " SRC="img100.svg"
+ ALT="$\overline{y}=150$"></SPAN>. Asuma que pero en la población se distribuye
+normal con media desconocida <SPAN CLASS="MATH"><IMG STYLE="height: 1.84ex; vertical-align: -0.12ex; " SRC="img4.svg"
+ ALT="$\theta$"></SPAN> y desviación estandar de
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.72ex; vertical-align: -0.12ex; " SRC="img101.svg"
+ ALT="$20$"></SPAN>. Suponga una distribución a priori para <SPAN CLASS="MATH"><IMG STYLE="height: 1.84ex; vertical-align: -0.12ex; " SRC="img4.svg"
+ ALT="$\theta$"></SPAN> normal
+con media <SPAN CLASS="MATH"><IMG STYLE="height: 1.72ex; vertical-align: -0.12ex; " SRC="img102.svg"
+ ALT="$180$"></SPAN> y desviación estandar de <SPAN CLASS="MATH"><IMG STYLE="height: 1.72ex; vertical-align: -0.12ex; " SRC="img103.svg"
+ ALT="$40$"></SPAN>. Encuentre la
+distribución a posterior de <SPAN CLASS="MATH"><IMG STYLE="height: 1.84ex; vertical-align: -0.12ex; " SRC="img4.svg"
+ ALT="$\theta$"></SPAN>. Sol: Solo con el objetivo
+de ejercitar todos los pasos deduciremos la distribución a posterior
+completamente.
+
+<P>
+<P></P>
+<DIV CLASS="mathdisplay"><TABLE CLASS="equation" >
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img104.svg"
+ ALT="$\displaystyle y\vert\theta$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.04ex; vertical-align: -0.93ex; " SRC="img105.svg"
+ ALT="$\displaystyle \sim N\left(\theta,\sigma^{2}\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.84ex; vertical-align: -0.12ex; " SRC="img106.svg"
+ ALT="$\displaystyle \theta$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.04ex; vertical-align: -0.93ex; " SRC="img107.svg"
+ ALT="$\displaystyle \sim N\left(\mu_{0},\tau_{0}^{2}\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<P></P>
+entonces tenemos que 
+<P></P>
+<DIV CLASS="mathdisplay"><TABLE CLASS="equation" >
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img66.svg"
+ ALT="$\displaystyle p\left(\theta\vert y\right)$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img67.svg"
+ ALT="$\displaystyle \propto p\left(y\vert\theta\right)p\left(\theta\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 7.02ex; vertical-align: -3.09ex; " SRC="img108.svg"
+ ALT="$\displaystyle =\prod_{i=1}^{n}\left[\left(2\pi\sigma^{2}\right)^{-1/2}\exp\left...
+...^{-1/2}\exp\left(-\frac{1}{2\tau_{0}^{2}}\left(\theta-\mu_{0}\right)^{2}\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 7.24ex; vertical-align: -3.09ex; " SRC="img109.svg"
+ ALT="$\displaystyle \propto\exp\left(\frac{1}{2\sigma^{2}}\sum_{i=1}^{n}\left(y_{i}-\...
+...}\right)\exp\left(\frac{1}{2\tau_{0}^{2}}\left(\theta-\mu_{0}\right)^{2}\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 7.24ex; vertical-align: -3.09ex; " SRC="img110.svg"
+ ALT="$\displaystyle =\exp\left(-\frac{1}{2\sigma^{2}}\sum_{i=1}^{n}\left(y_{i}-\theta\right)^{2}-\frac{1}{2\tau_{0}^{2}}\left(\theta-\mu_{0}\right)^{2}\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 7.24ex; vertical-align: -3.09ex; " SRC="img111.svg"
+ ALT="$\displaystyle \propto\exp\left(-\frac{1}{2\sigma^{2}}\sum_{i=1}^{n}\left(y_{i}^...
+...t)-\frac{1}{2\tau_{0}^{2}}\left(\theta^{2}-2\theta\mu_{0}+\mu^{2}\right)\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 7.24ex; vertical-align: -3.09ex; " SRC="img112.svg"
+ ALT="$\displaystyle \propto\exp\left(-\frac{1}{2\sigma^{2}}\sum_{i=1}^{n}\left(\theta...
+...eta\right)-\frac{1}{2\tau_{0}^{2}}\left(\theta^{2}-2\theta\mu_{0}\right)\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<P></P>
+
+<P>
+entonces 
+<P><!-- MATH
+ \begin{displaymath}
+\theta|y\sim N\left(\frac{\frac{1}{\sigma^{2}}\mu_{0}+\frac{n}{\tau_{0}^{2}}\overline{y}}{\frac{1}{\sigma^{2}}+\frac{n}{\tau_{0}^{2}}},\frac{1}{\frac{1}{\sigma^{2}}+\frac{n}{\tau_{0}^{2}}}\right)
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="mathdisplay">
+<IMG STYLE="height: 7.52ex; vertical-align: -3.19ex; " SRC="img113.svg"
+ ALT="$\displaystyle \theta\vert y\sim N\left(\frac{\frac{1}{\sigma^{2}}\mu_{0}+\frac{...
+...n}{\tau_{0}^{2}}},\frac{1}{\frac{1}{\sigma^{2}}+\frac{n}{\tau_{0}^{2}}}\right)
+$">
+</DIV><P></P>
+para nuestro caso tenemos que 
+<P><!-- MATH
+ \begin{displaymath}
+\theta|y\sim N\left(\frac{\frac{1}{\sigma^{2}}\mu_{0}+\frac{n}{\tau_{0}^{2}}\overline{y}}{\frac{1}{\sigma^{2}}+\frac{n}{\tau_{0}^{2}}},\frac{1}{\frac{1}{\sigma^{2}}+\frac{n}{\tau_{0}^{2}}}\right)
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="mathdisplay">
+<IMG STYLE="height: 7.52ex; vertical-align: -3.19ex; " SRC="img113.svg"
+ ALT="$\displaystyle \theta\vert y\sim N\left(\frac{\frac{1}{\sigma^{2}}\mu_{0}+\frac{...
+...n}{\tau_{0}^{2}}},\frac{1}{\frac{1}{\sigma^{2}}+\frac{n}{\tau_{0}^{2}}}\right)
+$">
+</DIV><P></P>
+en nuestro cado 
+<P><!-- MATH
+ \begin{displaymath}
+\theta|y\sim N\left(\frac{\frac{1}{20^{2}}180+\frac{n}{40^{2}}150}{\frac{1}{20^{2}}+\frac{n}{40^{2}}},\frac{1}{\frac{1}{20^{2}}+\frac{n}{40^{2}}}\right)
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="mathdisplay">
+<IMG STYLE="height: 6.39ex; vertical-align: -2.62ex; " SRC="img114.svg"
+ ALT="$\displaystyle \theta\vert y\sim N\left(\frac{\frac{1}{20^{2}}180+\frac{n}{40^{2...
+...}{20^{2}}+\frac{n}{40^{2}}},\frac{1}{\frac{1}{20^{2}}+\frac{n}{40^{2}}}\right)
+$">
+</DIV><P></P>
 
 <P>
 <BR><HR>

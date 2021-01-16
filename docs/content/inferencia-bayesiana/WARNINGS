@@ -1,7 +1,5 @@
 No implementation found for style `pgfplots'
 No implementation found for style `enumitem'
+couldn't convert character &acute into available encodings
 
-redefining command \textendash 
-
-redefining command \textemdash 
-couldn't convert character inodot into available encodings
+ ...set $ACCENT_IMAGES  to get an image 

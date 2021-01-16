@@ -1,77 +1,232 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE HTML>
 
-<!--Converted with LaTeX2HTML 2018 (Released Feb 1, 2018) -->
-<HTML>
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
 <HEAD>
-<TITLE>BDA 3</TITLE>
-<META NAME="description" CONTENT="BDA 3">
+<TITLE>Urnas de Polya </TITLE>
+<META NAME="description" CONTENT="Urnas de Polya ">
 <META NAME="keywords" CONTENT="inferencia-bayesiana">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
 
-<META NAME="Generator" CONTENT="LaTeX2HTML v2018">
-<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
 
 <LINK REL="STYLESHEET" HREF="inferencia-bayesiana.css">
 
-<LINK REL="next" HREF="node9.html">
+<LINK REL="next" HREF="node4.html">
 <LINK REL="previous" HREF="node2.html">
-<LINK REL="up" HREF="inferencia-bayesiana.html">
 <LINK REL="next" HREF="node4.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation"><!--Navigation Panel-->
-<A NAME="tex2html58"
-  HREF="node4.html">
-<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html56"
-  HREF="inferencia-bayesiana.html">
-<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html50"
-  HREF="node2.html">
-<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A>   
+<A
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
 <BR>
-<B> Next:</B> <A NAME="tex2html59"
-  HREF="node4.html">Introducci&#243; y motivaci&#243;n</A>
-<B> Up:</B> <A NAME="tex2html57"
-  HREF="inferencia-bayesiana.html">inferencia-bayesiana</A>
-<B> Previous:</B> <A NAME="tex2html51"
-  HREF="node2.html">Primeros ejemplos de medida</A>
+<B> Next:</B> <A
+ HREF="node4.html">Blackwell and MacQueen 1973</A>
+<B> Up:</B> <A
+ HREF="node2.html">Primeros ejemplos de medida</A>
+<B> Previous:</B> <A
+ HREF="node2.html">Primeros ejemplos de medida</A>
 <BR>
 <BR></DIV>
 <!--End of Navigation Panel-->
 
-<H1><A NAME="SECTION00030000000000000000">
-BDA 3</A>
-</H1>
+<H2><A ID="SECTION00011000000000000000">
+Urnas de Polya </A>
+</H2>
 
 <P>
-En esta secci&#243;n se ilustrar&#225;n algunos conceptos &#250;tiles
-expuestos en el libro de Gelman y algunos ejercicios que son frecuentes
-en c&#225;tedras de inferencia bayesiana que se basan en el texto.
+Las urnas de Polya son un buen ejemplo de intercambiabilidad: Tenemos
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.19ex; vertical-align: -0.46ex; " SRC="img17.svg"
+ ALT="$b_{0}$"></SPAN> bolitas negras y <SPAN CLASS="MATH"><IMG STYLE="height: 1.58ex; vertical-align: -0.46ex; " SRC="img18.svg"
+ ALT="$w_{0}$"></SPAN> bolitas blancas en una urna. Extraigo
+una bolita aleatoriamente, si es blanca retorno la bolita a la urna
+y agrego una blanca, si es negra retorno la bolita y agrego una negra.
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.16ex; vertical-align: -0.46ex; " SRC="img19.svg"
+ ALT="$B_{n}:$"></SPAN> El número de bolas negras dado <SPAN CLASS="MATH"><IMG STYLE="height: 1.23ex; vertical-align: -0.12ex; " SRC="img20.svg"
+ ALT="$n$"></SPAN> ensayos es.
+<P><!-- MATH
+ \begin{displaymath}
+B_{n}\sim Bin\left(n,\frac{b_{0}}{b_{0}+w_{0}}\right)
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="mathdisplay">
+<IMG STYLE="height: 5.79ex; vertical-align: -2.32ex; " SRC="img21.svg"
+ ALT="$\displaystyle B_{n}\sim Bin\left(n,\frac{b_{0}}{b_{0}+w_{0}}\right)
+$">
+</DIV><P></P>
+la demostración biene como sigue 
+<P></P>
+<DIV CLASS="mathdisplay"><TABLE CLASS="equation" >
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH">Bolas negras iniciales&nbsp;<IMG STYLE="height: 2.16ex; vertical-align: -0.46ex; " SRC="img22.svg"
+ ALT="$\displaystyle B_{0}$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.19ex; vertical-align: -0.46ex; " SRC="img23.svg"
+ ALT="$\displaystyle =b_{0}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img24.svg"
+ ALT="$\displaystyle \implies P\left(B_{0}=b_{0}\right)$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.72ex; vertical-align: -0.12ex; " SRC="img25.svg"
+ ALT="$\displaystyle =1$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img26.svg"
+ ALT="$\displaystyle P\left(B_{1}=b_{0}+1\right)$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img27.svg"
+ ALT="$\displaystyle =\frac{b_{0}}{b_{0}+w_{0}}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<P></P>
 
 <P>
-<BR><HR>
-<!--Table of Child-Links-->
-<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+Para <SPAN CLASS="MATH"><IMG STYLE="height: 1.72ex; vertical-align: -0.12ex; " SRC="img28.svg"
+ ALT="$n=2$"></SPAN> 
+<P></P>
+<DIV CLASS="mathdisplay"><TABLE CLASS="equation" >
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img29.svg"
+ ALT="$\displaystyle P\left(B_{2}=b_{0}\right)$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.22ex; vertical-align: -2.06ex; " SRC="img30.svg"
+ ALT="$\displaystyle =\frac{w_{0}}{w_{0}+b_{0}}\cdot\frac{w_{0}+1}{w_{0}+b_{0}+1}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img31.svg"
+ ALT="$\displaystyle P\left(B_{2}=b_{0}+1\right)$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img32.svg"
+ ALT="$\displaystyle =\frac{w_{0}}{w_{0}+b_{0}}\frac{b_{0}}{w_{0}+b_{0}+1}+\frac{b_{0}}{w_{0}+b_{0}}\frac{w_{0}}{w_{0}+b_{0}+1}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img33.svg"
+ ALT="$\displaystyle P\left(B_{2}=b_{0}+2\right)$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.34ex; vertical-align: -2.06ex; " SRC="img34.svg"
+ ALT="$\displaystyle =\frac{b_{0}}{w_{0}+b_{0}}\cdot\frac{b_{0}+1}{w_{0}+b_{0}+1}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<P></P>
+debemos demostrar que la secuencia de variables aleatorias <!-- MATH
+ $X_{1},\ldots,X_{n}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.26ex; vertical-align: -0.57ex; " SRC="img35.svg"
+ ALT="$X_{1},\ldots,X_{n}$"></SPAN>
+de la secuencua de colores en cada una de las <SPAN CLASS="MATH"><IMG STYLE="height: 1.23ex; vertical-align: -0.12ex; " SRC="img20.svg"
+ ALT="$n$"></SPAN> extracciones en
+la urna es una secuencia de variables aleatorias intercambiables.
+Sea <SPAN CLASS="MATH"><IMG STYLE="height: 2.16ex; vertical-align: -0.46ex; " SRC="img36.svg"
+ ALT="$Y_{n}$"></SPAN> la proporción de bolas negras en la urna en dado
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.23ex; vertical-align: -0.12ex; " SRC="img20.svg"
+ ALT="$n$"></SPAN> ensayos. 
+<P><!-- MATH
+ \begin{displaymath}
+Y_{n}=\frac{B_{n}}{B_{n}+W_{n}}=\frac{B_{n}}{b_{0}+w_{0}+n}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="mathdisplay">
+<IMG STYLE="height: 5.31ex; vertical-align: -2.06ex; " SRC="img37.svg"
+ ALT="$\displaystyle Y_{n}=\frac{B_{n}}{B_{n}+W_{n}}=\frac{B_{n}}{b_{0}+w_{0}+n}
+$">
+</DIV><P></P>
+con esto podemos decir que 
+<P><!-- MATH
+ \begin{displaymath}
+B_{n+1}=\begin{cases}
+B_{n} & \text{con probabilidad }1-Y_{n}\\
+B_{n}+1 & \text{con probabilidad }Y_{n}
+\end{cases}
+\end{displaymath}
+ -->
+</P>
+<DIV CLASS="mathdisplay">
+<IMG STYLE="height: 7.18ex; vertical-align: -3.02ex; " SRC="img38.svg"
+ ALT="$\displaystyle B_{n+1}=\begin{cases}
+B_{n} &amp; \text{con probabilidad }1-Y_{n}\\
+B_{n}+1 &amp; \text{con probabilidad }Y_{n}
+\end{cases}$">
+</DIV><P></P>
+entonces 
+<P></P>
+<DIV CLASS="mathdisplay"><TABLE CLASS="equation" >
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img39.svg"
+ ALT="$\displaystyle E\left(Y_{n+1}\vert X_{1},\ldots,X_{n}\right)$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.79ex; vertical-align: -2.32ex; " SRC="img40.svg"
+ ALT="$\displaystyle =E\left(\frac{B_{n+1}}{b_{0}+w_{0}+n}\vert X_{1},\ldots,X_{n}\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.22ex; vertical-align: -2.06ex; " SRC="img41.svg"
+ ALT="$\displaystyle =\frac{1}{b_{0}+w_{0}+n}E\left(B_{n+1}\vert X_{1},\ldots,X_{n}\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.22ex; vertical-align: -2.06ex; " SRC="img42.svg"
+ ALT="$\displaystyle =\frac{1}{b_{0}+w_{0}+n}\left(B_{n}\left(1-Y_{n}\right)+\left(B_{n}+1\right)Y_{n}\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.22ex; vertical-align: -2.06ex; " SRC="img43.svg"
+ ALT="$\displaystyle =\frac{1}{b_{0}+w_{0}+n}\left(B_{n}-B_{n}Y_{n}+B_{n}Y_{n}+Y_{n}\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.22ex; vertical-align: -2.06ex; " SRC="img44.svg"
+ ALT="$\displaystyle =\frac{1}{b_{0}+w_{0}+n}\left(B_{n}+Y_{n}\right)$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.16ex; vertical-align: -0.46ex; " SRC="img45.svg"
+ ALT="$\displaystyle =Y_{n}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<P></P>
 
-<UL CLASS="ChildLinks">
-<LI><A NAME="tex2html60"
-  HREF="node4.html">Introducci&#243; y motivaci&#243;n</A>
-<LI><A NAME="tex2html61"
-  HREF="node5.html">Modelos uniparam&#233;tricos</A>
-<UL>
-<LI><A NAME="tex2html62"
-  HREF="node6.html">2.5c. </A>
-<LI><A NAME="tex2html63"
-  HREF="node7.html">2.5d. </A>
-<LI><A NAME="tex2html64"
-  HREF="node8.html">2.7.a</A>
-</UL></UL>
-<!--End of Table of Child-Links-->
-<BR><HR>
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A
+ HREF="node4.html">Blackwell and MacQueen 1973</A>
+<B> Up:</B> <A
+ HREF="node2.html">Primeros ejemplos de medida</A>
+<B> Previous:</B> <A
+ HREF="node2.html">Primeros ejemplos de medida</A></DIV>
+<!--End of Navigation Panel-->
 
 </BODY>
 </HTML>

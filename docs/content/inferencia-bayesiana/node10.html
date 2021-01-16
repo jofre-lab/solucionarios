@@ -1,51 +1,102 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE HTML>
 
-<!--Converted with LaTeX2HTML 2018 (Released Feb 1, 2018) -->
-<HTML>
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
 <HEAD>
-<TITLE>Ayudant&#237;a 1</TITLE>
-<META NAME="description" CONTENT="Ayudant&#237;a 1">
+<TITLE>2.7a.</TITLE>
+<META NAME="description" CONTENT="2.7a.">
 <META NAME="keywords" CONTENT="inferencia-bayesiana">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
 
-<META NAME="Generator" CONTENT="LaTeX2HTML v2018">
-<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
 
 <LINK REL="STYLESHEET" HREF="inferencia-bayesiana.css">
 
 <LINK REL="next" HREF="node11.html">
 <LINK REL="previous" HREF="node9.html">
-<LINK REL="up" HREF="node9.html">
 <LINK REL="next" HREF="node11.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation"><!--Navigation Panel-->
-<A NAME="tex2html146"
-  HREF="node11.html">
-<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html144"
-  HREF="node9.html">
-<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html138"
-  HREF="node9.html">
-<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A>   
+<A
+ HREF="node11.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node7.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node9.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
 <BR>
-<B> Next:</B> <A NAME="tex2html147"
-  HREF="node11.html">Ayudant&#237;a 2</A>
-<B> Up:</B> <A NAME="tex2html145"
-  HREF="node9.html">Ayudant&#237;a</A>
-<B> Previous:</B> <A NAME="tex2html139"
-  HREF="node9.html">Ayudant&#237;a</A>
+<B> Next:</B> <A
+ HREF="node11.html">2.7b.</A>
+<B> Up:</B> <A
+ HREF="node7.html">Modelos uniparamétricos</A>
+<B> Previous:</B> <A
+ HREF="node9.html">2.5d.</A>
 <BR>
 <BR></DIV>
 <!--End of Navigation Panel-->
 
-<H2><A NAME="SECTION00041000000000000000">
-Ayudant&#237;a 1</A>
-</H2>
+<H4><A ID="SECTION00022030000000000000">
+2.7a.</A>
+</H4>
+
+<P>
+Sobre prioris no informativas: Para la verosimilitud binomial <!-- MATH
+ $y\sim\text{bin}\left(n,\theta\right)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 1.68ex; vertical-align: -0.57ex; " SRC="img86.svg"
+ ALT="$y\sim$">bin<IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img87.svg"
+ ALT="$\left(n,\theta\right)$"></SPAN>
+, muestre que <!-- MATH
+ $p\left(\theta\right)\propto\theta^{-1}\left(1-\theta\right)^{-1}$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img88.svg"
+ ALT="$p\left(\theta\right)\propto\theta^{-1}\left(1-\theta\right)^{-1}$"></SPAN>
+es la priori uniforme para el parámetro natural de la familia
+exponencial. Sol. Sabemos que la función de enlace canónica
+de distribución binomial es <!-- MATH
+ $\phi=\log\left(\frac{\theta}{1-\theta}\right)=h\left(\theta\right)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 4.40ex; vertical-align: -1.63ex; " SRC="img89.svg"
+ ALT="$\phi=\log\left(\frac{\theta}{1-\theta}\right)=h\left(\theta\right)$"></SPAN>.
+sabiendo que 
+<P></P>
+<DIV CLASS="mathdisplay"><TABLE CLASS="equation" >
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img90.svg"
+ ALT="$\displaystyle p\left(\theta\right)$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 7.49ex; vertical-align: -4.04ex; " SRC="img91.svg"
+ ALT="$\displaystyle =\underbrace{p\left(\phi\right)}_{\propto1}\left\vert\frac{d\phi}{d\theta}\right\vert$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.79ex; vertical-align: -2.32ex; " SRC="img92.svg"
+ ALT="$\displaystyle \propto\left\vert\frac{d}{d\theta}\log\left(\frac{\theta}{1-\theta}\right)\right\vert$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.07ex; vertical-align: -1.90ex; " SRC="img93.svg"
+ ALT="$\displaystyle =\frac{1}{\theta}+\frac{1}{1-\theta}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.02ex; vertical-align: -0.70ex; " SRC="img94.svg"
+ ALT="$\displaystyle =\theta^{-1}\left(1-\theta\right)^{-1}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<P></P>
+ .ver BDA (ecuación 2.19) 
 
 <P>
 <BR><HR>

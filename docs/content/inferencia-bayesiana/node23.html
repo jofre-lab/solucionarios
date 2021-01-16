@@ -1,50 +1,111 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE HTML>
 
-<!--Converted with LaTeX2HTML 2018 (Released Feb 1, 2018) -->
-<HTML>
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
 <HEAD>
-<TITLE>4.5.2e</TITLE>
-<META NAME="description" CONTENT="4.5.2e">
+<TITLE>4.5.1c.</TITLE>
+<META NAME="description" CONTENT="4.5.1c.">
 <META NAME="keywords" CONTENT="inferencia-bayesiana">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
 
-<META NAME="Generator" CONTENT="LaTeX2HTML v2018">
-<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
 
 <LINK REL="STYLESHEET" HREF="inferencia-bayesiana.css">
 
+<LINK REL="next" HREF="node24.html">
 <LINK REL="previous" HREF="node22.html">
-<LINK REL="up" HREF="node14.html">
 <LINK REL="next" HREF="node24.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation"><!--Navigation Panel-->
-<A NAME="tex2html281"
-  HREF="node24.html">
-<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html279"
-  HREF="node14.html">
-<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html275"
-  HREF="node22.html">
-<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A>   
+<A
+ HREF="node24.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node20.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node22.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
 <BR>
-<B> Next:</B> <A NAME="tex2html282"
-  HREF="node24.html">Ejemplos de c&#225;tedra</A>
-<B> Up:</B> <A NAME="tex2html280"
-  HREF="node14.html">Ayudant&#237;a 5</A>
-<B> Previous:</B> <A NAME="tex2html276"
-  HREF="node22.html">4.5.2d</A>
+<B> Next:</B> <A
+ HREF="node24.html">4.5.1d.</A>
+<B> Up:</B> <A
+ HREF="node20.html">Ayudantıa 5</A>
+<B> Previous:</B> <A
+ HREF="node22.html">4.5.1b.</A>
 <BR>
 <BR></DIV>
 <!--End of Navigation Panel-->
 
-<H4><A NAME="SECTION00045090000000000000">
-4.5.2e</A>
+<H4><A ID="SECTION00035030000000000000">
+4.5.1c.</A>
 </H4>
+
+<P>
+calcular la distribución a posteriori marginal de <SPAN CLASS="MATH"><IMG STYLE="height: 1.68ex; vertical-align: -0.57ex; " SRC="img151.svg"
+ ALT="$\mu$"></SPAN>
+<P></P>
+<DIV CLASS="mathdisplay"><TABLE CLASS="equation" >
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img152.svg"
+ ALT="$\displaystyle p\left(\mu\vert\mathbf{x}\right)$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.62ex; vertical-align: -2.23ex; " SRC="img153.svg"
+ ALT="$\displaystyle =\int_{0}^{\infty}p\left(\mu,\sigma^{2}\vert\mathbf{x}\right)d\sigma^{2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 5.79ex; vertical-align: -2.32ex; " SRC="img154.svg"
+ ALT="$\displaystyle \propto\int_{0}^{\infty}\left(\sigma^{2}\right)^{-3/2}\sigma^{-n/2}\exp\left(-\frac{1}{2\sigma^{2}}A\right)d\sigma^{2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 1.81ex; vertical-align: -0.12ex; " SRC="img155.svg"
+ ALT="$\displaystyle A$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 3.94ex; vertical-align: -1.39ex; " SRC="img156.svg"
+ ALT="$\displaystyle =\sum\left(x_{i}-\overline{x}\right)^{2}+n\left(\overline{x}-\mu\right)^{2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<P></P>
+con el siguiente cambio de variable <!-- MATH
+ $z=A/\left(2\sigma^{2}\right)$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.01ex; vertical-align: -0.93ex; " SRC="img157.svg"
+ ALT="$z=A/\left(2\sigma^{2}\right)$"></SPAN>,
+<!-- MATH
+ $\text{\ensuremath{\sigma^{2}=A/2z} }$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 2.69ex; vertical-align: -0.70ex; " SRC="img158.svg"
+ ALT="$\text{\ensuremath{\sigma^{2}=A/2z} }$"></SPAN> y <!-- MATH
+ $d\sigma^{2}=-\frac{A}{2z^{2}}dz$
+ -->
+<SPAN CLASS="MATH"><IMG STYLE="height: 3.05ex; vertical-align: -0.92ex; " SRC="img159.svg"
+ ALT="$d\sigma^{2}=-\frac{A}{2z^{2}}dz$"></SPAN>.
+Luego 
+<P></P>
+<DIV CLASS="mathdisplay"><TABLE CLASS="equation" >
+<TR >
+<TD  style="text-align:right;"><SPAN CLASS="MATH"><IMG STYLE="height: 2.55ex; vertical-align: -0.70ex; " SRC="img152.svg"
+ ALT="$\displaystyle p\left(\mu\vert\mathbf{x}\right)$"></SPAN></TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.43ex; vertical-align: -2.32ex; " SRC="img160.svg"
+ ALT="$\displaystyle \propto\int_{0}^{\infty}\left(\frac{A}{2z}\right)^{-3/2-n/2}\exp\left(-z\right)\left(-\frac{A}{2z^{2}}\right)dz$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR >
+<TD>&nbsp;</TD>
+<TD  style="text-align:left;"><SPAN CLASS="MATH"><IMG STYLE="height: 6.43ex; vertical-align: -2.32ex; " SRC="img161.svg"
+ ALT="$\displaystyle \propto\left(\frac{A}{2z}\right)^{-1/2-n/2}$"></SPAN></TD>
+<TD  CLASS="eqno" style="text-align:right">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<P></P>
 
 <P>
 <BR><HR>

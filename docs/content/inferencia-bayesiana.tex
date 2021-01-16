@@ -1,4 +1,4 @@
-%% LyX 2.2.4 created this file.  For more info, see http://www.lyx.org/.
+%% LyX 2.3.4.2 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
 \documentclass[english]{article}
 \usepackage[T1]{fontenc}
@@ -9,27 +9,24 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
 \theoremstyle{plain}
 \newtheorem{thm}{\protect\theoremname}
-  \theoremstyle{definition}
-  \newtheorem{problem}[thm]{\protect\problemname}
+\theoremstyle{definition}
+\newtheorem{problem}[thm]{\protect\problemname}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
 \usepackage{pgfplots}
 \usepackage{enumitem}
 \setenumerate{label=A)}
 \setenumerate[2]{label=a)}
-% Added by lyx2lyx
-\renewcommand{\textendash}{--}
-\renewcommand{\textemdash}{---}
 
 \makeatother
 
 \usepackage{babel}
-  \providecommand{\problemname}{Problem}
+\providecommand{\problemname}{Problem}
 \providecommand{\theoremname}{Theorem}
 
 \begin{document}
 
-\section{Teorema de De Finetti}
+\subsection{Teorema de De Finetti}
 
 Las urnas de Polya son un buen ejemplo de variables aleatorias intercambiables
 
@@ -79,6 +76,60 @@ entonces
 p\left(y_{1}+\ldots+y_{n}=s_{n}\right)=\sum p\left(y_{1}+\ldots+y_{n}=s_{n}|y_{1}+\ldots+y_{N}=s_{N}\right)p\left(y_{1}+\ldots+y_{N}=s_{N}\right)
 \]
 
+
+\subsection{Urnas de Polya }
+
+Las urnas de Polya son un buen ejemplo de intercambiabilidad: Tenemos
+$b_{0}$ bolitas negras y $w_{0}$ bolitas blancas en una urna. Extraigo
+una bolita aleatoriamente, si es blanca retorno la bolita a la urna
+y agrego una blanca, si es negra retorno la bolita y agrego una negra.
+$B_{n}:$ El n\'{u}mero de bolas negras dado $n$ ensayos es.
+\[
+B_{n}\sim Bin\left(n,\frac{b_{0}}{b_{0}+w_{0}}\right)
+\]
+la demostraci\'{o}n biene como sigue 
+\begin{align*}
+\text{Bolas negras iniciales }B_{0} & =b_{0}\\
+\implies P\left(B_{0}=b_{0}\right) & =1\\
+P\left(B_{1}=b_{0}+1\right) & =\frac{b_{0}}{b_{0}+w_{0}}
+\end{align*}
+
+Para $n=2$ 
+\begin{align*}
+P\left(B_{2}=b_{0}\right) & =\frac{w_{0}}{w_{0}+b_{0}}\cdot\frac{w_{0}+1}{w_{0}+b_{0}+1}\\
+P\left(B_{2}=b_{0}+1\right) & =\frac{w_{0}}{w_{0}+b_{0}}\frac{b_{0}}{w_{0}+b_{0}+1}+\frac{b_{0}}{w_{0}+b_{0}}\frac{w_{0}}{w_{0}+b_{0}+1}\\
+P\left(B_{2}=b_{0}+2\right) & =\frac{b_{0}}{w_{0}+b_{0}}\cdot\frac{b_{0}+1}{w_{0}+b_{0}+1}
+\end{align*}
+debemos demostrar que la secuencia de variables aleatorias $X_{1},\ldots,X_{n}$
+de la secuencua de colores en cada una de las $n$ extracciones en
+la urna es una secuencia de variables aleatorias intercambiables.
+Sea $Y_{n}$ la proporci\'{o}n de bolas negras en la urna en dado
+$n$ ensayos. 
+\[
+Y_{n}=\frac{B_{n}}{B_{n}+W_{n}}=\frac{B_{n}}{b_{0}+w_{0}+n}
+\]
+con esto podemos decir que 
+\[
+B_{n+1}=\begin{cases}
+B_{n} & \text{con probabilidad }1-Y_{n}\\
+B_{n}+1 & \text{con probabilidad }Y_{n}
+\end{cases}
+\]
+entonces 
+\begin{align*}
+E\left(Y_{n+1}|X_{1},\ldots,X_{n}\right) & =E\left(\frac{B_{n+1}}{b_{0}+w_{0}+n}|X_{1},\ldots,X_{n}\right)\\
+ & =\frac{1}{b_{0}+w_{0}+n}E\left(B_{n+1}|X_{1},\ldots,X_{n}\right)\\
+ & =\frac{1}{b_{0}+w_{0}+n}\left(B_{n}\left(1-Y_{n}\right)+\left(B_{n}+1\right)Y_{n}\right)\\
+ & =\frac{1}{b_{0}+w_{0}+n}\left(B_{n}-B_{n}Y_{n}+B_{n}Y_{n}+Y_{n}\right)\\
+ & =\frac{1}{b_{0}+w_{0}+n}\left(B_{n}+Y_{n}\right)\\
+ & =Y_{n}
+\end{align*}
+
+
+\subsection{Blackwell and MacQueen 1973}
+
+Revisaremos la implicancias de este art\'{\i}culo en estad\'{\i}stica
+bayesiana no param\'{e}trica.
 
 \section{BDA 3}
 
@@ -159,7 +210,7 @@ a priori. Sol.
 \]
 y seleccionamos valores que respeten la igualdad.
 
-\paragraph*{2.7.a}
+\paragraph*{2.7a.}
 
 Sobre prioris no informativas: Para la verosimilitud binomial $y\sim\text{bin}\left(n,\theta\right)$
 , muestre que $p\left(\theta\right)\propto\theta^{-1}\left(1-\theta\right)^{-1}$
@@ -174,6 +225,107 @@ p\left(\theta\right) & =\underbrace{p\left(\phi\right)}_{\propto1}\left|\frac{d\
  & =\theta^{-1}\left(1-\theta\right)^{-1}
 \end{align*}
  .ver BDA (ecuaci\'{o}n 2.19) 
+
+\paragraph*{2.7b.}
+
+Muestre que si $y=0$ o $n=0$ la distribuci\'{o}n posterior es impropia.
+Sol: Si tenemos que 
+\begin{align*}
+p\left(\theta|y\right) & \propto p\left(y|\theta\right)p\left(\theta\right)\\
+ & =\binom{n}{y}\theta^{y}\left(1-\theta\right)^{n-y}\theta^{-1}\left(1-\theta\right)^{-1}\\
+ & \propto\theta^{y-1}\left(1-\theta\right)^{n-y-1}=\begin{cases}
+\theta^{-1}\left(1-\theta\right)^{n-1} & y=0\\
+\theta^{-1}\left(1-\theta\right)^{-1} & n=0\\
+\theta^{y-1}\left(1-\theta\right)^{n-y-1} & \text{otro caso}
+\end{cases}
+\end{align*}
+
+en los dos primeros casos no integra 1
+
+\paragraph*{2.8a. }
+
+Distribuci\'{o}n normal con media desconocida: Sea una muestra aleatoria
+de $n$ estudiantes extraidos de una poblaci\'{o}n lo suficientemente
+grande para luego medir su peso. La media del peso viene dada por
+$\overline{y}=150$. Asuma que pero en la poblaci\'{o}n se distribuye
+normal con media desconocida $\theta$ y desviaci\'{o}n estandar de
+$20$. Suponga una distribuci\'{o}n a priori para $\theta$ normal
+con media $180$ y desviaci\'{o}n estandar de $40$. Encuentre la
+distribuci\'{o}n a posterior de $\theta$. Sol: Solo con el objetivo
+de ejercitar todos los pasos deduciremos la distribuci\'{o}n a posterior
+completamente.
+
+\begin{align*}
+y|\theta & \sim N\left(\theta,\sigma^{2}\right)\\
+\theta & \sim N\left(\mu_{0},\tau_{0}^{2}\right)
+\end{align*}
+entonces tenemos que 
+\begin{align*}
+p\left(\theta|y\right) & \propto p\left(y|\theta\right)p\left(\theta\right)\\
+ & =\prod_{i=1}^{n}\left[\left(2\pi\sigma^{2}\right)^{-1/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y_{i}-\theta\right)^{2}\right)\right]\left(2\pi\tau_{0}^{2}\right)^{-1/2}\exp\left(-\frac{1}{2\tau_{0}^{2}}\left(\theta-\mu_{0}\right)^{2}\right)\\
+ & \propto\exp\left(\frac{1}{2\sigma^{2}}\sum_{i=1}^{n}\left(y_{i}-\theta\right)^{2}\right)\exp\left(\frac{1}{2\tau_{0}^{2}}\left(\theta-\mu_{0}\right)^{2}\right)\\
+ & =\exp\left(-\frac{1}{2\sigma^{2}}\sum_{i=1}^{n}\left(y_{i}-\theta\right)^{2}-\frac{1}{2\tau_{0}^{2}}\left(\theta-\mu_{0}\right)^{2}\right)\\
+ & \propto\exp\left(-\frac{1}{2\sigma^{2}}\sum_{i=1}^{n}\left(y_{i}^{2}-2y_{i}\theta+\theta^{2}\right)-\frac{1}{2\tau_{0}^{2}}\left(\theta^{2}-2\theta\mu_{0}+\mu^{2}\right)\right)\\
+ & \propto\exp\left(-\frac{1}{2\sigma^{2}}\sum_{i=1}^{n}\left(\theta^{2}-2y_{i}\theta\right)-\frac{1}{2\tau_{0}^{2}}\left(\theta^{2}-2\theta\mu_{0}\right)\right)
+\end{align*}
+
+entonces 
+\[
+\theta|y\sim N\left(\frac{\frac{1}{\sigma^{2}}\mu_{0}+\frac{n}{\tau_{0}^{2}}\overline{y}}{\frac{1}{\sigma^{2}}+\frac{n}{\tau_{0}^{2}}},\frac{1}{\frac{1}{\sigma^{2}}+\frac{n}{\tau_{0}^{2}}}\right)
+\]
+para nuestro caso tenemos que 
+\[
+\theta|y\sim N\left(\frac{\frac{1}{\sigma^{2}}\mu_{0}+\frac{n}{\tau_{0}^{2}}\overline{y}}{\frac{1}{\sigma^{2}}+\frac{n}{\tau_{0}^{2}}},\frac{1}{\frac{1}{\sigma^{2}}+\frac{n}{\tau_{0}^{2}}}\right)
+\]
+en nuestro cado 
+\[
+\theta|y\sim N\left(\frac{\frac{1}{20^{2}}180+\frac{n}{40^{2}}150}{\frac{1}{20^{2}}+\frac{n}{40^{2}}},\frac{1}{\frac{1}{20^{2}}+\frac{n}{40^{2}}}\right)
+\]
+
+
+\paragraph*{2.8b.}
+
+La forma de encontrar la distribuci\'{o}n predictiva en media esperanza
+y varianza iterada. 
+\[
+\tilde{y}|y\sim N\left(\widetilde{\mu},\widetilde{\sigma}^{2}\right)
+\]
+donde 
+\begin{align*}
+\widetilde{\mu} & =E\left(\tilde{y}|y\right)\\
+ & =E\left(E\left(\tilde{y}|\theta,y\right)|y\right)\\
+ & =E\left(E\left(\tilde{y}|\theta\right)|y\right)\\
+ & =E\left(\theta|y\right)\\
+ & =\frac{\frac{1}{\sigma^{2}}\mu_{0}+\frac{n}{\tau_{0}^{2}}\overline{y}}{\frac{1}{\sigma^{2}}+\frac{n}{\tau_{0}^{2}}}
+\end{align*}
+y la varianza 
+\begin{align*}
+\widetilde{\sigma}^{2} & =var\left(\tilde{y}|y\right)\\
+ & =var\left(E\left(\tilde{y}|\theta\right)|y\right)+E\left(var\left(\tilde{y}|\theta\right)|y\right)\\
+ & =var\left(\theta|y\right)+E\left(\sigma^{2}|y\right)\\
+ & =\frac{1}{\frac{1}{\sigma^{2}}+\frac{n}{\tau_{0}^{2}}}+\sigma^{2}
+\end{align*}
+por lo tanto 
+\[
+\tilde{y}|y\sim N\left(\frac{\frac{1}{20^{2}}180+\frac{n}{40^{2}}150}{\frac{1}{20^{2}}+\frac{n}{40^{2}}},\frac{1}{\frac{1}{\sigma^{2}}+\frac{n}{\tau_{0}^{2}}}+\sigma^{2}\right)
+\]
+
+
+\paragraph*{4.2.a}
+
+normalidad asint\'{o}tica de la posterior: sea $y_{1}\ldots,y_{5}$
+muestras independientes de una distribuci\'{o}n cauchy con parametro
+de posici\'{o}n desconocido $\theta$ y escala conicda $1$. $p\left(y_{i}|\theta\right)\propto\frac{1}{1+\left(y_{i}-\theta\right)^{2}}$.
+Asuma que la distribuci\'{o}n a priori para 
+\[
+\theta\sim\text{uniforme}\left(0,1\right)
+\]
+ determine la derivada y la segunda derivada del logaritmo de la verosimilitud.
+sol
+\[
+l\left(\theta|y\right)=\prod_{i=1}^{n}\frac{1}{1+\left(y_{i}-\theta\right)^{2}}
+\]
+
 
 \section{Ayudant\'{\i}a}
 
@@ -223,7 +375,7 @@ calcular la distribuci\'{o}n a posteriori marginal de $\mu$
 \begin{align*}
 p\left(\mu|\mathbf{x}\right) & =\int_{0}^{\infty}p\left(\mu,\sigma^{2}|\mathbf{x}\right)d\sigma^{2}\\
  & \propto\int_{0}^{\infty}\left(\sigma^{2}\right)^{-3/2}\sigma^{-n/2}\exp\left(-\frac{1}{2\sigma^{2}}A\right)d\sigma^{2}\\
-A & =\left(\sum\left(x_{i}-\overline{x}\right)^{2}+n\left(\overline{x}-\mu\right)^{2}\right)
+A & =\sum\left(x_{i}-\overline{x}\right)^{2}+n\left(\overline{x}-\mu\right)^{2}
 \end{align*}
 con el siguiente cambio de variable $z=A/\left(2\sigma^{2}\right)$,
 $\text{\ensuremath{\sigma^{2}=A/2z} }$ y $d\sigma^{2}=-\frac{A}{2z^{2}}dz$.
@@ -258,19 +410,59 @@ p\left(\mu,\sigma^{2}|\mathbf{x}\right) & \propto p\left(\mu,\sigma^{2}\right)p\
 
 \paragraph{4.5.2a.}
 
-Encontre la distribuci\'{o}n a posterior de $\beta,\sigma^{2}$. 
+Encontre la distribuci\'{o}n a posterior de $\beta,\sigma^{2}$. Conocido
+que la distribuci\'{o}n a priori de $p\left(\beta,\sigma^{2}\right)\propto\sigma^{-2}$
 \begin{align*}
 y|\beta,\sigma^{2},X & \sim N\left(X\beta,\sigma^{2}I\right)\\
-p\left(y|\beta,\sigma^{2},X\right) & \propto\left(\sigma^{2}\right)^{2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\hat{\beta}\right)^{t}\left(y-X\hat{\beta}\right)\right)\exp\left(-\frac{1}{2\sigma^{2}}\left(\beta-\hat{\beta}\right)^{t}X^{t}X\left(\beta-\hat{\beta}\right)\right)\\
-\implies
+p\left(y|\beta,\sigma^{2},X\right) & \propto\det\left(\sigma^{2}I\right)^{-1/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\beta\right)^{t}\left(y-X\beta\right)\right)\\
+ & =\left(\sigma^{2}\right)^{-1/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\beta\right)^{t}\left(y-X\beta\right)\right)\\
+ & =\\
+\implies p\left(\beta,\sigma^{2}|y,X\right) & \propto\left(\sigma^{2}\right)^{-n/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\beta\right)^{t}\left(y-X\beta\right)\right)\sigma^{-2}\\
+ & =\left(\sigma^{2}\right)^{-n/2-2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\beta\right)^{t}\left(y-X\beta\right)\right)
 \end{align*}
 
 
-\paragraph{4.5.2b}
+\paragraph*{4.5.2b.}
 
-\paragraph{4.5.2d}
+Demuestre que la distribuci\'{o}n a posterior de \textbf{$\beta$
+}dado $\sigma^{2}$ corresponde a una distribuci\'{o}n normal\textbf{
+$\hat{\beta},\sigma^{2}\left(X^{t}X\right)^{-1}$. }Sol: Sabemos que
+\begin{align*}
+p\left(\beta,\sigma^{2}|y\right) & =p\left(\sigma^{2}|\beta,y\right)p\left(\beta|y\right) & \implies & p\left(\beta|y\right)=\frac{p\left(\beta,\sigma^{2}|y\right)}{p\left(\sigma^{2}|\beta,y\right)}=\frac{p\left(y|\beta,\sigma^{2}\right)p\left(\beta,\sigma^{2}\right)}{p\left(\sigma^{2}|\beta,y\right)}\\
+p\left(\beta,\sigma^{2}|y\right) & =p\left(\beta|\sigma^{2},y\right)p\left(\sigma^{2}|y\right) & \implies & p\left(\sigma^{2}|y\right)=\frac{p\left(y|\beta,\sigma^{2}\right)p\left(\beta,\sigma^{2}\right)}{p\left(\beta|\sigma^{2},y\right)}
+\end{align*}
+El camino quiz\'{a}s es m\'{a}s simple si hacemos la siguiente operatoria:
 
-\paragraph{4.5.2e}
+\begin{align*}
+p\left(\beta|\sigma^{2},y\right) & =\frac{p\left(\beta,\sigma^{2}|,y\right)}{p\left(\sigma^{2}|y\right)}\\
+ & \propto p\left(\beta,\sigma^{2}|,y\right)\\
+ & =\left(\sigma^{2}\right)^{-n/2-2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\beta\right)^{t}\left(y-X\beta\right)\right)\\
+ & \propto\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\beta\right)^{t}\left(y-X\beta\right)\right)\\
+ & =\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\hat{\beta}\right)^{t}\left(y-X\hat{\beta}\right)-\frac{1}{2\sigma^{2}}\left(\beta-\hat{\beta}\right)^{t}X^{t}X\left(\beta-\hat{\beta}\right)\right)\\
+ & \propto\exp\left(-\frac{1}{2\sigma^{2}}\left(\beta-\hat{\beta}\right)^{t}X^{t}X\left(\beta-\hat{\beta}\right)\right)\\
+\implies\beta|\sigma^{2},y & \sim N\left(\hat{\beta},\sigma^{2}\left(X^{t}X\right)^{-1}\right)
+\end{align*}
+
+
+\paragraph{4.5.2c.}
+
+Encuentre la distribuci\'{o}n a posterior de $\sigma^{2}$ , (ver
+ejercicio 14.4 BDA)
+\begin{align*}
+p\left(\sigma^{2}|y\right) & =\frac{p\left(\beta,\sigma^{2}|,y\right)}{p\left(\beta|\sigma^{2},y\right)}\\
+ & \propto\frac{\left(\sigma^{2}\right)^{-n/2-2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\beta\right)^{t}\left(y-X\beta\right)\right)}{\det\left(\sigma^{2}\left(X^{t}X\right)^{-1}\right)^{-1/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(\beta-\hat{\beta}\right)^{t}X^{t}X\left(\beta-\hat{\beta}\right)\right)}\\
+ & =\frac{\left(\sigma^{2}\right)^{-n/2-2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\hat{\beta}\right)^{t}\left(y-X\hat{\beta}\right)-\frac{1}{2\sigma^{2}}\left(\beta-\hat{\beta}\right)^{t}X^{t}X\left(\beta-\hat{\beta}\right)\right)}{\det\left(\sigma^{2}\left(X^{t}X\right)^{-1}\right)^{-1/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(\beta-\hat{\beta}\right)^{t}X^{t}X\left(\beta-\hat{\beta}\right)\right)}\\
+ & =\frac{\left(\sigma^{2}\right)^{-n/2-2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\hat{\beta}\right)^{t}\left(y-X\hat{\beta}\right)\right)}{\det\left(\sigma^{2}\left(X^{t}X\right)^{-1}\right)^{-1/2}\exp\left(0\right)}\\
+ & =\frac{\left(\sigma^{2}\right)^{-n/2-2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\hat{\beta}\right)^{t}\left(y-X\hat{\beta}\right)\right)}{\left(\sigma^{2k}\right)^{-1/2}\det\left(\left(X^{t}X\right)^{-1}\right)^{-1/2}\exp\left(0\right)}\\
+ & \propto\left(\sigma^{2}\right)^{-n/2-2+k/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\hat{\beta}\right)^{t}\left(y-X\hat{\beta}\right)\right)\\
+\implies\sigma^{2}|y & \sim Inv-\chi^{2}\left(n-k,s^{2}\right)
+\end{align*}
+
+
+\paragraph{4.5.2d }
+
+Si $\widetilde{y}$ es una nueva respuesta, existen $a$ y $b$ tales
+que 
 
 \section{Ejemplos de c\'{a}tedra}
 

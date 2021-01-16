@@ -13,17 +13,13 @@
 \theoremstyle{plain}
 
 \newtheorem{thm}{\protect\theoremname } \theoremstyle{definition}
-  
+
 \newtheorem{problem}[thm]{\protect\problemname } 
 
 \usepackage{pgfplots}
 \usepackage{enumitem}
 \setenumerate{label=A)}
 \setenumerate[2]{label=a)}
-%
-\renewcommand{\textendash}{--}
-%
-\renewcommand{\textemdash}{---}
 
 
 \makeatother
@@ -81,75 +77,59 @@
  \parindent=0pt\abovedisplayskip=0pt\belowdisplayskip=0pt}%
  \def\phantompar{\csname par\endcsname}\normalsize}%
 \def\lthtmltypeout#1{{\let\protect\string \immediate\write\lthtmlwrite{#1}}}%
-\newcommand\lthtmlhboxmathA{\adjustnormalsize\setbox\sizebox=\hbox\bgroup\kern.05em }%
-\newcommand\lthtmlhboxmathB{\adjustnormalsize\setbox\sizebox=\hbox to\hsize\bgroup\hfill }%
-\newcommand\lthtmlvboxmathA{\adjustnormalsize\setbox\sizebox=\vbox\bgroup %
- \let\ifinner=\iffalse \let\)\liih@math }%
-\newcommand\lthtmlboxmathZ{\@next\next\@currlist{}{\def\next{\voidb@x}}%
- \expandafter\box\next\egroup}%
-\newcommand\lthtmlmathtype[1]{\gdef\lthtmlmathenv{#1}}%
-\newcommand\lthtmllogmath{\dimen0\ht\sizebox \advance\dimen0\dp\sizebox
-  \ifdim\dimen0>.95\vsize
-   \lthtmltypeout{%
-*** image for \lthtmlmathenv\space is too tall at \the\dimen0, reducing to .95 vsize ***}%
-   \ht\sizebox.95\vsize \dp\sizebox\z@ \fi
-  \lthtmltypeout{l2hSize %
-:\lthtmlmathenv:\the\ht\sizebox::\the\dp\sizebox::\the\wd\sizebox.\preveqno}}%
-\newcommand\lthtmlfigureA[1]{\let\@savefreelist\@freelist
-       \lthtmlmathtype{#1}\lthtmlvboxmathA}%
-\newcommand\lthtmlpictureA{\bgroup\catcode`\_=8 \lthtmlpictureB}%
-\newcommand\lthtmlpictureB[1]{\lthtmlmathtype{#1}\egroup
-       \let\@savefreelist\@freelist \lthtmlhboxmathB}%
-\newcommand\lthtmlpictureZ[1]{\hfill\lthtmlfigureZ}%
-\newcommand\lthtmlfigureZ{\lthtmlboxmathZ\lthtmllogmath\copy\sizebox
-       \global\let\@freelist\@savefreelist}%
-\newcommand\lthtmldisplayA{\bgroup\catcode`\_=8 \lthtmldisplayAi}%
-\newcommand\lthtmldisplayAi[1]{\lthtmlmathtype{#1}\egroup\lthtmlvboxmathA}%
-\newcommand\lthtmldisplayB[1]{\edef\preveqno{(\theequation)}%
-  \lthtmldisplayA{#1}\let\@eqnnum\relax}%
-\newcommand\lthtmldisplayZ{\lthtmlboxmathZ\lthtmllogmath\lthtmlsetmath}%
-\newcommand\lthtmlinlinemathA{\bgroup\catcode`\_=8 \lthtmlinlinemathB}
-\newcommand\lthtmlinlinemathB[1]{\lthtmlmathtype{#1}\egroup\lthtmlhboxmathA
-  \vrule height1.5ex width0pt }%
-\newcommand\lthtmlinlineA{\bgroup\catcode`\_=8 \lthtmlinlineB}%
-\newcommand\lthtmlinlineB[1]{\lthtmlmathtype{#1}\egroup\lthtmlhboxmathA}%
-\newcommand\lthtmlinlineZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
-  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetinline}
-\newcommand\lthtmlinlinemathZ{\egroup\expandafter\ifdim\dp\sizebox>0pt %
-  \expandafter\centerinlinemath\fi\lthtmllogmath\lthtmlsetmath}
-\newcommand\lthtmlindisplaymathZ{\egroup %
-  \centerinlinemath\lthtmllogmath\lthtmlsetmath}
-\def\lthtmlsetinline{\hbox{\vrule width.1em \vtop{\vbox{%
-  \kern.1em\copy\sizebox}\ifdim\dp\sizebox>0pt\kern.1em\else\kern.3pt\fi
-  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
-\def\lthtmlsetmath{\hbox{\vrule width.1em\kern-.05em\vtop{\vbox{%
-  \kern.1em\kern0.8 pt\hbox{\hglue.17em\copy\sizebox\hglue0.8 pt}}\kern.3pt%
-  \ifdim\dp\sizebox>0pt\kern.1em\fi \kern0.8 pt%
-  \ifdim\hsize>\wd\sizebox \hrule depth1pt\fi}}}
-\def\centerinlinemath{%
-  \dimen1=\ifdim\ht\sizebox<\dp\sizebox \dp\sizebox\else\ht\sizebox\fi
-  \advance\dimen1by.5pt \vrule width0pt height\dimen1 depth\dimen1 
- \dp\sizebox=\dimen1\ht\sizebox=\dimen1\relax}
-
+\usepackage[tightpage,active]{preview}
+\newbox\lthtmlPageBox
+\newdimen\lthtmlCropMarkHeight
+\newdimen\lthtmlCropMarkDepth
+\long\def\lthtmlTightVBox#1#2{%
+    \setbox\lthtmlPageBox\vbox{\hbox{\catcode`\_=8 #2}}%
+    \lthtmlCropMarkHeight=\ht\lthtmlPageBox \advance \lthtmlCropMarkHeight 6pt
+    \lthtmlCropMarkDepth=\dp\lthtmlPageBox
+    \lthtmltypeout{^^J:#1:lthtmlCropMarkHeight:=\the\lthtmlCropMarkHeight}%
+    \lthtmltypeout{^^J:#1:lthtmlCropMarkDepth:=\the\lthtmlCropMarkDepth:1ex:=\the \dimexpr 1ex}%
+    \begin{preview}\copy\lthtmlPageBox\end{preview}}%
+\long\def\lthtmlTightFBox#1#2{%
+    \adjustnormalsize\setbox\lthtmlPageBox=\vbox\bgroup %
+    \let\ifinner=\iffalse \let\)\liih@math %
+    {\catcode`\_=8 #2}%
+    \@next\next\@currlist{}{\def\next{\voidb@x}}%
+    \expandafter\box\next\egroup %
+    \lthtmlCropMarkHeight=\ht\lthtmlPageBox \advance \lthtmlCropMarkHeight 6pt
+    \lthtmlCropMarkDepth=\dp\lthtmlPageBox
+    \lthtmltypeout{^^J:#1:lthtmlCropMarkHeight:=\the\lthtmlCropMarkHeight}%
+    \lthtmltypeout{^^J:#1:lthtmlCropMarkDepth:=\the\lthtmlCropMarkDepth:1ex:=\the \dimexpr 1ex}%
+    \begin{preview}\copy\lthtmlPageBox\end{preview}}%
+    \long\def\lthtmlinlinemathA#1#2\lthtmlindisplaymathZ{\lthtmlTightVBox{#1}{#2}}
+    \def\lthtmlinlineA#1#2\lthtmlinlineZ{\lthtmlTightVBox{#1}{#2}}
+    \long\def\lthtmldisplayA#1#2\lthtmldisplayZ{\lthtmlTightVBox{#1}{#2}}
+    \long\def\lthtmlinlinemathA#1#2\lthtmlindisplaymathZ{\lthtmlTightVBox{#1}{#2}}
+    \def\lthtmlinlineA#1#2\lthtmlinlineZ{\lthtmlTightVBox{#1}{#2}}
+    \long\def\lthtmldisplayA#1#2\lthtmldisplayZ{\lthtmlTightVBox{#1}{#2}}
+    \long\def\lthtmldisplayB#1#2\lthtmldisplayZ{\\edef\preveqno{(\theequation)}%
+        \lthtmlTightVBox{#1}{\let\@eqnnum\relax#2}}
+    \long\def\lthtmlfigureA#1#2\lthtmlfigureZ{\let\@savefreelist\@freelist
+        \lthtmlTightFBox{#1}{#2}\global\let\@freelist\@savefreelist}
+    \long\def\lthtmlpictureA#1#2\lthtmlpictureZ{\let\@savefreelist\@freelist
+        \lthtmlTightVBox{#1}{#2}\global\let\@freelist\@savefreelist}
 \def\lthtmlcheckvsize{\ifdim\ht\sizebox<\vsize 
   \ifdim\wd\sizebox<\hsize\expandafter\hfill\fi \expandafter\vfill
   \else\expandafter\vss\fi}%
 \providecommand{\selectlanguage}[1]{}%
 \makeatletter \tracingstats = 1 
-\providecommand{\Chi}{\textrm{X}}
-\providecommand{\Eta}{\textrm{H}}
+\providecommand{\Kappa}{\textrm{K}}
 \providecommand{\Rho}{\textrm{R}}
 \providecommand{\Nu}{\textrm{N}}
 \providecommand{\Epsilon}{\textrm{E}}
-\providecommand{\Iota}{\textrm{J}}
-\providecommand{\Zeta}{\textrm{Z}}
-\providecommand{\Alpha}{\textrm{A}}
-\providecommand{\Kappa}{\textrm{K}}
-\providecommand{\Mu}{\textrm{M}}
-\providecommand{\Beta}{\textrm{B}}
-\providecommand{\Omicron}{\textrm{O}}
-\providecommand{\Tau}{\textrm{T}}
 \providecommand{\omicron}{\textrm{o}}
+\providecommand{\Eta}{\textrm{H}}
+\providecommand{\Omicron}{\textrm{O}}
+\providecommand{\Alpha}{\textrm{A}}
+\providecommand{\Tau}{\textrm{T}}
+\providecommand{\Mu}{\textrm{M}}
+\providecommand{\Zeta}{\textrm{Z}}
+\providecommand{\Iota}{\textrm{J}}
+\providecommand{\Beta}{\textrm{B}}
+\providecommand{\Chi}{\textrm{X}}
 
 
 \begin{document}
@@ -174,44 +154,829 @@
 
 % !!! IMAGES START HERE !!!
 
-\stepcounter{section}
-\stepcounter{section}
-\stepcounter{section}
 \stepcounter{subsection}
-\stepcounter{subsection}
+\stepcounter{section}
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_inline854}%
-$ \phi=\log\left(\frac{\theta}{1-\theta}\right)=h\left(\theta\right)$%
-\lthtmlinlinemathZ
+\lthtmlinlinemathA{tex2html_wrap_indisplay1470}%
+$\displaystyle f\left(x_{1},\ldots,x_{n}\right)=\prod_{i=1}^{n}f\left(x_{i}\right)\implies f\left(x_{n+1},\ldots,x_{n+m}|x_{1},\ldots,x_{n}\right)=\prod_{i=n+1}^{m}f\left(x_{i}\right)
+$%
+\lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay855}%
+\lthtmlinlinemathA{tex2html_wrap_inline1477}%
+$ \theta\sim f\left(\theta\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1479}%
+$ Y_{1},\ldots,Y_{n}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1481}%
+$ \theta$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1485}%
+$ \qedsymbol$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1487}%
+$\displaystyle f\left(y_{1},\ldots,y_{n}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1488}%
+$\displaystyle =\int f\left(y_{1},\ldots,y_{n}|\theta\right)dF\left(\theta\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1489}%
+$\displaystyle =\int\prod_{i=1}^{n}f\left(y_{i}|\theta\right)dF\left(\theta\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1490}%
+$\displaystyle =f\left(y_{\pi_{1}},\ldots,y_{\pi_{n}}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1492}%
+$ 0-1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1493}%
+$\displaystyle p\left(y_{1},\ldots,y_{n}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1494}%
+$\displaystyle =\int\prod_{i=1}^{n}p\left(y_{i}|\theta\right)dF\left(\theta\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1496}%
+$\displaystyle F\left(\theta\right)=\lim_{n\to\infty}P\left(s_{n}\leq\theta\right)
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1498}%
+$\displaystyle p\left(y_{1}+\ldots+y_{n}=s_{n}\right)=\binom{n}{s_{n}}p\left(y_{1},\ldots,y_{n}\right)=\binom{n}{s_{n}}p\left(y_{\pi_{1}},\ldots,y_{\pi_{n}}\right)
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1500}%
+$ N>n$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1502}%
+$\displaystyle p\left(y_{1}+\ldots+y_{n}=s_{n}\right)=\sum p\left(y_{1}+\ldots+y_{n}=s_{n}|y_{1}+\ldots+y_{N}=s_{N}\right)p\left(y_{1}+\ldots+y_{N}=s_{N}\right)
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1505}%
+$ b_{0}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1507}%
+$ w_{0}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1509}%
+$ B_{n}:$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1511}%
+$ n$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1513}%
+$\displaystyle B_{n}\sim Bin\left(n,\frac{b_{0}}{b_{0}+w_{0}}\right)
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1514}%
+$\displaystyle B_{0}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1515}%
+$\displaystyle =b_{0}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1516}%
+$\displaystyle \implies P\left(B_{0}=b_{0}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1517}%
+$\displaystyle =1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1518}%
+$\displaystyle P\left(B_{1}=b_{0}+1\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1519}%
+$\displaystyle =\frac{b_{0}}{b_{0}+w_{0}}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1521}%
+$ n=2$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1522}%
+$\displaystyle P\left(B_{2}=b_{0}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1523}%
+$\displaystyle =\frac{w_{0}}{w_{0}+b_{0}}\cdot\frac{w_{0}+1}{w_{0}+b_{0}+1}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1524}%
+$\displaystyle P\left(B_{2}=b_{0}+1\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1525}%
+$\displaystyle =\frac{w_{0}}{w_{0}+b_{0}}\frac{b_{0}}{w_{0}+b_{0}+1}+\frac{b_{0}}{w_{0}+b_{0}}\frac{w_{0}}{w_{0}+b_{0}+1}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1526}%
+$\displaystyle P\left(B_{2}=b_{0}+2\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1527}%
+$\displaystyle =\frac{b_{0}}{w_{0}+b_{0}}\cdot\frac{b_{0}+1}{w_{0}+b_{0}+1}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1529}%
+$ X_{1},\ldots,X_{n}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1533}%
+$ Y_{n}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1537}%
+$\displaystyle Y_{n}=\frac{B_{n}}{B_{n}+W_{n}}=\frac{B_{n}}{b_{0}+w_{0}+n}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1539}%
+$\displaystyle B_{n+1}=\begin{cases}
+B_{n} & \text{con probabilidad }1-Y_{n}\\
+B_{n}+1 & \text{con probabilidad }Y_{n}
+\end{cases}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1540}%
+$\displaystyle E\left(Y_{n+1}|X_{1},\ldots,X_{n}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1541}%
+$\displaystyle =E\left(\frac{B_{n+1}}{b_{0}+w_{0}+n}|X_{1},\ldots,X_{n}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1542}%
+$\displaystyle =\frac{1}{b_{0}+w_{0}+n}E\left(B_{n+1}|X_{1},\ldots,X_{n}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1543}%
+$\displaystyle =\frac{1}{b_{0}+w_{0}+n}\left(B_{n}\left(1-Y_{n}\right)+\left(B_{n}+1\right)Y_{n}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1544}%
+$\displaystyle =\frac{1}{b_{0}+w_{0}+n}\left(B_{n}-B_{n}Y_{n}+B_{n}Y_{n}+Y_{n}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1545}%
+$\displaystyle =\frac{1}{b_{0}+w_{0}+n}\left(B_{n}+Y_{n}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1546}%
+$\displaystyle =Y_{n}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+\stepcounter{subsection}
+\stepcounter{section}
+\stepcounter{subsection}
+\stepcounter{subsection}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1561}%
+$ 0,1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1563}%
+$\displaystyle p\left(y=k\right)=\int_{0}^{1}p\left(y=k|\theta\right)d\theta
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1565}%
+$ k=1,\ldots,n$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1566}%
+$\displaystyle p\left(y=k\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1567}%
+$\displaystyle =\int_{0}^{1}p\left(y=k,\theta\right)d\theta$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1568}%
+$\displaystyle =\int_{0}^{1}p\left(y=k|\theta\right)\underbrace{p\left(\theta\right)}_{1}d\theta$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1569}%
+$\displaystyle =\int_{0}^{1}p\left(y=k|\theta\right)d\theta$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1570}%
+$\displaystyle =\int_{0}^{1}\binom{n}{k}\theta^{k}\left(1-\theta\right)^{n-k}d\theta$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1571}%
+$\displaystyle =\binom{n}{k}\int_{0}^{1}\theta^{k}\left(1-\theta\right)^{n-k}d\theta$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1572}%
+$\displaystyle =\binom{n}{k}\frac{\Gamma\left(k+1\right)\Gamma\left(n-k+1\right)}{\Gamma\left(n+2\right)}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1573}%
+$\displaystyle =\binom{n}{k}\frac{k!\left(n-k\right)!}{\left(n+1\right)!}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1574}%
+$\displaystyle =\frac{1}{n+1}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1575}%
+$\displaystyle \int_{0}^{1}\frac{\Gamma\left(\alpha+\beta\right)}{\Gamma\left(\alpha\right)\Gamma\left(\beta\right)}\theta^{\alpha-1}\left(1-\theta\right)^{\beta-1}d\theta$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1577}%
+$\displaystyle \implies\int_{0}^{1}\theta^{\alpha-1}\left(1-\theta\right)^{\beta-1}d\theta$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1578}%
+$\displaystyle =\frac{\Gamma\left(\alpha\right)\Gamma\left(\beta\right)}{\Gamma\left(\alpha+\beta\right)}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1579}%
+$\displaystyle \implies\int_{0}^{1}\theta^{k}\left(1-\theta\right)^{n-k}d\theta$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1580}%
+$\displaystyle =\frac{\Gamma\left(k+1\right)\Gamma\left(n-k+1\right)}{\Gamma\left(k+1+n-k+1\right)}=\frac{\Gamma\left(k+1\right)\Gamma\left(n-k+1\right)}{\Gamma\left(n+2\right)}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1582}%
+$ \theta\sim$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1583}%
+$ \left(\alpha,\beta\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1585}%
+$ y$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1588}%
+$\displaystyle p\left(\theta|y\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1589}%
+$\displaystyle \propto p\left(y|\theta\right)p\left(\theta\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1590}%
+$\displaystyle =\binom{n}{y}\theta^{y}\left(1-\theta\right)^{n-y}\frac{\Gamma\left(\alpha+\beta\right)}{\Gamma\left(\alpha\right)\Gamma\left(\beta\right)}\theta^{\alpha-1}\left(1-\theta\right)^{\beta-1}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1591}%
+$\displaystyle \propto\theta^{\alpha+y-1}\left(1-\theta\right)^{\beta+n-y-1}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1592}%
+$\displaystyle \implies\theta|y$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1593}%
+$\displaystyle \sim$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1594}%
+$\displaystyle \left(\alpha+y,\beta+n-y\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1595}%
+$\displaystyle E\left(\theta|y\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1596}%
+$\displaystyle =\frac{\alpha+y}{\alpha+y+\beta+n-y}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1597}%
+$\displaystyle =\frac{\alpha+y}{\alpha+\beta+n}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1598}%
+$\displaystyle =\frac{\alpha}{\alpha+\beta+n}+\frac{y}{\alpha+\beta+n}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1599}%
+$\displaystyle =\frac{\alpha+\beta}{\alpha+\beta}\frac{\alpha}{\alpha+\beta+n}+\frac{n}{n}\frac{y}{\alpha+\beta+n}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1600}%
+$\displaystyle =\frac{\alpha+\beta}{\alpha+\beta+n}\underbrace{\frac{\alpha}{\alpha+\beta}}_{E\left(\theta\right)}+\frac{n}{\alpha+\beta+n}\frac{y}{n}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1604}%
+$ \left(1,1\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1605}%
+$\displaystyle \left(\theta|y\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1606}%
+$\displaystyle =\frac{\left(\alpha+y\right)\left(\beta+n-y\right)}{\left(\alpha+y+\beta+n-y\right)^{2}\left(\alpha+y+\beta+n-y\right)}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1607}%
+$\displaystyle =\frac{\left(\alpha+y\right)\left(\beta+n-y\right)}{\left(\alpha+\beta+n\right)^{2}\left(\alpha+\beta+n+1\right)}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1608}%
+$\displaystyle =\frac{\left(1+y\right)\left(1+n-y\right)}{\left(2+n\right)^{2}\left(2+n+1\right)}=\frac{\left(1+y\right)\left(1+n-y\right)}{\left(2+n\right)^{2}\left(n+3\right)}\leq\frac{1}{12}=$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1609}%
+$\displaystyle \left(\theta\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1618}%
+$\displaystyle \frac{\left(\alpha+y\right)\left(\beta+n-y\right)}{\left(\alpha+\beta+n\right)^{2}\left(\alpha+\beta+n+1\right)}\leq\frac{\alpha\beta}{\left(\alpha+\beta\right)^{2}\left(\alpha+\beta+1\right)}
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1621}%
+$ y\sim$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1622}%
+$ \left(n,\theta\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1624}%
+$ p\left(\theta\right)\propto\theta^{-1}\left(1-\theta\right)^{-1}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1626}%
+$ \phi=\log\left(\frac{\theta}{1-\theta}\right)=h\left(\theta\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1627}%
 $\displaystyle p\left(\theta\right)$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay856}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay1628}%
 $\displaystyle =\underbrace{p\left(\phi\right)}_{\propto1}\left|\frac{d\phi}{d\theta}\right|$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay857}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay1629}%
 $\displaystyle \propto\left|\frac{d}{d\theta}\log\left(\frac{\theta}{1-\theta}\right)\right|$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay858}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay1630}%
 $\displaystyle =\frac{1}{\theta}+\frac{1}{1-\theta}$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
 {\newpage\clearpage
-\lthtmlinlinemathA{tex2html_wrap_indisplay859}%
+\lthtmlinlinemathA{tex2html_wrap_indisplay1631}%
 $\displaystyle =\theta^{-1}\left(1-\theta\right)^{-1}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1634}%
+$ y=0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1636}%
+$ n=0$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1639}%
+$\displaystyle =\binom{n}{y}\theta^{y}\left(1-\theta\right)^{n-y}\theta^{-1}\left(1-\theta\right)^{-1}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1640}%
+$\displaystyle \propto\theta^{y-1}\left(1-\theta\right)^{n-y-1}=\begin{cases}
+\theta^{-1}\left(1-\theta\right)^{n-1} & y=0\\
+\theta^{-1}\left(1-\theta\right)^{-1} & n=0\\
+\theta^{y-1}\left(1-\theta\right)^{n-y-1} &$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1641}%
+$\displaystyle \end{cases}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1646}%
+$ \overline{y}=150$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1650}%
+$ 20$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1654}%
+$ 180$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1656}%
+$ 40$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1659}%
+$\displaystyle y|\theta$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1660}%
+$\displaystyle \sim N\left(\theta,\sigma^{2}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1661}%
+$\displaystyle \theta$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1662}%
+$\displaystyle \sim N\left(\mu_{0},\tau_{0}^{2}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1665}%
+$\displaystyle =\prod_{i=1}^{n}\left[\left(2\pi\sigma^{2}\right)^{-1/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y_{i}-\theta\right)^{2}\right)\right]\left(2\pi\tau_{0}^{2}\right)^{-1/2}\exp\left(-\frac{1}{2\tau_{0}^{2}}\left(\theta-\mu_{0}\right)^{2}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1666}%
+$\displaystyle \propto\exp\left(\frac{1}{2\sigma^{2}}\sum_{i=1}^{n}\left(y_{i}-\theta\right)^{2}\right)\exp\left(\frac{1}{2\tau_{0}^{2}}\left(\theta-\mu_{0}\right)^{2}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1667}%
+$\displaystyle =\exp\left(-\frac{1}{2\sigma^{2}}\sum_{i=1}^{n}\left(y_{i}-\theta\right)^{2}-\frac{1}{2\tau_{0}^{2}}\left(\theta-\mu_{0}\right)^{2}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1668}%
+$\displaystyle \propto\exp\left(-\frac{1}{2\sigma^{2}}\sum_{i=1}^{n}\left(y_{i}^{2}-2y_{i}\theta+\theta^{2}\right)-\frac{1}{2\tau_{0}^{2}}\left(\theta^{2}-2\theta\mu_{0}+\mu^{2}\right)\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1669}%
+$\displaystyle \propto\exp\left(-\frac{1}{2\sigma^{2}}\sum_{i=1}^{n}\left(\theta^{2}-2y_{i}\theta\right)-\frac{1}{2\tau_{0}^{2}}\left(\theta^{2}-2\theta\mu_{0}\right)\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1671}%
+$\displaystyle \theta|y\sim N\left(\frac{\frac{1}{\sigma^{2}}\mu_{0}+\frac{n}{\tau_{0}^{2}}\overline{y}}{\frac{1}{\sigma^{2}}+\frac{n}{\tau_{0}^{2}}},\frac{1}{\frac{1}{\sigma^{2}}+\frac{n}{\tau_{0}^{2}}}\right)
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1675}%
+$\displaystyle \theta|y\sim N\left(\frac{\frac{1}{20^{2}}180+\frac{n}{40^{2}}150}{\frac{1}{20^{2}}+\frac{n}{40^{2}}},\frac{1}{\frac{1}{20^{2}}+\frac{n}{40^{2}}}\right)
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1678}%
+$\displaystyle \tilde{y}|y\sim N\left(\widetilde{\mu},\widetilde{\sigma}^{2}\right)
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1679}%
+$\displaystyle \widetilde{\mu}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1680}%
+$\displaystyle =E\left(\tilde{y}|y\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1681}%
+$\displaystyle =E\left(E\left(\tilde{y}|\theta,y\right)|y\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1682}%
+$\displaystyle =E\left(E\left(\tilde{y}|\theta\right)|y\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1683}%
+$\displaystyle =E\left(\theta|y\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1684}%
+$\displaystyle =\frac{\frac{1}{\sigma^{2}}\mu_{0}+\frac{n}{\tau_{0}^{2}}\overline{y}}{\frac{1}{\sigma^{2}}+\frac{n}{\tau_{0}^{2}}}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1685}%
+$\displaystyle \widetilde{\sigma}^{2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1686}%
+$\displaystyle =var\left(\tilde{y}|y\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1687}%
+$\displaystyle =var\left(E\left(\tilde{y}|\theta\right)|y\right)+E\left(var\left(\tilde{y}|\theta\right)|y\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1688}%
+$\displaystyle =var\left(\theta|y\right)+E\left(\sigma^{2}|y\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1689}%
+$\displaystyle =\frac{1}{\frac{1}{\sigma^{2}}+\frac{n}{\tau_{0}^{2}}}+\sigma^{2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1691}%
+$\displaystyle \tilde{y}|y\sim N\left(\frac{\frac{1}{20^{2}}180+\frac{n}{40^{2}}150}{\frac{1}{20^{2}}+\frac{n}{40^{2}}},\frac{1}{\frac{1}{\sigma^{2}}+\frac{n}{\tau_{0}^{2}}}+\sigma^{2}\right)
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1694}%
+$ y_{1}\ldots,y_{5}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1698}%
+$ 1$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1700}%
+$ p\left(y_{i}|\theta\right)\propto\frac{1}{1+\left(y_{i}-\theta\right)^{2}}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1702}%
+$\displaystyle \theta\sim$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1703}%
+$\displaystyle \left(0,1\right)
+$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1705}%
+$\displaystyle l\left(\theta|y\right)=\prod_{i=1}^{n}\frac{1}{1+\left(y_{i}-\theta\right)^{2}}
+$%
 \lthtmlindisplaymathZ
 \lthtmlcheckvsize\clearpage}
 
@@ -222,15 +987,512 @@ $\displaystyle =\theta^{-1}\left(1-\theta\right)^{-1}$%
 \stepcounter{subsection}
 \stepcounter{subsection}
 \stepcounter{paragraph}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1714}%
+$ x_{i}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1716}%
+$ p\left(\mu,\sigma^{2}\right)\propto\left(\sigma^{2}\right)^{-3/2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1717}%
+$\displaystyle p\left(\mu,\sigma^{2}|\mathbf{x}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1718}%
+$\displaystyle \propto p\left(\mu,\sigma^{2}\right)p\left(\mathbf{x}|\mu,\sigma^{2}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1719}%
+$\displaystyle =\left(\sigma^{2}\right)^{-3/2}\sigma^{-n/2}\exp\left(-\frac{1}{2\sigma^{2}}\sum\left(x_{i}-\mu\right)^{2}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1720}%
+$\displaystyle =\left(\sigma^{2}\right)^{-3/2}\sigma^{-n/2}\exp\left(-\frac{1}{2\sigma^{2}}\sum\left(x_{i}-\overline{x}\right)^{2}+n\left(\overline{x}-\mu\right)^{2}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1721}%
+$\displaystyle =\left(\sigma^{2}\right)^{-3/2}\sigma^{-n/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(\sum\left(x_{i}-\overline{x}\right)^{2}+n\left(\overline{x}-\mu\right)^{2}\right)\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1722}%
+$\displaystyle =\left(\sigma^{2}\right)^{-3/2-n/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(\left(n-1\right)s^{2}+n\left(\overline{x}-\mu\right)^{2}\right)\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1723}%
+$\displaystyle \propto\exp\left(-\frac{1}{2\sigma^{2}}\left(n\left(\overline{x}-\mu\right)^{2}\right)\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1724}%
+$\displaystyle \implies\mu|\mathbf{x},\sigma^{2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1725}%
+$\displaystyle \sim N\left(\overline{x},\sigma^{2}/n\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
 \stepcounter{paragraph}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1728}%
+$\displaystyle \propto\left(\sigma^{2}\right)^{-3/2-n/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(\left(n-1\right)s^{2}+n\left(\overline{x}-\mu\right)^{2}\right)\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1729}%
+$\displaystyle =\left(\sigma^{2}\right)^{-3/2-n/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(n-1\right)s^{2}\right)\underbrace{\exp\left(-\frac{1}{2\sigma^{2}}n\left(\overline{x}-\mu\right)^{2}\right)\left(\frac{\sigma}{n}\right)^{-1/2}}_{\text{kernel de una normal}}\left(\frac{\sigma}{n}\right)^{1/2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1730}%
+$\displaystyle \implies p\left(\sigma^{2}|\mathbf{x}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1731}%
+$\displaystyle \propto\left(\sigma^{2}\right)^{-\left(n/2+1\right)}\exp\left(-\frac{1}{2\sigma^{2}}\left(n-1\right)s^{2}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1732}%
+$\displaystyle \sigma^{2}|\mathbf{x}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1733}%
+$\displaystyle \sim\chi^{2}-\mathbf{inv}\left(n,s^{2}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
 \stepcounter{paragraph}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1736}%
+$ \mu$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1737}%
+$\displaystyle p\left(\mu|\mathbf{x}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1738}%
+$\displaystyle =\int_{0}^{\infty}p\left(\mu,\sigma^{2}|\mathbf{x}\right)d\sigma^{2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1739}%
+$\displaystyle \propto\int_{0}^{\infty}\left(\sigma^{2}\right)^{-3/2}\sigma^{-n/2}\exp\left(-\frac{1}{2\sigma^{2}}A\right)d\sigma^{2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1740}%
+$\displaystyle A$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1741}%
+$\displaystyle =\sum\left(x_{i}-\overline{x}\right)^{2}+n\left(\overline{x}-\mu\right)^{2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1743}%
+$ z=A/\left(2\sigma^{2}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1277}%
+$\text{\ensuremath{\sigma^{2}=A/2z} }$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1746}%
+$ d\sigma^{2}=-\frac{A}{2z^{2}}dz$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1748}%
+$\displaystyle \propto\int_{0}^{\infty}\left(\frac{A}{2z}\right)^{-3/2-n/2}\exp\left(-z\right)\left(-\frac{A}{2z^{2}}\right)dz$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1749}%
+$\displaystyle \propto\left(\frac{A}{2z}\right)^{-1/2-n/2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
 \stepcounter{paragraph}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1752}%
+$ s=1\ldots,S$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1754}%
+$ \mu^{\left(s\right)}\sim p\left(\mu|\mathbf{y}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1756}%
+$ \sigma^{2\left(s\right)}\sim p\left(\sigma^{2}|\mathbf{y}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1758}%
+$ y^{s}\sim p\left(x|\mu^{\left(s\right)},\sigma^{2\left(s\right)}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
 \stepcounter{paragraph}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1761}%
+$ p\left(\mu,\sigma^{2}\right)=p\left(\mu|\sigma^{2}\right)p\left(\sigma^{2}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1764}%
+$\displaystyle =p\left(\mu|\sigma^{2}\right)p\left(\sigma^{2}\right)p\left(\mathbf{x}|\mu,\sigma^{2}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1765}%
+$\displaystyle =$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
 \stepcounter{paragraph}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1768}%
+$ \beta,\sigma^{2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1770}%
+$ p\left(\beta,\sigma^{2}\right)\propto\sigma^{-2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1771}%
+$\displaystyle y|\beta,\sigma^{2},X$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1772}%
+$\displaystyle \sim N\left(X\beta,\sigma^{2}I\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1773}%
+$\displaystyle p\left(y|\beta,\sigma^{2},X\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1774}%
+$\displaystyle \propto\det\left(\sigma^{2}I\right)^{-1/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\beta\right)^{t}\left(y-X\beta\right)\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1775}%
+$\displaystyle =\left(\sigma^{2}\right)^{-1/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\beta\right)^{t}\left(y-X\beta\right)\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1777}%
+$\displaystyle \implies p\left(\beta,\sigma^{2}|y,X\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1778}%
+$\displaystyle \propto\left(\sigma^{2}\right)^{-n/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\beta\right)^{t}\left(y-X\beta\right)\right)\sigma^{-2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1779}%
+$\displaystyle =\left(\sigma^{2}\right)^{-n/2-2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\beta\right)^{t}\left(y-X\beta\right)\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1782}%
+$ \beta$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1784}%
+$ \sigma^{2}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1786}%
+$ \hat{\beta},\sigma^{2}\left(X^{t}X\right)^{-1}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1787}%
+$\displaystyle p\left(\beta,\sigma^{2}|y\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1788}%
+$\displaystyle =p\left(\sigma^{2}|\beta,y\right)p\left(\beta|y\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1789}%
+$\displaystyle \implies$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1790}%
+$\displaystyle p\left(\beta|y\right)=\frac{p\left(\beta,\sigma^{2}|y\right)}{p\left(\sigma^{2}|\beta,y\right)}=\frac{p\left(y|\beta,\sigma^{2}\right)p\left(\beta,\sigma^{2}\right)}{p\left(\sigma^{2}|\beta,y\right)}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1792}%
+$\displaystyle =p\left(\beta|\sigma^{2},y\right)p\left(\sigma^{2}|y\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1794}%
+$\displaystyle p\left(\sigma^{2}|y\right)=\frac{p\left(y|\beta,\sigma^{2}\right)p\left(\beta,\sigma^{2}\right)}{p\left(\beta|\sigma^{2},y\right)}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1795}%
+$\displaystyle p\left(\beta|\sigma^{2},y\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1796}%
+$\displaystyle =\frac{p\left(\beta,\sigma^{2}|,y\right)}{p\left(\sigma^{2}|y\right)}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1797}%
+$\displaystyle \propto p\left(\beta,\sigma^{2}|,y\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1799}%
+$\displaystyle \propto\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\beta\right)^{t}\left(y-X\beta\right)\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1800}%
+$\displaystyle =\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\hat{\beta}\right)^{t}\left(y-X\hat{\beta}\right)-\frac{1}{2\sigma^{2}}\left(\beta-\hat{\beta}\right)^{t}X^{t}X\left(\beta-\hat{\beta}\right)\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1801}%
+$\displaystyle \propto\exp\left(-\frac{1}{2\sigma^{2}}\left(\beta-\hat{\beta}\right)^{t}X^{t}X\left(\beta-\hat{\beta}\right)\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1802}%
+$\displaystyle \implies\beta|\sigma^{2},y$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1803}%
+$\displaystyle \sim N\left(\hat{\beta},\sigma^{2}\left(X^{t}X\right)^{-1}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
 \stepcounter{paragraph}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1807}%
+$\displaystyle p\left(\sigma^{2}|y\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1808}%
+$\displaystyle =\frac{p\left(\beta,\sigma^{2}|,y\right)}{p\left(\beta|\sigma^{2},y\right)}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1809}%
+$\displaystyle \propto\frac{\left(\sigma^{2}\right)^{-n/2-2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\beta\right)^{t}\left(y-X\beta\right)\right)}{\det\left(\sigma^{2}\left(X^{t}X\right)^{-1}\right)^{-1/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(\beta-\hat{\beta}\right)^{t}X^{t}X\left(\beta-\hat{\beta}\right)\right)}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1810}%
+$\displaystyle =\frac{\left(\sigma^{2}\right)^{-n/2-2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\hat{\beta}\right)^{t}\left(y-X\hat{\beta}\right)-\frac{1}{2\sigma^{2}}\left(\beta-\hat{\beta}\right)^{t}X^{t}X\left(\beta-\hat{\beta}\right)\right)}{\det\left(\sigma^{2}\left(X^{t}X\right)^{-1}\right)^{-1/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(\beta-\hat{\beta}\right)^{t}X^{t}X\left(\beta-\hat{\beta}\right)\right)}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1811}%
+$\displaystyle =\frac{\left(\sigma^{2}\right)^{-n/2-2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\hat{\beta}\right)^{t}\left(y-X\hat{\beta}\right)\right)}{\det\left(\sigma^{2}\left(X^{t}X\right)^{-1}\right)^{-1/2}\exp\left(0\right)}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1812}%
+$\displaystyle =\frac{\left(\sigma^{2}\right)^{-n/2-2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\hat{\beta}\right)^{t}\left(y-X\hat{\beta}\right)\right)}{\left(\sigma^{2k}\right)^{-1/2}\det\left(\left(X^{t}X\right)^{-1}\right)^{-1/2}\exp\left(0\right)}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1813}%
+$\displaystyle \propto\left(\sigma^{2}\right)^{-n/2-2+k/2}\exp\left(-\frac{1}{2\sigma^{2}}\left(y-X\hat{\beta}\right)^{t}\left(y-X\hat{\beta}\right)\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1814}%
+$\displaystyle \implies\sigma^{2}|y$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1815}%
+$\displaystyle \sim Inv-\chi^{2}\left(n-k,s^{2}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
 \stepcounter{paragraph}
-\stepcounter{paragraph}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1818}%
+$ \widetilde{y}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1820}%
+$ a$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1822}%
+$ b$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
 \stepcounter{section}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1825}%
+$ \pi\left(x\right)=\Phi\left(\beta_{0}+\beta_{1}x|\mu,\sigma^{2}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1830}%
+$\displaystyle Y_{i}|x_{i}$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1832}%
+$\displaystyle \left(\pi\left(x_{i}\right)\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1833}%
+$\displaystyle \implies\pi\left(x\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1834}%
+$\displaystyle =\Phi\left(\beta_{0}+\beta_{1}x|\mu,\sigma^{2}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1835}%
+$\displaystyle \pi\left(x\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1836}%
+$\displaystyle =\Phi_{0,1}\left(\frac{\beta_{0}+\beta_{1}x-\mu}{\sigma}\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_indisplay1838}%
+$\displaystyle =\Phi_{0,1}\left(\beta_{0}^{*}+\beta_{1}^{*}x\right)$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
 \stepcounter{paragraph}
+{\newpage\clearpage
+\lthtmlinlinemathA{tex2html_wrap_inline1841}%
+$ 1-\alpha$%
+\lthtmlindisplaymathZ
+\lthtmlcheckvsize\clearpage}
+
 
 \end{document}

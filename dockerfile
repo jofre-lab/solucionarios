@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get clean && apt-get update && apt-get install -y locales
@@ -13,12 +13,10 @@ RUN apt-get upgrade -y
 RUN lyx -batch /usr/share/lyx/doc/LaTeXConfig.lyx
 RUN mkdir /home/content
 RUN apt-get install latex2html -y 
-CMD lyx --force-overwrite --export xetex /home/content/probabilidad.lyx &&        latex2html /home/content/probabilidad.tex \
-&& lyx --force-overwrite --export xetex /home/content/inferencia-clasica.lyx &&   latex2html /home/content/inferencia-clasica.tex \
-&& lyx --force-overwrite --export xetex /home/content/inferencia-bayesiana.lyx && latex2html /home/content/inferencia-bayesiana.tex
+CMD lyx --force-overwrite --export xetex /home/content/*.lyx && latex2html /home/content/*.tex 
 
-
-# docker run -v ${PWD}/content:/home/content --rm -it  lyx2web:latest
+# docker build . -t solucionarios
+# docker run -v /Users/leonardojofre/Dropbox/solucionario-barry-james.github.io/docs/content:/home/content --rm -it  solucionarios:latest
 # lyx --force-overwrite --export pdflatex /home/content/test.lyx
 # latex2html /home/content/test.tex
 # lyx --force-overwrite --export latex content/test.lyx

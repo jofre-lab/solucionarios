@@ -1,346 +1,85 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE HTML>
 
-<!--Converted with LaTeX2HTML 2018 (Released Feb 1, 2018) -->
-<HTML>
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
 <HEAD>
-<TITLE>Modelos uniparam&#233;tricos</TITLE>
-<META NAME="description" CONTENT="Modelos uniparam&#233;tricos">
+<TITLE>BDA 3</TITLE>
+<META NAME="description" CONTENT="BDA 3">
 <META NAME="keywords" CONTENT="inferencia-bayesiana">
 <META NAME="resource-type" CONTENT="document">
 <META NAME="distribution" CONTENT="global">
 
-<META NAME="Generator" CONTENT="LaTeX2HTML v2018">
-<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
 
 <LINK REL="STYLESHEET" HREF="inferencia-bayesiana.css">
 
-<LINK REL="previous" HREF="node4.html">
-<LINK REL="up" HREF="node3.html">
+<LINK REL="next" HREF="node15.html">
+<LINK REL="previous" HREF="node2.html">
 <LINK REL="next" HREF="node6.html">
 </HEAD>
 
 <BODY >
 
 <DIV CLASS="navigation"><!--Navigation Panel-->
-<A NAME="tex2html81"
-  HREF="node6.html">
-<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html79"
-  HREF="node3.html">
-<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html75"
-  HREF="node4.html">
-<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A>   
+<A
+ HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="inferencia-bayesiana.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A>   
 <BR>
-<B> Next:</B> <A NAME="tex2html82"
-  HREF="node6.html">2.5c.</A>
-<B> Up:</B> <A NAME="tex2html80"
-  HREF="node3.html">BDA 3</A>
-<B> Previous:</B> <A NAME="tex2html76"
-  HREF="node4.html">Introducci&#243; y motivaci&#243;n</A>
+<B> Next:</B> <A
+ HREF="node6.html">Introducció y motivación</A>
+<B> Up:</B> <A
+ HREF="inferencia-bayesiana.html">inferencia-bayesiana</A>
+<B> Previous:</B> <A
+ HREF="node4.html">Blackwell and MacQueen 1973</A>
 <BR>
 <BR></DIV>
 <!--End of Navigation Panel-->
 
-<H2><A NAME="SECTION00032000000000000000">
-Modelos uniparam&#233;tricos</A>
-</H2>
+<H1><A ID="SECTION00020000000000000000">
+BDA 3</A>
+</H1>
+
 <P>
-<DIV><B>Problem <SPAN CLASS="arabic">2</SPAN></B> (cap2.prob5)  &nbsp; 
-La distribuci&#243;n a posterior es un compromiso entre la priori
-y los datos: Sea <SPAN CLASS="MATH"><IMG
- WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
- SRC="img17.png"
- ALT="$n$"></SPAN> el n&#250;mero de lanzamientos de una moneda,
-la cual tiene probabilidad de <SPAN CLASS="MATH"><IMG
- WIDTH="12" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img4.png"
- ALT="$\theta$"></SPAN> de ser cara. (a) Si la distribuci&#243;n
-a priori es una uniforme entre <SPAN CLASS="MATH"><IMG
- WIDTH="27" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
- SRC="img18.png"
- ALT="$0,1$"></SPAN>, derive la distribuci&#243;n
-predictiva 
-<P><!-- MATH
- \begin{displaymath}
-p\left(y=k\right)=\int_{0}^{1}p\left(y=k|\theta\right)d\theta
-\end{displaymath}
- -->
-</P>
-<DIV ALIGN="CENTER" CLASS="mathdisplay">
-<IMG
- WIDTH="205" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
- SRC="img19.png"
- ALT="$\displaystyle p\left(y=k\right)=\int_{0}^{1}p\left(y=k\vert\theta\right)d\theta
-$">
-</DIV><P></P>
-para cada <!-- MATH
- $k=1,\ldots,n$
- -->
-<SPAN CLASS="MATH"><IMG
- WIDTH="87" HEIGHT="30" ALIGN="MIDDLE" BORDER="0"
- SRC="img20.png"
- ALT="$k=1,\ldots,n$"></SPAN>. Sol: 
-<P></P>
-<DIV ALIGN="CENTER" CLASS="mathdisplay"><TABLE CELLPADDING="0" ALIGN="CENTER">
-<TR VALIGN="MIDDLE">
-<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
- WIDTH="65" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img21.png"
- ALT="$\displaystyle p\left(y=k\right)$"></SPAN></TD>
-<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
- WIDTH="141" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
- SRC="img22.png"
- ALT="$\displaystyle =\int_{0}^{1}p\left(y=k,\theta\right)d\theta$"></SPAN></TD>
-<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
-&nbsp;&nbsp;&nbsp;</TD></TR>
-<TR VALIGN="MIDDLE">
-<TD>&nbsp;</TD>
-<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
- WIDTH="172" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
- SRC="img23.png"
- ALT="$\displaystyle =\int_{0}^{1}p\left(y=k\vert\theta\right)\underbrace{p\left(\theta\right)}_{1}d\theta$"></SPAN></TD>
-<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
-&nbsp;&nbsp;&nbsp;</TD></TR>
-<TR VALIGN="MIDDLE">
-<TD>&nbsp;</TD>
-<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
- WIDTH="139" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
- SRC="img24.png"
- ALT="$\displaystyle =\int_{0}^{1}p\left(y=k\vert\theta\right)d\theta$"></SPAN></TD>
-<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
-&nbsp;&nbsp;&nbsp;</TD></TR>
-<TR VALIGN="MIDDLE">
-<TD>&nbsp;</TD>
-<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
- WIDTH="190" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
- SRC="img25.png"
- ALT="$\displaystyle =\int_{0}^{1}\binom{n}{k}\theta^{k}\left(1-\theta\right)^{n-k}d\theta$"></SPAN></TD>
-<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
-&nbsp;&nbsp;&nbsp;</TD></TR>
-<TR VALIGN="MIDDLE">
-<TD>&nbsp;</TD>
-<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
- WIDTH="192" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
- SRC="img26.png"
- ALT="$\displaystyle =\binom{n}{k}\int_{0}^{1}\theta^{k}\left(1-\theta\right)^{n-k}d\theta$"></SPAN></TD>
-<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
-&nbsp;&nbsp;&nbsp;</TD></TR>
-<TR VALIGN="MIDDLE">
-<TD>&nbsp;</TD>
-<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
- WIDTH="211" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
- SRC="img27.png"
- ALT="$\displaystyle =\binom{n}{k}\frac{\Gamma\left(k+1\right)\Gamma\left(n-k+1\right)}{\Gamma\left(n+2\right)}$"></SPAN></TD>
-<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
-&nbsp;&nbsp;&nbsp;</TD></TR>
-<TR VALIGN="MIDDLE">
-<TD>&nbsp;</TD>
-<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
- WIDTH="128" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
- SRC="img28.png"
- ALT="$\displaystyle =\binom{n}{k}\frac{k!\left(n-k\right)!}{\left(n+1\right)!}$"></SPAN></TD>
-<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
-&nbsp;&nbsp;&nbsp;</TD></TR>
-<TR VALIGN="MIDDLE">
-<TD>&nbsp;</TD>
-<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
- WIDTH="61" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
- SRC="img29.png"
- ALT="$\displaystyle =\frac{1}{n+1}$"></SPAN></TD>
-<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
-&nbsp;&nbsp;&nbsp;</TD></TR>
-</TABLE></DIV>
-<BR CLEAR="ALL"><P></P>
-usamos el siguiente resultado 
-<P></P>
-<DIV ALIGN="CENTER" CLASS="mathdisplay"><TABLE CELLPADDING="0" ALIGN="CENTER">
-<TR VALIGN="MIDDLE">
-<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
- WIDTH="233" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
- SRC="img30.png"
- ALT="$\displaystyle \int_{0}^{1}\frac{\Gamma\left(\alpha+\beta\right)}{\Gamma\left(\a...
-...Gamma\left(\beta\right)}\theta^{\alpha-1}\left(1-\theta\right)^{\beta-1}d\theta$"></SPAN></TD>
-<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
- WIDTH="28" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
- SRC="img31.png"
- ALT="$\displaystyle =1$"></SPAN></TD>
-<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
-&nbsp;&nbsp;&nbsp;</TD></TR>
-<TR VALIGN="MIDDLE">
-<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
- WIDTH="196" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
- SRC="img32.png"
- ALT="$\displaystyle \implies\int_{0}^{1}\theta^{\alpha-1}\left(1-\theta\right)^{\beta-1}d\theta$"></SPAN></TD>
-<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
- WIDTH="97" HEIGHT="53" ALIGN="MIDDLE" BORDER="0"
- SRC="img33.png"
- ALT="$\displaystyle =\frac{\Gamma\left(\alpha\right)\Gamma\left(\beta\right)}{\Gamma\left(\alpha+\beta\right)}$"></SPAN></TD>
-<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
-&nbsp;&nbsp;&nbsp;</TD></TR>
-<TR VALIGN="MIDDLE">
-<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
- WIDTH="179" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
- SRC="img34.png"
- ALT="$\displaystyle \implies\int_{0}^{1}\theta^{k}\left(1-\theta\right)^{n-k}d\theta$"></SPAN></TD>
-<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
- WIDTH="357" HEIGHT="53" ALIGN="MIDDLE" BORDER="0"
- SRC="img35.png"
- ALT="$\displaystyle =\frac{\Gamma\left(k+1\right)\Gamma\left(n-k+1\right)}{\Gamma\lef...
-...}=\frac{\Gamma\left(k+1\right)\Gamma\left(n-k+1\right)}{\Gamma\left(n+2\right)}$"></SPAN></TD>
-<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
-&nbsp;&nbsp;&nbsp;</TD></TR>
-</TABLE></DIV>
-<BR CLEAR="ALL"><P></P>
-(b) Supona que asigna una distribuci&#243;n <!-- MATH
- $\theta\sim\text{beta}\left(\alpha,\beta\right)$
- -->
-<SPAN CLASS="MATH"><IMG
- WIDTH="28" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
- SRC="img36.png"
- ALT="$\theta\sim$">beta<IMG
- WIDTH="43" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img37.png"
- ALT="$\left(\alpha,\beta\right)$"></SPAN>
-y usted observa <SPAN CLASS="MATH"><IMG
- WIDTH="12" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
- SRC="img38.png"
- ALT="$y$"></SPAN> caras en sus <SPAN CLASS="MATH"><IMG
- WIDTH="13" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
- SRC="img17.png"
- ALT="$n$"></SPAN> lanzamientos. Muestre algebraicamente
-que la media posterior involucra a la media a priori y la media de
-los datos. 
-<P></P>
-<DIV ALIGN="CENTER" CLASS="mathdisplay"><TABLE CELLPADDING="0" ALIGN="CENTER">
-<TR VALIGN="MIDDLE">
-<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
- WIDTH="47" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img39.png"
- ALT="$\displaystyle p\left(\theta\vert y\right)$"></SPAN></TD>
-<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
- WIDTH="98" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img40.png"
- ALT="$\displaystyle \propto p\left(y\vert\theta\right)p\left(\theta\right)$"></SPAN></TD>
-<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
-&nbsp;&nbsp;&nbsp;</TD></TR>
-<TR VALIGN="MIDDLE">
-<TD>&nbsp;</TD>
-<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
- WIDTH="333" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
- SRC="img41.png"
- ALT="$\displaystyle =\binom{n}{y}\theta^{y}\left(1-\theta\right)^{n-y}\frac{\Gamma\le...
-...right)\Gamma\left(\beta\right)}\theta^{\alpha-1}\left(1-\theta\right)^{\beta-1}$"></SPAN></TD>
-<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
-&nbsp;&nbsp;&nbsp;</TD></TR>
-<TR VALIGN="MIDDLE">
-<TD>&nbsp;</TD>
-<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
- WIDTH="180" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
- SRC="img42.png"
- ALT="$\displaystyle \propto\theta^{\alpha+y-1}\left(1-\theta\right)^{\beta+n-y-1}$"></SPAN></TD>
-<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
-&nbsp;&nbsp;&nbsp;</TD></TR>
-<TR VALIGN="MIDDLE">
-<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
- WIDTH="63" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img43.png"
- ALT="$\displaystyle \implies\theta\vert y$"></SPAN></TD>
-<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
- WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
- SRC="img44.png"
- ALT="$\displaystyle \sim$">beta<IMG
- WIDTH="128" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img45.png"
- ALT="$\displaystyle \left(\alpha+y,\beta+n-y\right)$"></SPAN></TD>
-<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
-&nbsp;&nbsp;&nbsp;</TD></TR>
-</TABLE></DIV>
-<BR CLEAR="ALL"><P></P>
-luego, la media condicional 
-<P></P>
-<DIV ALIGN="CENTER" CLASS="mathdisplay"><TABLE CELLPADDING="0" ALIGN="CENTER">
-<TR VALIGN="MIDDLE">
-<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
- WIDTH="52" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
- SRC="img46.png"
- ALT="$\displaystyle E\left(\theta\vert y\right)$"></SPAN></TD>
-<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
- WIDTH="149" HEIGHT="48" ALIGN="MIDDLE" BORDER="0"
- SRC="img47.png"
- ALT="$\displaystyle =\frac{\alpha+y}{\alpha+y+\beta+n-y}$"></SPAN></TD>
-<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
-&nbsp;&nbsp;&nbsp;</TD></TR>
-<TR VALIGN="MIDDLE">
-<TD>&nbsp;</TD>
-<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
- WIDTH="93" HEIGHT="48" ALIGN="MIDDLE" BORDER="0"
- SRC="img48.png"
- ALT="$\displaystyle =\frac{\alpha+y}{\alpha+\beta+n}$"></SPAN></TD>
-<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
-&nbsp;&nbsp;&nbsp;</TD></TR>
-<TR VALIGN="MIDDLE">
-<TD>&nbsp;</TD>
-<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
- WIDTH="185" HEIGHT="44" ALIGN="MIDDLE" BORDER="0"
- SRC="img49.png"
- ALT="$\displaystyle =\frac{\alpha}{\alpha+\beta+n}+\frac{y}{\alpha+\beta+n}$"></SPAN></TD>
-<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
-&nbsp;&nbsp;&nbsp;</TD></TR>
-<TR VALIGN="MIDDLE">
-<TD>&nbsp;</TD>
-<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
- WIDTH="241" HEIGHT="51" ALIGN="MIDDLE" BORDER="0"
- SRC="img50.png"
- ALT="$\displaystyle =\frac{\alpha+\beta}{\alpha+\beta}\frac{\alpha}{\alpha+\beta+n}+\frac{n}{n}\frac{y}{\alpha+\beta+n}$"></SPAN></TD>
-<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
-&nbsp;&nbsp;&nbsp;</TD></TR>
-<TR VALIGN="MIDDLE">
-<TD>&nbsp;</TD>
-<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
- WIDTH="240" HEIGHT="89" ALIGN="MIDDLE" BORDER="0"
- SRC="img51.png"
- ALT="$\displaystyle =\frac{\alpha+\beta}{\alpha+\beta+n}\underbrace{\frac{\alpha}{\alpha+\beta}}_{E\left(\theta\right)}+\frac{n}{\alpha+\beta+n}\frac{y}{n}$"></SPAN></TD>
-<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
-&nbsp;&nbsp;&nbsp;</TD></TR>
-</TABLE></DIV>
-<BR CLEAR="ALL"><P></P></DIV><P></P>
+En esta sección se ilustrarán algunos conceptos útiles
+expuestos en el libro de Gelman y algunos ejercicios que son frecuentes
+en cátedras de inferencia bayesiana que se basan en el texto.
 
 <P>
 <BR><HR>
 <!--Table of Child-Links-->
-<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
 
 <UL CLASS="ChildLinks">
-<LI><UL>
-<LI><A NAME="tex2html83"
-  HREF="node6.html">2.5c. </A>
-<LI><A NAME="tex2html84"
-  HREF="node7.html">2.5d. </A>
-<LI><A NAME="tex2html85"
-  HREF="node8.html">2.7.a</A>
+<LI><A ID="tex2html36"
+  HREF="node6.html">Introducció y motivación</A>
+<LI><A ID="tex2html37"
+  HREF="node7.html">Modelos uniparamétricos</A>
+<UL>
+<LI><A ID="tex2html38"
+  HREF="node8.html">2.5c. </A>
+<LI><A ID="tex2html39"
+  HREF="node9.html">2.5d. </A>
+<LI><A ID="tex2html40"
+  HREF="node10.html">2.7a.</A>
+<LI><A ID="tex2html41"
+  HREF="node11.html">2.7b.</A>
+<LI><A ID="tex2html42"
+  HREF="node12.html">2.8a. </A>
+<LI><A ID="tex2html43"
+  HREF="node13.html">2.8b.</A>
+<LI><A ID="tex2html44"
+  HREF="node14.html">4.2.a</A>
 </UL></UL>
 <!--End of Table of Child-Links-->
-
-<DIV CLASS="navigation"><HR>
-<!--Navigation Panel-->
-<A NAME="tex2html81"
-  HREF="node6.html">
-<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
-<A NAME="tex2html79"
-  HREF="node3.html">
-<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
-<A NAME="tex2html75"
-  HREF="node4.html">
-<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A>   
-<BR>
-<B> Next:</B> <A NAME="tex2html82"
-  HREF="node6.html">2.5c.</A>
-<B> Up:</B> <A NAME="tex2html80"
-  HREF="node3.html">BDA 3</A>
-<B> Previous:</B> <A NAME="tex2html76"
-  HREF="node4.html">Introducci&#243; y motivaci&#243;n</A></DIV>
-<!--End of Navigation Panel-->
+<BR><HR>
 
 </BODY>
 </HTML>
